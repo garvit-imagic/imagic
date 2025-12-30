@@ -11,7 +11,7 @@ export default function MarqueeSection() {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full relative z-20">
       {/* Desktop Marquee */}
       <div className="hidden md:block">
         {/* Marquee Container with 2px border */}
@@ -47,7 +47,7 @@ export default function MarqueeSection() {
       {/* Mobile Marquee */}
       <div className="md:hidden">
         {/* Marquee Container with 1px border */}
-        <div className="w-full h-[46px] border-bottom border-black overflow-hidden relative bg-white">
+        <div className="w-full h-[46px] border-b border-black overflow-hidden relative bg-white">
           <div className="marquee-content-mobile flex items-center h-full">
             {Array(12)
               .fill(marqueeItems)
