@@ -54,24 +54,28 @@ IMagic/
 ## 🚨 Critical Issues
 
 ### 1. **Node.js Version Incompatibility**
+
 - **Current:** Node.js v18.12.1
 - **Required:** Node.js ^18.18.0 || ^19.8.0 || >= 20.0.0
 - **Impact:** Cannot build for production
 - **Solution:** Upgrade Node.js or downgrade Next.js
 
 ### 2. **Missing MUI in package.json**
+
 - **Issue:** All @mui packages marked as "extraneous"
 - **Installed:** @mui/material@7.3.6, @mui/icons-material@7.3.6
 - **Impact:** Will break on fresh install, not tracked in dependencies
 - **Solution:** Add MUI packages to package.json dependencies
 
 ### 3. **Design System Not Extracted from Figma**
+
 - **Issue:** Generic colors/spacing used, not matching Figma design
 - **Current Colors:** Basic primary green (#CDFF3C)
 - **Expected:** Need to extract exact colors from HOME PAGE DESKTOP.jpg
 - **Impact:** Design won't match Figma pixel-perfectly
 
 ### 4. **Placeholder Content Throughout**
+
 - All components use generic/AI-generated content
 - No real company logos
 - Placeholder images instead of actual design assets
@@ -82,6 +86,7 @@ IMagic/
 ## ⚠️ Component-Specific Issues
 
 ### **Button.tsx**
+
 ```typescript
 Issues:
 - Missing hover/active states
@@ -91,6 +96,7 @@ Issues:
 ```
 
 ### **Navbar.tsx**
+
 ```typescript
 Issues:
 - Uses MUI AppBar but custom Button (inconsistent)
@@ -102,6 +108,7 @@ Issues:
 ```
 
 ### **Hero.tsx**
+
 ```typescript
 Issues:
 - Generic gradient placeholder (not matching Figma)
@@ -112,6 +119,7 @@ Issues:
 ```
 
 ### **CompanyLogos.tsx**
+
 ```typescript
 Issues:
 - Fake company placeholders (just gray boxes)
@@ -121,6 +129,7 @@ Issues:
 ```
 
 ### **FeatureCards.tsx**
+
 ```typescript
 Issues:
 - Alternating bg colors (may not match design)
@@ -130,6 +139,7 @@ Issues:
 ```
 
 ### **StatsSection.tsx**
+
 ```typescript
 Issues:
 - "35+ Years" - likely not accurate
@@ -139,6 +149,7 @@ Issues:
 ```
 
 ### **ImageCarousel.tsx**
+
 ```typescript
 Issues:
 - Uses MUI MobileStepper (may not match design)
@@ -149,6 +160,7 @@ Issues:
 ```
 
 ### **ServicesAccordion.tsx**
+
 ```typescript
 Issues:
 - Generic service categories (SPACE, TECHNOLOGY, DEFENSE)
@@ -158,6 +170,7 @@ Issues:
 ```
 
 ### **ContactSection.tsx**
+
 ```typescript
 Issues:
 - Uses MUI TextField (styling may not match Figma)
@@ -168,6 +181,7 @@ Issues:
 ```
 
 ### **Footer.tsx**
+
 ```typescript
 Issues:
 - Generic links (Privacy, Terms, Careers)
@@ -181,6 +195,7 @@ Issues:
 ## 🎨 Design System Issues
 
 ### **Colors** (from image analysis)
+
 ```
 Extracted from Figma:
 - #160F0F - Dark brown/black
@@ -200,6 +215,7 @@ Current Tailwind:
 ```
 
 ### **Typography**
+
 ```
 Issues:
 - Font: "Open Sans Hebrew" specified but not loaded
@@ -209,6 +225,7 @@ Issues:
 ```
 
 ### **Spacing**
+
 ```
 Issues:
 - Using Tailwind defaults
@@ -230,21 +247,25 @@ Issues:
 ## 🔧 Technical Debt
 
 ### **Package Management**
+
 - MUI packages not in dependencies
 - No emotion/styled-components (required for MUI)
 - Missing peer dependencies
 
 ### **Type Safety**
+
 - Minimal type definitions
 - Many implicit 'any' types in components
 - No prop validation beyond TypeScript
 
 ### **Performance**
+
 - No image optimization strategy
 - No lazy loading implemented
 - Large placeholder images not optimized
 
 ### **SEO**
+
 - No metadata in components
 - No structured data
 - Generic page title/description
@@ -254,13 +275,16 @@ Issues:
 ## 🎯 Fix Strategy (Going Forward)
 
 ### **Phase 1: Foundation**
+
 1. ✅ Fix package.json (add MUI properly)
 2. ✅ Extract design tokens from Figma images
 3. ✅ Update tailwind.config.ts with real values
 4. ✅ Load correct fonts
 
 ### **Phase 2: Component-by-Component Fixes**
+
 For each component screenshot you provide:
+
 1. Analyze exact layout, spacing, colors
 2. Identify real content/copy
 3. Extract images/icons needed
@@ -269,6 +293,7 @@ For each component screenshot you provide:
 6. Validate against Figma
 
 ### **Phase 3: Integration**
+
 1. Connect components with real data
 2. Add animations/interactions
 3. Optimize performance
@@ -291,6 +316,7 @@ For each component screenshot you provide:
 ## 🛠️ Required for Each Component Fix
 
 When you add a component screenshot, provide:
+
 - ✅ PNG/JPG in public/
 - ✅ Component name (e.g., "Navbar", "Hero")
 - ✅ Desktop or Mobile version
@@ -302,6 +328,7 @@ When you add a component screenshot, provide:
 ## 📊 Quality Metrics
 
 ### Current State
+
 - **Design Accuracy:** ⚠️ ~30% (generic AI-generated)
 - **Code Quality:** ⚠️ 60% (functional but not polished)
 - **Responsiveness:** ⚠️ 50% (basic but not validated)
@@ -309,6 +336,7 @@ When you add a component screenshot, provide:
 - **Type Safety:** ✅ 80% (TypeScript setup good)
 
 ### Target State
+
 - **Design Accuracy:** 🎯 95%+ (pixel-perfect to Figma)
 - **Code Quality:** 🎯 90%+ (clean, modular, reusable)
 - **Responsiveness:** 🎯 95%+ (perfect on all devices)
@@ -336,4 +364,4 @@ Share the first component screenshot (recommend starting with **Navbar** or **He
 
 ---
 
-*Last Updated: December 31, 2025*
+_Last Updated: December 31, 2025_

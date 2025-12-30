@@ -40,7 +40,7 @@ export default function MarqueeSection() {
 
         {/* 12px height strip with 40px padding on both sides */}
         <div className="w-full px-[40px] bg-transparent">
-          <div className="h-[10px] bg-black w-full"></div>
+          <div className="h-[9px] bg-black w-full"></div>
         </div>
       </div>
 
