@@ -83,11 +83,19 @@ export default function Navbar() {
           <div className="flex items-center justify-between w-full">
             <a href="/" className="flex items-center">
               <Image 
-                src="/logo.svg" 
+                src="/assets/nav-logo-mobile.jpg" 
+                alt="IMAGIC CREATIVES" 
+                width={145}
+                height={28}
+                className="h-[28px] w-[145px] md:hidden"
+                priority
+              />
+              <Image 
+                src="/assets/nav-logo.svg" 
                 alt="IMAGIC CREATIVES" 
                 width={200} 
                 height={50}
-                className="h-10 w-auto md:h-12"
+                className="hidden md:block h-12 w-auto"
                 priority
               />
             </a>

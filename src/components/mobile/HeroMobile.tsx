@@ -1,7 +1,7 @@
 export default function HeroMobile() {
   return (
     <div className="md:hidden relative">
-      <div className="h-[153px] bg-white w-full" />
+      {/* <div className="h-[153px] bg-white w-full" /> */}
       <div
         className="absolute top-[153px] left-0 right-0 bottom-0 w-full"
         style={{
@@ -14,10 +14,10 @@ export default function HeroMobile() {
       />
 
       <div className="relative z-10 h-[622px]">
-        <div className="px-[24px] pt-[52px] flex flex-col gap-[45px]">
-          <div className="w-[342px] h-[87px] mx-auto">
-            <span
-              className="font-bold leading-[100%] text-center flex items-center justify-center h-full"
+        <div className="px-[24px] pt-[55px] flex flex-col gap-[45px]">
+          <div className="w-[342px] h-[87px] mx-auto flex items-center justify-center">
+            <h1
+              className="font-bold text-center"
               style={{
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                 fontSize: "32px",
@@ -25,8 +25,9 @@ export default function HeroMobile() {
               }}
             >
               Where <span style={{ color: "#8CC63F" }}>Ideas</span>
+              <br />
               Take Flight.
-            </span>
+            </h1>
           </div>
 
           <div className="w-[81.86px] h-[81.86px] mx-auto">
@@ -90,4 +91,3 @@ export default function HeroMobile() {
     </div>
   );
 }
-
