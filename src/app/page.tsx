@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MarqueeSection from "@/components/MarqueeSection";
 import CompanyLogos from "@/components/CompanyLogos";
 import FeatureCards from "@/components/FeatureCards";
 import StatsSection from "@/components/StatsSection";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <HeroSection />
+      <MarqueeSection />
       <CompanyLogos />
       <FeatureCards />
       <StatsSection />

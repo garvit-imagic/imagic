@@ -29,6 +29,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Open Sans Hebrew", "Open Sans", "system-ui", "sans-serif"],
+        manrope: ["var(--font-manrope)", "Manrope", "sans-serif"],
       },
       borderRadius: {
         "4xl": "2rem",
