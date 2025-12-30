@@ -27,6 +27,7 @@ The homepage consists of **9 main components** rendered in sequence:
 **Dependencies:** MUI (AppBar, Toolbar, Drawer, IconButton), Next Image
 
 #### Current Implementation:
+
 ```typescript
 - Sticky AppBar with white background
 - Logo switches based on screen size:
@@ -38,12 +39,14 @@ The homepage consists of **9 main components** rendered in sequence:
 ```
 
 #### Layout & Spacing:
+
 - Desktop Toolbar: 80px height, 48px horizontal padding
 - Mobile Toolbar: 70px height, 24px horizontal padding
 - Max width: 1400px centered
 - Desktop nav links: 12px gap between items
 
 #### Issues & Improvements Needed:
+
 - ✅ Logo dimensions correctly set for mobile (145×28)
 - ⚠️ Desktop logo sizing needs verification from Figma
 - ⚠️ Nav link styling generic (font-size, weight, spacing)
@@ -52,6 +55,7 @@ The homepage consists of **9 main components** rendered in sequence:
 - ⚠️ No active state for current section
 
 #### Assets Used:
+
 - `/assets/nav-logo-mobile.jpg`
 - `/assets/nav-logo.svg`
 
@@ -60,21 +64,24 @@ The homepage consists of **9 main components** rendered in sequence:
 ### 2. **HeroSection Component**
 
 **File:** `src/components/HeroSection.tsx`  
-**Sub-components:** 
+**Sub-components:**
+
 - `src/components/desktop/HeroDesktop.tsx`
 - `src/components/mobile/HeroMobile.tsx`
 
 #### HeroDesktop Implementation:
 
 **Dimensions:**
+
 - Total height: 1050px
 - Top section: 105px padding-top, 100px horizontal padding
 - Bottom section: 165px padding-bottom
 
 **Layout Structure:**
+
 ```
 ┌─────────────────────────────────────────┐
-│  [Heading]              [Image Placeholder] │  
+│  [Heading]              [Image Placeholder] │
 │  "Where Ideas          E5E5E5 box      │
 │   Take Flight"         700×431px       │
 │                                        │
@@ -85,6 +92,7 @@ The homepage consists of **9 main components** rendered in sequence:
 ```
 
 **Typography:**
+
 - Heading: "Open Sans Hebrew", 78px, bold, 100% line-height
 - Green accent: #8CC63F
 - Description: 26px, normal weight
@@ -92,6 +100,7 @@ The homepage consists of **9 main components** rendered in sequence:
 - Right text padding: 127px from left box
 
 **Elements:**
+
 - Background: `/assets/D2-BG.jpg` (cover, center)
 - SVG plane illustration (gradient: yellow to orange)
 - Two placeholder boxes (need actual images)
@@ -99,10 +108,12 @@ The homepage consists of **9 main components** rendered in sequence:
 #### HeroMobile Implementation:
 
 **Dimensions:**
+
 - Total height: 622px
 - Padding: 24px horizontal, 55px top
 
 **Layout Structure:**
+
 ```
 ┌──────────────────┐
 │  [Heading]       │  87px height, 342px width
@@ -119,16 +130,19 @@ The homepage consists of **9 main components** rendered in sequence:
 ```
 
 **Typography:**
+
 - Heading: 32px, bold, centered
 - Green accent: #8CC63F
 - Description: 14px, 20px line-height, #616161 color
 
 **Elements:**
+
 - Background: `/assets/M2-BG.jpg` (starts at 153px from top)
 - Same SVG plane (smaller size)
 - One placeholder box
 
 #### Issues & Improvements:
+
 - ⚠️ Placeholder boxes need real images (have D5 internal.jpg available)
 - ⚠️ Font loading (Open Sans Hebrew not explicitly loaded)
 - ⚠️ Hardcoded colors should use Tailwind config
@@ -136,6 +150,7 @@ The homepage consists of **9 main components** rendered in sequence:
 - ⚠️ Responsive breakpoint at md: may need tablet adjustments
 
 #### Assets Used:
+
 - `/assets/D2-BG.jpg` (Desktop background)
 - `/assets/M2-BG.jpg` (Mobile background)
 - SVG plane illustration (inline)
@@ -148,6 +163,7 @@ The homepage consists of **9 main components** rendered in sequence:
 **Type:** Server Component
 
 #### Current Implementation:
+
 ```typescript
 - 16 placeholder company "logos"
 - Grid layout: 4 cols mobile, 6 cols tablet, 8 cols desktop
@@ -157,11 +173,13 @@ The homepage consists of **9 main components** rendered in sequence:
 ```
 
 #### Layout:
+
 - Container: max-w-7xl, centered
 - Padding: py-12 mobile, py-16 desktop
 - Grid gaps: gap-8 mobile, gap-12 desktop
 
 #### Issues & Improvements:
+
 - ❌ **Completely placeholder** - no real logos
 - ⚠️ Need actual company logos from `/public/` directory
 - ⚠️ Grid layout may not match Figma
@@ -169,6 +187,7 @@ The homepage consists of **9 main components** rendered in sequence:
 - ⚠️ Should use Next Image component when real logos added
 
 #### Potential Assets:
+
 - Check if company logos exist in public folder
 - May need separate assets folder
 
@@ -180,6 +199,7 @@ The homepage consists of **9 main components** rendered in sequence:
 **Type:** Server Component
 
 #### Current Implementation:
+
 ```typescript
 Features array (8 items):
 1. AI & ML
@@ -207,12 +227,14 @@ Each card:
 ```
 
 #### Typography & Styling:
+
 - Section heading: "Designed to Deliver — Literally"
 - "Deliver" in primary color
 - Cards have hover effects (shadow-lg)
 - Text color changes based on bg (dark on primary, normal on white)
 
 #### Issues & Improvements:
+
 - ❌ **Placeholder aspect-video divs** - need actual icons/images
 - ⚠️ Alternating bg pattern may not match Figma design
 - ⚠️ Generic descriptions (AI-generated)
@@ -221,6 +243,7 @@ Each card:
 - ⚠️ "Start Your Project Today!" CTA at bottom (no button)
 
 #### Assets Needed:
+
 - 8 feature icons or images
 - Check D3.jpg, D4.png, etc. in public folder
 
@@ -233,6 +256,7 @@ Each card:
 **Dependencies:** Custom Button component
 
 #### Current Implementation:
+
 ```typescript
 Layout: 2-column grid (1 col mobile, 2 cols desktop)
 
@@ -252,18 +276,21 @@ Right Column:
 ```
 
 #### Typography:
+
 - Heading: text-3xl mobile → text-5xl desktop, bold
 - Description: text-base mobile → text-lg desktop
 - Stats numbers: text-4xl mobile → text-5xl desktop, primary color
 - Stats labels: text-sm, secondary color
 
 #### Layout & Spacing:
+
 - Section: gradient background (primary/20 → white → primary/10)
 - Padding: py-16 mobile, py-24 desktop
 - Gap between columns: gap-8 mobile, gap-12 desktop
 - Stats gap: gap-6
 
 #### Issues & Improvements:
+
 - ❌ **"35+ Years"** - likely inaccurate, needs real data
 - ❌ **Fake stats** (10K+, 20+ countries) - need real numbers
 - ❌ **Placeholder image** - needs actual image/video
@@ -271,6 +298,7 @@ Right Column:
 - ⚠️ May need actual company milestones/achievements
 
 #### Potential Assets:
+
 - May use one of: D5.png, D6.jpg, D7.jpg
 
 ---
@@ -282,6 +310,7 @@ Right Column:
 **Dependencies:** MUI (MobileStepper, Button), MUI Icons
 
 #### Current Implementation:
+
 ```typescript
 Carousel items (3 slides):
 1. Space Exploration - "Discover the universe..."
@@ -297,6 +326,7 @@ MUI MobileStepper:
 ```
 
 #### Layout:
+
 - Section background: dark (#000000)
 - Padding: py-16 mobile, py-24 desktop
 - Container: max-w-7xl
@@ -304,12 +334,14 @@ MUI MobileStepper:
 - Border radius: rounded-2xl
 
 #### Current Slide Display:
+
 - Gradient background (gray-900 → black → gray-800)
 - Centered text overlay
 - Title: text-3xl mobile → text-4xl desktop
 - Description: text-lg, white/80%
 
 #### Issues & Improvements:
+
 - ❌ **No actual images** - just placeholder gradients
 - ❌ **Generic content** - needs real project images/titles
 - ⚠️ MUI Stepper styling may not match Figma
@@ -318,6 +350,7 @@ MUI MobileStepper:
 - ⚠️ Should show actual project images/case studies
 
 #### Assets Available:
+
 - Check: D8.png, D9.png, D10.png (might be carousel images)
 
 ---
@@ -329,6 +362,7 @@ MUI MobileStepper:
 **Dependencies:** MUI (Accordion, AccordionSummary, AccordionDetails), MUI Icons
 
 #### Current Implementation:
+
 ```typescript
 Services array (6 items):
 1. SPACE - "Advanced space technology..."
@@ -348,17 +382,20 @@ MUI Accordion styling:
 ```
 
 #### Layout:
+
 - Section heading: "A little peek into our playground"
 - "little peek" in primary color
 - Max width: 4xl (896px)
 - Gap between accordions: 4px (16px when expanded)
 
 #### Typography:
+
 - Section heading: text-3xl mobile → text-5xl desktop
 - Accordion titles: text-lg mobile → text-xl desktop, bold
 - Content: text-secondary color, normal weight
 
 #### Issues & Improvements:
+
 - ⚠️ **Generic service categories** - may not match actual business
 - ⚠️ **AI-generated descriptions** - need real service offerings
 - ⚠️ MUI accordion styling may differ from Figma
@@ -375,6 +412,7 @@ MUI Accordion styling:
 **Dependencies:** MUI TextField, Custom Button
 
 #### Current Implementation:
+
 ```typescript
 Layout: 2-column grid (1 col mobile, 2 cols desktop)
 
@@ -403,6 +441,7 @@ MUI TextField styling:
 ```
 
 #### Layout & Spacing:
+
 - Section background: gradient (primary/10 → white → primary/20)
 - Padding: py-16 mobile, py-24 desktop
 - Section heading: "Let's Talk." ("Talk" in primary)
@@ -410,6 +449,7 @@ MUI TextField styling:
 - Cards: white bg, rounded-2xl, p-6
 
 #### Issues & Improvements:
+
 - ❌ **Fake contact info** - needs real address/email/phone
 - ❌ **Form doesn't submit** - no backend integration
 - ❌ **No validation** - no error states
@@ -420,6 +460,7 @@ MUI TextField styling:
 - ⚠️ Consider adding reCAPTCHA
 
 #### Missing:
+
 - Social media icons/links
 - Google Maps integration
 - Form backend API endpoint
@@ -434,6 +475,7 @@ MUI TextField styling:
 **Dependencies:** Next Image
 
 #### Current Implementation:
+
 ```typescript
 Layout: Single row, space-between (stacks on mobile)
 
@@ -453,6 +495,7 @@ Styling:
 ```
 
 #### Layout & Spacing:
+
 - Padding: py-12
 - Container: max-w-7xl
 - Flexbox: column mobile, row desktop
@@ -460,17 +503,19 @@ Styling:
 - Logo: 120×40, auto height (32px)
 
 #### Issues & Improvements:
+
 - ⚠️ **Generic footer links** - may not match actual pages
 - ⚠️ **Links go nowhere** - href="#"
 - ⚠️ No social media icons
 - ⚠️ No newsletter signup (if in design)
 - ⚠️ Missing:
-  * Social media links
-  * Additional nav columns (About, Resources, etc.)
-  * Newsletter subscription
-  * Trust badges/certifications
+  - Social media links
+  - Additional nav columns (About, Resources, etc.)
+  - Newsletter subscription
+  - Trust badges/certifications
 
 #### Assets Used:
+
 - `/logo.svg` (needs to exist, currently hardcoded)
 
 ---
@@ -559,22 +604,26 @@ Usage pattern:
 ### **High Priority:**
 
 1. **Missing Fonts**
+
    - Open Sans Hebrew not loaded
    - Need @next/font or @import in globals.css
 
 2. **Placeholder Content**
+
    - All image boxes are gray placeholders
    - Company logos fake
    - Stats likely inaccurate
    - Contact info fake
 
 3. **No Real Assets Used**
+
    - Hero placeholders (need actual images)
    - Feature card icons missing
    - Carousel images missing
    - Company logos missing
 
 4. **Color Inconsistencies**
+
    - #8CC63F (green) in Hero ≠ #CDFF3C (primary)
    - Many hardcoded colors
    - Need unified color system
@@ -587,11 +636,13 @@ Usage pattern:
 ### **Medium Priority:**
 
 6. **MUI Styling**
+
    - May not match Figma exactly
    - Need to verify component appearance
    - Consider custom components vs MUI
 
 7. **Generic Content**
+
    - AI-generated descriptions
    - Services may not match business
    - Need real copy throughout
@@ -605,6 +656,7 @@ Usage pattern:
 ### **Low Priority:**
 
 9. **Code Quality**
+
    - Mix of inline styles and Tailwind
    - Some hardcoded values
    - Could improve component structure
@@ -641,8 +693,9 @@ Full Designs:
 ```
 
 **Need to identify:**
-- Which D* files go where?
-- Which M* files go where?
+
+- Which D\* files go where?
+- Which M\* files go where?
 - Company logos location?
 
 ---
@@ -650,13 +703,16 @@ Full Designs:
 ## 🎯 Recommended Fix Order
 
 ### Phase 1: Foundation (Do First)
+
 1. ✅ Load Open Sans Hebrew font properly
 2. ✅ Unify color system (fix #8CC63F → primary)
 3. ✅ Map available assets to components
 4. ✅ Replace placeholder boxes with actual images
 
 ### Phase 2: Component-by-Component
+
 Compare each component screenshot with implementation:
+
 1. Navbar (verify dimensions, spacing, styling)
 2. Hero (verify layout, images, typography)
 3. CompanyLogos (add real logos)
@@ -668,6 +724,7 @@ Compare each component screenshot with implementation:
 9. Footer (add social links, fix navigation)
 
 ### Phase 3: Polish
+
 1. Add animations/transitions
 2. Implement form validation & backend
 3. Add scroll behaviors
@@ -679,7 +736,8 @@ Compare each component screenshot with implementation:
 
 ## 💡 Key Questions Before Starting Fixes
 
-1. **Which D*.jpg/png files correspond to which component?**
+1. **Which D\*.jpg/png files correspond to which component?**
+
    - D5 internal.jpg for StatsSection?
    - D8-D10 for ImageCarousel?
    - D3-D4 for FeatureCards?
@@ -694,6 +752,6 @@ Compare each component screenshot with implementation:
 
 ---
 
-**Ready to start making changes!** 
+**Ready to start making changes!**
 
 Which component should we tackle first, or do you want to provide the component-to-asset mapping so I can systematically fix everything?

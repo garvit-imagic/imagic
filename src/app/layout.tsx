@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} ${manrope.variable}`}>{children}</body>
+      <body className={`${openSans.className} ${manrope.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
