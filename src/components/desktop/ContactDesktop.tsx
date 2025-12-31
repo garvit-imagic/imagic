@@ -63,7 +63,7 @@ export default function ContactDesktop() {
 
             <form onSubmit={handleSubmit} className="mt-[42px]">
               <div
-                className="bg-white p-[32px]"
+                className="bg-white p-[32px] pb-[23px]"
                 style={{
                   borderRadius: "18px",
                   border: "1px solid #CACACA",
@@ -153,7 +153,7 @@ export default function ContactDesktop() {
                   fullWidth
                   name="message"
                   multiline
-                  rows={4}
+                  rows={5}
                   value={formData.message}
                   onChange={handleChange}
                   variant="standard"
@@ -166,7 +166,7 @@ export default function ContactDesktop() {
                     },
                     "& .MuiInputBase-input": {
                       fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                      color: "#000000",
+                      color: "#8CC63F",
                     },
                     "& .MuiInputBase-input::placeholder": {
                       fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
@@ -178,7 +178,7 @@ export default function ContactDesktop() {
 
               <button
                 type="submit"
-                className="font-normal text-center mt-[30px]"
+                className="font-normal text-[28px] leading-[100%] text-center mt-[30px]"
                 style={{
                   width: "fit-content",
                   height: "70px",
@@ -190,8 +190,6 @@ export default function ContactDesktop() {
                   background: "#BEE56E",
                   boxShadow: "7px 7px 0px 0px #81A733",
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                  fontSize: "34px",
-                  lineHeight: "100%",
                   letterSpacing: "0%",
                 }}
               >
@@ -272,7 +270,7 @@ export default function ContactDesktop() {
             </div>
 
             <button
-              className="font-normal text-center"
+              className="font-normal text-[28px] leading-[100%] text-center"
               style={{
                 height: "70px",
                 borderRadius: "8px",
@@ -283,8 +281,6 @@ export default function ContactDesktop() {
                 background: "#BEE56E",
                 boxShadow: "7px 7px 0px 0px #81A733",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                fontSize: "34px",
-                lineHeight: "100%",
                 letterSpacing: "0%",
                 marginTop: "73px",
                 width: "fit-content",

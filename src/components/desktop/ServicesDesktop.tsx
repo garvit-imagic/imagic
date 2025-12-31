@@ -124,9 +124,13 @@ export default function ServicesDesktop() {
                 }
                 sx={{
                   padding: "30px 10px",
+                  minHeight: "unset !important",
                   "& .MuiAccordionSummary-content": {
-                    margin: "0",
+                    margin: "0 !important",
                     color: "#000000",
+                  },
+                  "& .MuiAccordionSummary-content.Mui-expanded": {
+                    margin: "0 !important",
                   },
                   "& .MuiAccordionSummary-expandIconWrapper": {
                     color: "#BEE56E",
