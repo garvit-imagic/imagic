@@ -84,13 +84,13 @@ export default function FeatureCards() {
           ))}
         </div>
 
-        <div className="text-center mt-12 md:mt-16">
+        {/* <div className="text-center mt-12 md:mt-16">
           <h3 className="text-3xl md:text-4xl font-bold">
             Start Your
             <br />
             <span className="text-primary">Project Today!</span>
           </h3>
-        </div>
+        </div> */}
       </div>
     </section>
   );
