@@ -1,21 +1,23 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import Button from './ui/Button';
+import { useState } from "react";
+import TextField from "@mui/material/TextField";
+import Button from "./ui/Button";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -46,9 +48,9 @@ export default function ContactSection() {
                   onChange={handleChange}
                   variant="outlined"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      borderRadius: '12px',
-                      backgroundColor: 'white',
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "12px",
+                      backgroundColor: "white",
                     },
                   }}
                 />
@@ -61,9 +63,9 @@ export default function ContactSection() {
                   onChange={handleChange}
                   variant="outlined"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      borderRadius: '12px',
-                      backgroundColor: 'white',
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "12px",
+                      backgroundColor: "white",
                     },
                   }}
                 />
@@ -77,9 +79,9 @@ export default function ContactSection() {
                   onChange={handleChange}
                   variant="outlined"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      borderRadius: '12px',
-                      backgroundColor: 'white',
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "12px",
+                      backgroundColor: "white",
                     },
                   }}
                 />
@@ -121,7 +123,8 @@ export default function ContactSection() {
             <div className="bg-white rounded-2xl p-6">
               <h4 className="font-bold mb-2">Let&apos;s get social</h4>
               <p className="text-sm text-text-secondary">
-                Follow us on social media to stay updated with our latest projects and innovations.
+                Follow us on social media to stay updated with our latest
+                projects and innovations.
               </p>
             </div>
           </div>
@@ -130,4 +133,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
