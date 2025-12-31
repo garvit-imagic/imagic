@@ -113,6 +113,10 @@ export default function ServicesDesktop() {
                     alt="Expand"
                     width={38}
                     height={38}
+                    style={{
+                      transform: expanded === `panel${index}` ? "rotate(45deg)" : "rotate(0deg)",
+                      transition: "transform 0.3s ease",
+                    }}
                   />
                 }
                 sx={{
@@ -123,7 +127,6 @@ export default function ServicesDesktop() {
                   },
                   "& .MuiAccordionSummary-expandIconWrapper": {
                     color: "#BEE56E",
-                    rotate: expanded ? "45deg" : "0deg",
                   },
                 }}
               >

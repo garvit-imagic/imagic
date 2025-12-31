@@ -110,10 +110,14 @@ export default function ServicesMobile() {
                     alt="Expand"
                     width={26}
                     height={26}
+                    style={{
+                      transform: expanded === `panel${index}` ? "rotate(45deg)" : "rotate(0deg)",
+                      transition: "transform 0.3s ease",
+                    }}
                   />
                 }
                 sx={{
-                  padding: "20px 10px 20px 10px",
+                  padding: "20px 10px",
                   "& .MuiAccordionSummary-content": {
                     margin: "0",
                   },
