@@ -111,7 +111,10 @@ export default function ServicesMobile() {
                     width={26}
                     height={26}
                     style={{
-                      transform: expanded === `panel${index}` ? "rotate(45deg)" : "rotate(0deg)",
+                      transform:
+                        expanded === `panel${index}`
+                          ? "rotate(45deg)"
+                          : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                     }}
                   />
@@ -161,4 +164,3 @@ export default function ServicesMobile() {
     </div>
   );
 }
-

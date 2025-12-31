@@ -114,7 +114,10 @@ export default function ServicesDesktop() {
                     width={38}
                     height={38}
                     style={{
-                      transform: expanded === `panel${index}` ? "rotate(45deg)" : "rotate(0deg)",
+                      transform:
+                        expanded === `panel${index}`
+                          ? "rotate(45deg)"
+                          : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                     }}
                   />
