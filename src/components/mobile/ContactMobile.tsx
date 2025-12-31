@@ -77,6 +77,12 @@ export default function ContactMobile() {
                 },
                 "& .MuiInputLabel-root": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                  color: "#000000",
+                  fontSize: "18px",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#000000",
+                  fontSize: "18px",
                 },
                 "& .MuiInputBase-input": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
@@ -104,6 +110,12 @@ export default function ContactMobile() {
                 },
                 "& .MuiInputLabel-root": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                  color: "#000000",
+                  fontSize: "18px",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#000000",
+                  fontSize: "18px",
                 },
                 "& .MuiInputBase-input": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
@@ -132,6 +144,12 @@ export default function ContactMobile() {
                 },
                 "& .MuiInputLabel-root": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                  color: "#000000",
+                  fontSize: "18px",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#000000",
+                  fontSize: "18px",
                 },
                 "& .MuiInputBase-input": {
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
