@@ -121,8 +121,12 @@ export default function ServicesMobile() {
                 }
                 sx={{
                   padding: "20px 10px",
+                  minHeight: "unset !important",
                   "& .MuiAccordionSummary-content": {
-                    margin: "0",
+                    margin: "0 !important",
+                  },
+                  "& .MuiAccordionSummary-content.Mui-expanded": {
+                    margin: "0 !important",
                   },
                   "& .MuiAccordionSummary-expandIconWrapper": {
                     color: "#BEE56E",
