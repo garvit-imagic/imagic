@@ -76,8 +76,8 @@ export default function ServicesDesktop() {
               justifySelf: "flex-end",
             }}
           >
-            Across sectors it&apos;s the constant — the bridge between vision and
-            design, and the people each idea is meant to inspire, ultimately
+            Across sectors it&apos;s the constant — the bridge between vision
+            and design, and the people each idea is meant to inspire, ultimately
             driving real-world impact.
           </p>
         </div>
@@ -162,4 +162,3 @@ export default function ServicesDesktop() {
     </div>
   );
 }
-
