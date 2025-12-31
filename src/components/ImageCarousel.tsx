@@ -1,97 +1,175 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import MobileStepper from '@mui/material/MobileStepper';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import Carousel from "react-material-ui-carousel";
+import Image from "next/image";
+import { Paper } from "@mui/material";
 
+// Carousel items - can be expanded with more project images
 const carouselItems = [
   {
-    title: 'Space Exploration',
-    description: 'Discover the universe with cutting-edge technology',
+    id: 1,
+    image: "/D7.jpg",
+    mobileImage: "/M7.jpg",
+    alt: "Project showcase 1",
   },
   {
-    title: 'Innovation',
-    description: 'Pushing boundaries of what\'s possible',
+    id: 2,
+    image: "/D7.jpg",
+    mobileImage: "/M7.jpg",
+    alt: "Project showcase 1",
   },
   {
-    title: 'Future Technology',
-    description: 'Building tomorrow\'s solutions today',
+    id: 3,
+    image: "/D7.jpg",
+    mobileImage: "/M7.jpg",
+    alt: "Project showcase 1",
   },
+  // Add more carousel items here as needed
 ];
 
 export default function ImageCarousel() {
-  const [activeStep, setActiveStep] = useState(0);
-  const maxSteps = carouselItems.length;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
   return (
-    <section className="bg-dark py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="relative rounded-2xl overflow-hidden">
-          <div className="relative w-full aspect-video bg-gradient-to-br from-gray-900 via-black to-gray-800">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white p-8">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                  {carouselItems[activeStep].title}
-                </h3>
-                <p className="text-lg text-white/80">
-                  {carouselItems[activeStep].description}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-            <MobileStepper
-              steps={maxSteps}
-              position="static"
-              activeStep={activeStep}
+    <section className="relative w-full">
+      {/* Desktop Carousel */}
+      <div className="hidden md:block">
+        <Carousel
+          autoPlay={true}
+          interval={5000}
+          animation="slide"
+          duration={800}
+          indicators={true}
+          navButtonsAlwaysVisible={false}
+          cycleNavigation={true}
+          swipe={true}
+          indicatorIconButtonProps={{
+            style: {
+              padding: "8px",
+              color: "#FFFFFF",
+              opacity: 0.5,
+            },
+          }}
+          activeIndicatorIconButtonProps={{
+            style: {
+              color: "#8CC63F",
+              opacity: 1,
+            },
+          }}
+          indicatorContainerProps={{
+            style: {
+              marginTop: "20px",
+              position: "absolute",
+              bottom: "30px",
+              zIndex: 2,
+            },
+          }}
+          navButtonsProps={{
+            style: {
+              backgroundColor: "rgba(255, 255, 255, 0.3)",
+              borderRadius: "50%",
+              padding: "10px",
+              margin: "0 20px",
+            },
+          }}
+          navButtonsWrapperProps={{
+            style: {
+              top: "50%",
+              transform: "translateY(-50%)",
+            },
+          }}
+        >
+          {carouselItems.map((item) => (
+            <Paper
+              key={item.id}
+              elevation={0}
               sx={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                borderRadius: '12px',
-                padding: '8px 16px',
-                '& .MuiMobileStepper-dot': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                },
-                '& .MuiMobileStepper-dotActive': {
-                  backgroundColor: '#CDFF3C',
-                },
+                position: "relative",
+                width: "100%",
+                height: "auto",
+                overflow: "hidden",
+                backgroundColor: "transparent",
               }}
-              nextButton={
-                <Button
-                  size="small"
-                  onClick={handleNext}
-                  disabled={activeStep === maxSteps - 1}
-                  sx={{ color: 'white' }}
-                >
-                  <KeyboardArrowRight />
-                </Button>
-              }
-              backButton={
-                <Button
-                  size="small"
-                  onClick={handleBack}
-                  disabled={activeStep === 0}
-                  sx={{ color: 'white' }}
-                >
-                  <KeyboardArrowLeft />
-                </Button>
-              }
-            />
-          </div>
-        </div>
+            >
+              <div className="relative w-full h-auto">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto object-cover"
+                  priority={item.id === 1}
+                />
+              </div>
+            </Paper>
+          ))}
+        </Carousel>
+      </div>
+
+      {/* Mobile Carousel */}
+      <div className="block md:hidden">
+        <Carousel
+          autoPlay={true}
+          interval={5000}
+          animation="slide"
+          duration={800}
+          indicators={true}
+          navButtonsAlwaysVisible={false}
+          cycleNavigation={true}
+          swipe={true}
+          indicatorIconButtonProps={{
+            style: {
+              padding: "6px",
+              color: "#FFFFFF",
+              opacity: 0.5,
+            },
+          }}
+          activeIndicatorIconButtonProps={{
+            style: {
+              color: "#8CC63F",
+              opacity: 1,
+            },
+          }}
+          indicatorContainerProps={{
+            style: {
+              marginTop: "15px",
+              position: "absolute",
+              bottom: "20px",
+              zIndex: 2,
+            },
+          }}
+          navButtonsProps={{
+            style: {
+              backgroundColor: "rgba(255, 255, 255, 0.3)",
+              borderRadius: "50%",
+              padding: "8px",
+            },
+          }}
+        >
+          {carouselItems.map((item) => (
+            <Paper
+              key={item.id}
+              elevation={0}
+              sx={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+                overflow: "hidden",
+                backgroundColor: "transparent",
+              }}
+            >
+              <div className="relative w-full h-auto">
+                <Image
+                  src={item.mobileImage}
+                  alt={item.alt}
+                  width={768}
+                  height={1024}
+                  className="w-full h-auto object-cover"
+                  priority={item.id === 1}
+                />
+              </div>
+            </Paper>
+          ))}
+        </Carousel>
       </div>
     </section>
   );
 }
-
