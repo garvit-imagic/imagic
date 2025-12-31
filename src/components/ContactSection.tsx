@@ -27,7 +27,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Let's <span className="text-primary">Talk.</span>
+            Let&apos;s <span className="text-primary">Talk.</span>
           </h2>
         </div>
 
@@ -35,7 +35,7 @@ export default function ContactSection() {
           <div className="flex flex-col gap-6">
             <div>
               <h3 className="text-xl md:text-2xl font-bold mb-4">
-                Tell us more about what you're building?
+                Tell us more about what you&apos;re building?
               </h3>
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <TextField
@@ -119,7 +119,7 @@ export default function ContactSection() {
             </div>
 
             <div className="bg-white rounded-2xl p-6">
-              <h4 className="font-bold mb-2">Let's get social</h4>
+              <h4 className="font-bold mb-2">Let&apos;s get social</h4>
               <p className="text-sm text-text-secondary">
                 Follow us on social media to stay updated with our latest projects and innovations.
               </p>

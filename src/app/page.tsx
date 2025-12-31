@@ -7,7 +7,6 @@ import StatsSection from "@/components/StatsSection";
 import ImageCarousel from "@/components/ImageCarousel";
 import ServicesAccordion from "@/components/ServicesAccordion";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <ImageCarousel />
       <ServicesAccordion />
       <ContactSection />
-      <Footer />
     </main>
   );
 }
