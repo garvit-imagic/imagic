@@ -24,52 +24,98 @@ export default function NavbarMobile() {
   };
 
   const drawer = (
-    <div className="w-64 h-full bg-white">
-      <div className="flex justify-end p-4">
-        <IconButton onClick={handleDrawerToggle}>
-          <CloseIcon />
+    <div className="h-full bg-white flex flex-col overflow-hidden">
+      {/* Header with logo and close button */}
+      <div className="flex items-center justify-between px-6 py-6 border-b border-[#DEDEDE] flex-shrink-0">
+        <Image
+          src="/assets/nav-logo-mobile.jpg"
+          alt="IMAGIC CREATIVES"
+          width={145}
+          height={28}
+          className="h-[28px] w-[145px]"
+        />
+        <IconButton
+          onClick={handleDrawerToggle}
+          sx={{
+            color: "#000",
+            padding: "8px",
+          }}
+        >
+          <CloseIcon sx={{ fontSize: 24 }} />
         </IconButton>
       </div>
-      <List>
-        {navLinks.map((link) => (
-          <ListItem key={link.label} disablePadding>
-            <ListItemButton href={link.href} onClick={handleDrawerToggle}>
-              <ListItemText
-                primary={link.label}
+
+      {/* Navigation Links */}
+      <div className="flex-1 overflow-y-auto">
+        <List sx={{ paddingTop: "32px", paddingBottom: "24px" }}>
+          {navLinks.map((link, index) => (
+            <ListItem key={link.label} disablePadding>
+              <ListItemButton
+                href={link.href}
+                onClick={handleDrawerToggle}
                 sx={{
-                  "& .MuiListItemText-primary": {
-                    fontSize: "16px",
-                    fontWeight: 500,
+                  paddingY: "16px",
+                  paddingX: "32px",
+                  "&:hover": {
+                    backgroundColor: "#F5F5F5",
                   },
                 }}
-              />
-            </ListItemButton>
-          </ListItem>
-        ))}
-        <ListItem sx={{ padding: "16px" }}>
-          <button
-            className="font-normal text-center"
+              >
+                <ListItemText
+                  primary={link.label}
+                  sx={{
+                    "& .MuiListItemText-primary": {
+                      fontFamily: "Manrope, sans-serif",
+                      fontSize: "19px",
+                      fontWeight: 500,
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    },
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </div>
+
+      {/* Bottom Section with Button */}
+      <div className="px-6 pb-8 border-t border-[#DEDEDE] pt-6 flex-shrink-0">
+        <button
+          onClick={handleDrawerToggle}
+          className="font-normal text-center w-full"
+          style={{
+            height: "56px",
+            borderRadius: "8px",
+            background: "#BEE56E",
+            boxShadow: "5px 5px 0px 0px #81A733",
+            fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+            fontSize: "18px",
+            lineHeight: "100%",
+            letterSpacing: "0%",
+            color: "#000000",
+          }}
+        >
+          Magic Space
+        </button>
+
+        {/* Optional: Add contact info or social links */}
+        <div className="mt-6 text-center">
+          <p
             style={{
-              borderRadius: "8px",
-              paddingTop: "16px",
-              paddingRight: "40px",
-              paddingBottom: "16px",
-              paddingLeft: "40px",
-              background: "#BEE56E",
-              boxShadow: "5px 5px 0px 0px #81A733",
               fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "18px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
+              fontSize: "12px",
+              color: "#666666",
+              lineHeight: "150%",
             }}
           >
-            Magic Space
-          </button>
-        </ListItem>
-      </List>
+            © 2026 Imagic Creatives
+          </p>
+        </div>
+      </div>
     </div>
   );
-
   return (
     <>
       <AppBar
@@ -126,7 +172,8 @@ export default function NavbarMobile() {
         }}
         sx={{
           "& .MuiDrawer-paper": {
-            width: 280,
+            width: 320,
+            boxShadow: "-4px 0 20px rgba(0, 0, 0, 0.1)",
           },
         }}
       >
