@@ -69,6 +69,9 @@ export default function ContactMobile() {
               onChange={handleChange}
               variant="standard"
               sx={{
+                "& .MuiInput-root": {
+                  marginTop: "40px",
+                },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "#CACACA",
                 },
@@ -102,6 +105,9 @@ export default function ContactMobile() {
               onChange={handleChange}
               variant="standard"
               sx={{
+                "& .MuiInput-root": {
+                  marginTop: "40px",
+                },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "#CACACA",
                 },
@@ -136,6 +142,9 @@ export default function ContactMobile() {
               onChange={handleChange}
               variant="standard"
               sx={{
+                "& .MuiInput-root": {
+                  marginTop: "40px",
+                },
                 "& .MuiInput-underline:before": {
                   borderBottomColor: "#CACACA",
                 },
@@ -159,26 +168,28 @@ export default function ContactMobile() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="font-normal text-center mt-[48px] w-full"
-            style={{
-              height: "60px",
-              borderRadius: "8px",
-              paddingTop: "16px",
-              paddingRight: "40px",
-              paddingBottom: "16px",
-              paddingLeft: "40px",
-              background: "#BEE56E",
-              boxShadow: "5px 5px 0px 0px #81A733",
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "18px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Send Message!
-          </button>
+          <div className="flex justify-center mt-[48px]">
+            <button
+              type="submit"
+              className="font-normal text-center"
+              style={{
+                height: "60px",
+                borderRadius: "8px",
+                paddingTop: "16px",
+                paddingRight: "40px",
+                paddingBottom: "16px",
+                paddingLeft: "40px",
+                background: "#BEE56E",
+                boxShadow: "5px 5px 0px 0px #81A733",
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "18px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              Send Message!
+            </button>
+          </div>
         </form>
 
         <h3
@@ -195,15 +206,15 @@ export default function ContactMobile() {
         </h3>
 
         <div
-          className="pt-[42px] mx-auto"
+          className="mt-[42px] mx-auto"
           style={{
-            width: "15%",
+            width: "25%",
             borderTop: "2px solid #BEE56E",
           }}
         />
 
         <p
-          className="pt-[42.40px] font-light text-center"
+          className="mt-[42.40px] font-light text-center"
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "18px",
@@ -220,7 +231,7 @@ export default function ContactMobile() {
         </p>
 
         <h3
-          className="pt-[101px] font-bold text-center"
+          className="mt-[101px] font-bold text-center"
           style={{
             fontFamily: "Manrope, sans-serif",
             fontSize: "32px",
@@ -233,15 +244,15 @@ export default function ContactMobile() {
         </h3>
 
         <div
-          className="pt-[42px] mx-auto"
+          className="mt-[42px] mx-auto"
           style={{
-            width: "15%",
+            width: "25%",
             borderTop: "2px solid #BEE56E",
           }}
         />
 
         <p
-          className="pt-[42.40px] font-light text-center"
+          className="mt-[42.40px] font-light text-center"
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "18px",
@@ -256,7 +267,7 @@ export default function ContactMobile() {
         </p>
 
         <button
-          className="font-normal text-center mt-[64.86px] w-full"
+          className="font-normal text-center mt-[64.86px]"
           style={{
             height: "60px",
             borderRadius: "8px",
@@ -276,7 +287,7 @@ export default function ContactMobile() {
         </button>
 
         <div
-          className="pt-[120px] pb-[43px] text-center font-light"
+          className="mt-[120px] pb-[43px] text-center font-light"
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "14px",
@@ -290,4 +301,3 @@ export default function ContactMobile() {
     </div>
   );
 }
-

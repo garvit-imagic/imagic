@@ -80,7 +80,7 @@ export default function ServicesMobile() {
         </p>
       </div>
 
-      <div className="mt-[50px] mx-[45px] pb-[80px]">
+      <div className="mt-[50px] mx-[45px]">
         <div className="flex flex-col">
           {services.map((service, index) => (
             <Accordion
@@ -168,3 +168,4 @@ export default function ServicesMobile() {
     </div>
   );
 }
+
