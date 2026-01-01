@@ -125,6 +125,7 @@ export default function NavbarMobile() {
           backgroundColor: "white",
           borderBottom: "1px solid #DEDEDE",
           boxShadow: "none",
+          display: { xs: "block", md: "none" },
         }}
       >
         <Toolbar

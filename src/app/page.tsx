@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import CompanyLogos from "@/components/CompanyLogos";
-import FeatureCards from "@/components/FeatureCards";
+import ProjectsSection from "@/components/ProjectsSection";
 import StatsSection from "@/components/StatsSection";
 import ImageCarousel from "@/components/ImageCarousel";
 import ServicesAccordion from "@/components/ServicesAccordion";
@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <MarqueeSection />
       <CompanyLogos />
-      <FeatureCards />
+      <ProjectsSection />
       <StatsSection />
       <ImageCarousel />
       <ServicesAccordion />

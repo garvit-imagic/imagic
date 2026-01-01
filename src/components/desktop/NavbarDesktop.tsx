@@ -15,6 +15,7 @@ export default function NavbarDesktop() {
         backgroundColor: "white",
         borderBottom: "1px solid #DEDEDE",
         boxShadow: "none",
+        display: { xs: "none", md: "block" },
       }}
     >
       <Toolbar

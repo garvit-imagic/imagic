@@ -178,7 +178,7 @@ export default function ContactDesktop() {
 
               <button
                 type="submit"
-                className="font-normal text-[28px] leading-[100%] text-center mt-[30px]"
+                className="font-normal text-[28px] leading-[100%] text-center mt-[55px]"
                 style={{
                   width: "fit-content",
                   height: "70px",
