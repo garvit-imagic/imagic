@@ -11,15 +11,11 @@ export default function InfoCardDesktop({
 }: InfoCardDesktopProps) {
   return (
     <div
-      className="bg-white flex flex-col"
+      className="bg-white flex flex-col w-full"
       style={{
-        width: "266.14px",
         height: "337.99px",
         borderRadius: "19px",
-        marginLeft: "33.27px",
-        marginTop: "32.2px",
-        marginBottom: "31.2px",
-        marginRight: "14.55px",
+        padding: "32.2px 14.55px 31.2px 33.27px",
       }}
     >
       <div className="flex flex-col justify-between h-full">

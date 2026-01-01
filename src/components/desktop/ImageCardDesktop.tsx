@@ -28,7 +28,7 @@ export default function ImageCardDesktop({
   };
 
   const cardStyle = {
-    width: "313.96px",
+    width: "100%",
     height: "401.43px",
     borderRadius: "30px",
     backgroundColor: "#8DD461",

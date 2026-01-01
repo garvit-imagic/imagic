@@ -144,7 +144,7 @@ export default function ContactDesktop() {
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     letterSpacing: "0%",
                     color: " #050505",
-                    marginBottom: "10px",
+                    marginBottom: "9px",
                   }}
                 >
                   Your Message
@@ -153,7 +153,7 @@ export default function ContactDesktop() {
                   fullWidth
                   name="message"
                   multiline
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   variant="standard"
@@ -178,7 +178,7 @@ export default function ContactDesktop() {
 
               <button
                 type="submit"
-                className="font-normal text-[28px] leading-[100%] text-center mt-[55px]"
+                className="font-normal text-[28px] leading-[100%] text-center mt-[52px]"
                 style={{
                   width: "fit-content",
                   height: "70px",
