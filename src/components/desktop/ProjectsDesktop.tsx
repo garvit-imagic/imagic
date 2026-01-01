@@ -42,7 +42,7 @@ export default function ProjectsDesktop() {
               gridColumn: "3/4",
             }}
           />
-           <div
+          <div
             style={{
               width: "100%",
               height: "401.43px",
@@ -144,4 +144,3 @@ export default function ProjectsDesktop() {
     </div>
   );
 }
-
