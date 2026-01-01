@@ -27,7 +27,7 @@ export default function NavbarDesktop() {
         }}
       >
         <div className="flex items-center justify-between w-full">
-          <Link href="/" className="flex items-center  py-[45px]">
+          <Link href="/" className="flex items-center  py-[25px]">
             <Image
               src="/assets/nav-logo.svg"
               alt="IMAGIC CREATIVES"
