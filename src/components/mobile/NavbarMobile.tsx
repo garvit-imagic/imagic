@@ -13,17 +13,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
-import Button from "./ui/Button";
-import type { NavLink } from "@/types";
+import Button from "../ui/Button";
+import { navLinks } from "@/constants/navigation";
 
-const navLinks: NavLink[] = [
-  { label: "Culture", href: "#culture" },
-  { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-];
-
-export default function Navbar() {
+export default function NavbarMobile() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -54,9 +47,24 @@ export default function Navbar() {
           </ListItem>
         ))}
         <ListItem sx={{ padding: "16px" }}>
-          <Button variant="primary" size="md" className="w-full">
+          <button
+            className="font-normal text-center"
+            style={{
+              borderRadius: "8px",
+              paddingTop: "16px",
+              paddingRight: "40px",
+              paddingBottom: "16px",
+              paddingLeft: "40px",
+              background: "#BEE56E",
+              boxShadow: "5px 5px 0px 0px #81A733",
+              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+              fontSize: "18px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+            }}
+          >
             Magic Space
-          </Button>
+          </button>
         </ListItem>
       </List>
     </div>
@@ -69,16 +77,15 @@ export default function Navbar() {
         elevation={0}
         sx={{
           backgroundColor: "white",
-          borderBottom: "none",
+          borderBottom: "1px solid #DEDEDE",
           boxShadow: "none",
         }}
       >
         <Toolbar
-          className="max-w-[1400px] w-full mx-auto px-6 lg:px-12"
+          className="w-full py-[16px]"
           sx={{
-            minHeight: { xs: "70px", md: "80px" },
-            paddingLeft: { xs: "24px", md: "48px" },
-            paddingRight: { xs: "24px", md: "48px" },
+            paddingLeft: "24px",
+            paddingRight: "30px",
           }}
         >
           <div className="flex items-center justify-between w-full">
@@ -88,40 +95,16 @@ export default function Navbar() {
                 alt="IMAGIC CREATIVES"
                 width={145}
                 height={28}
-                className="h-[28px] w-[145px] md:hidden"
-                priority
-              />
-              <Image
-                src="/assets/nav-logo.svg"
-                alt="IMAGIC CREATIVES"
-                width={200}
-                height={50}
-                className="hidden md:block h-12 w-auto"
+                className="h-[28px] w-[145px]"
                 priority
               />
             </Link>
-
-            <nav className="hidden md:flex items-center gap-12">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-black text-base font-normal hover:text-gray-600 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button variant="primary" size="md" className="px-8 py-3">
-                Magic Space
-              </Button>
-            </nav>
 
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              className="md:hidden"
               sx={{
                 color: "#666",
                 padding: "8px",
