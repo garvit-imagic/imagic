@@ -32,3 +32,4 @@ export default function ImageCardMobile({ image }: ImageCardMobileProps) {
   return <div style={cardStyle}>{renderContent()}</div>;
 }
 
+
