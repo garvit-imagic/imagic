@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollAnimation from "./ScrollAnimation";
+
 export default function MarqueeSection() {
   // Marquee items with numbers and 6 spaces between number and text
   const marqueeItems = [
@@ -13,7 +15,8 @@ export default function MarqueeSection() {
   return (
     <section className="w-full relative z-20">
       {/* Desktop Marquee */}
-      <div className="hidden md:block">
+      <ScrollAnimation direction="up" distance={16} delay={0.2}>
+        <div className="hidden md:block">
         {/* Marquee Container with 2px border */}
         <div className="w-full h-[56px] border-b-2 border-black overflow-hidden relative bg-white">
           <div className="marquee-content-desktop flex items-center h-full">
@@ -42,10 +45,12 @@ export default function MarqueeSection() {
         <div className="w-full px-[40px] bg-transparent">
           <div className="h-[9px] bg-black w-full"></div>
         </div>
-      </div>
+        </div>
+      </ScrollAnimation>
 
       {/* Mobile Marquee */}
-      <div className="md:hidden">
+      <ScrollAnimation direction="up" distance={12} delay={0.24}>
+        <div className="md:hidden">
         {/* Marquee Container with 1px border */}
         <div className="w-full h-[46px] border-b border-black overflow-hidden relative bg-white">
           <div className="marquee-content-mobile flex items-center h-full">
@@ -74,7 +79,8 @@ export default function MarqueeSection() {
         <div className="w-full px-[20px] bg-transparent">
           <div className="h-[3px] bg-black w-full"></div>
         </div>
-      </div>
+        </div>
+      </ScrollAnimation>
 
       <style jsx>{`
         .marquee-content-desktop {

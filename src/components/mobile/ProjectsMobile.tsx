@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { projects } from "@/data/projects";
 import InfoCardMobile from "./InfoCardMobile";
 import ImageCardMobile from "./ImageCardMobile";
+import ScrollAnimation from "../ScrollAnimation";
 
 export default function ProjectsMobile() {
   const [showAll, setShowAll] = useState(false);
@@ -42,23 +43,27 @@ export default function ProjectsMobile() {
     return index === 0 ? project.frontImage : project.backImage;
   };
 
+  const itemDelay = (index: number) => 0.24 + index * 0.08;
+
   return (
     <div className="md:hidden bg-white">
       <div className="mx-[42.31px] mt-[80.68px]">
-        <h2
-          className="font-bold text-center mb-[90px]"
-          style={{
-            fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-            fontSize: "32px",
-            lineHeight: "100%",
-            letterSpacing: "0%",
-          }}
-        >
-          Designed to <span style={{ color: "#8CC63F" }}>Deliver</span> —
-          Literally.
-        </h2>
+        <ScrollAnimation direction="up" distance={20} delay={0.22}>
+          <h2
+            className="font-bold text-center mb-[90px]"
+            style={{
+              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+            }}
+          >
+            Designed to <span style={{ color: "#8CC63F" }}>Deliver</span> —
+            Literally.
+          </h2>
+        </ScrollAnimation>
 
-        {visibleProjects.map((project) => (
+        {visibleProjects.map((project, index) => (
           <div
             key={project.id}
             onMouseEnter={() => handleInteraction(project.id, true)}
@@ -66,42 +71,56 @@ export default function ProjectsMobile() {
             onTouchStart={() => handleInteraction(project.id, true)}
             onTouchEnd={() => handleInteraction(project.id, false)}
           >
-            <div
-              style={{
-                transition: "opacity 0.5s ease-in-out",
-              }}
+            <ScrollAnimation
+              direction="up"
+              distance={18}
+              delay={itemDelay(index)}
             >
-              <ImageCardMobile image={getCurrentImage(project)} />
-            </div>
+              <div
+                style={{
+                  transition: "opacity 0.5s ease-in-out",
+                }}
+              >
+                <ImageCardMobile image={getCurrentImage(project)} />
+              </div>
+            </ScrollAnimation>
 
-            <InfoCardMobile
-              number={project.number}
-              title={project.title}
-              description={project.description}
-            />
+            <ScrollAnimation
+              direction="up"
+              distance={16}
+              delay={itemDelay(index) + 0.06}
+            >
+              <InfoCardMobile
+                number={project.number}
+                title={project.title}
+                description={project.description}
+              />
+            </ScrollAnimation>
           </div>
         ))}
 
         <div className="flex justify-center mb-[71.62px]">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="font-normal text-center"
-            style={{
-              borderRadius: "8px",
-              paddingTop: "10px",
-              paddingRight: "30px",
-              paddingBottom: "10px",
-              paddingLeft: "30px",
-              background: "#BEE56E",
-              boxShadow: "5px 5px 0px 0px #81A733",
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "18px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            {showAll ? "View Less" : "View More"}
-          </button>
+          <ScrollAnimation direction="up" distance={16} delay={0.4}>
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="font-normal text-center"
+              style={{
+                borderRadius: "8px",
+                paddingTop: "10px",
+                paddingRight: "30px",
+                paddingBottom: "10px",
+                paddingLeft: "30px",
+                background: "#BEE56E",
+                boxShadow: "5px 5px 0px 0px #81A733",
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "18px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              {showAll ? "View Less" : "View More"}
+            </button>
+          </ScrollAnimation>
         </div>
       </div>
     </div>

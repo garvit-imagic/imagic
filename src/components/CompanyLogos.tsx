@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollAnimation from "./ScrollAnimation";
 
 export default function CompanyLogos() {
   return (
@@ -18,31 +19,35 @@ export default function CompanyLogos() {
 
         {/* Content */}
         <div className="relative z-10 pt-[210px] pb-[100px]">
-          <div className="flex items-center justify-center">
-            <Image
-              src="/assets/D4.svg"
-              alt="Company Logos"
-              width={1200}
-              height={400}
-              className="w-auto h-auto max-w-full"
-              priority
-            />
-          </div>
+          <ScrollAnimation direction="down" distance={28} delay={0.24}>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/assets/D4.svg"
+                alt="Company Logos"
+                width={1200}
+                height={400}
+                className="w-auto h-auto max-w-full"
+                priority
+              />
+            </div>
+          </ScrollAnimation>
         </div>
       </div>
 
       {/* Mobile */}
       <div className="md:hidden bg-white">
-        <div className="pl-[47px] pt-[49px] pb-[49px]">
-          <Image
-            src="/assets/M4.svg"
-            alt="Company Logos"
-            width={600}
-            height={300}
-            className="w-auto h-auto max-w-full"
-            priority
-          />
-        </div>
+        <ScrollAnimation direction="down" distance={22} delay={0.26}>
+          <div className="pl-[47px] pt-[49px] pb-[49px]">
+            <Image
+              src="/assets/M4.svg"
+              alt="Company Logos"
+              width={600}
+              height={300}
+              className="w-auto h-auto max-w-full"
+              priority
+            />
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
