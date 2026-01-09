@@ -1,11 +1,12 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 interface ImageCardMobileProps {
   image?: string;
 }
 
 export default function ImageCardMobile({ image }: ImageCardMobileProps) {
-  const cardStyle = {
+  const cardStyle: CSSProperties = {
     width: "305.39px",
     height: "388.96px",
     borderRadius: "30px",
@@ -33,4 +34,3 @@ export default function ImageCardMobile({ image }: ImageCardMobileProps) {
 
   return <div style={cardStyle}>{renderContent()}</div>;
 }
-
