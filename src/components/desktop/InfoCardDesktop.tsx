@@ -14,6 +14,7 @@ export default function InfoCardDesktop({
       className="bg-white flex flex-col justify-between w-full"
       style={{
         borderRadius: "19px",
+        height: "100%",
         padding: "32.2px 14.55px 31.2px 33.27px",
       }}
     >

@@ -59,6 +59,9 @@ export default function NavbarMobile() {
                   "&:hover": {
                     backgroundColor: "#F5F5F5",
                   },
+                  "&:hover .MuiListItemText-primary": {
+                    color: "#8CC63F",
+                  },
                 }}
               >
                 <ListItemText
@@ -84,11 +87,10 @@ export default function NavbarMobile() {
       <div className="px-6 pb-8 border-t border-[#DEDEDE] pt-6 flex-shrink-0">
         <button
           onClick={handleDrawerToggle}
-          className="font-normal text-center w-full"
+          className="font-normal text-center w-full bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
           style={{
             height: "56px",
             borderRadius: "8px",
-            background: "#BEE56E",
             boxShadow: "5px 5px 0px 0px #81A733",
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "18px",
@@ -119,12 +121,16 @@ export default function NavbarMobile() {
   return (
     <>
       <AppBar
-        position="sticky"
+        position="fixed"
         elevation={0}
         sx={{
           backgroundColor: "white",
           borderBottom: "1px solid #DEDEDE",
           boxShadow: "none",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1300,
           display: { xs: "block", md: "none" },
         }}
       >
@@ -132,7 +138,7 @@ export default function NavbarMobile() {
           className="w-full py-[16px]"
           sx={{
             paddingLeft: "24px",
-            paddingRight: "30px",
+            paddingRight: "60px",
           }}
         >
           <div className="flex items-center justify-between w-full">
@@ -170,6 +176,7 @@ export default function NavbarMobile() {
         onClose={handleDrawerToggle}
         ModalProps={{
           keepMounted: true,
+          disableScrollLock: true,
         }}
         sx={{
           "& .MuiDrawer-paper": {

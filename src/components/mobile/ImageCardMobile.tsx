@@ -10,6 +10,8 @@ export default function ImageCardMobile({ image }: ImageCardMobileProps) {
     height: "388.96px",
     borderRadius: "30px",
     backgroundColor: "#8DD461",
+    position: "relative",
+    overflow: "hidden",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -31,5 +33,4 @@ export default function ImageCardMobile({ image }: ImageCardMobileProps) {
 
   return <div style={cardStyle}>{renderContent()}</div>;
 }
-
 

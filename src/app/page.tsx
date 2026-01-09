@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import CompanyLogos from "@/components/CompanyLogos";
@@ -11,7 +11,7 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-[80px]">
       <Navbar />
       <ScrollAnimation direction="up" distance={40}>
         <HeroSection />

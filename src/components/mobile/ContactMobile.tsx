@@ -64,8 +64,8 @@ export default function ContactMobile() {
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={16} delay={0.34}>
-          <form onSubmit={handleSubmit} className="w-full">
+        <ScrollAnimation direction="up" distance={16} delay={0.34} className="w-full">
+          <form onSubmit={handleSubmit} className="w-full  px-[24px]">
             <div className="pt-[46px]">
               <TextField
                 fullWidth
@@ -177,7 +177,7 @@ export default function ContactMobile() {
             <div className="flex justify-center mt-[48px]">
               <button
                 type="submit"
-                className="font-normal text-center"
+                className="font-normal text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                 style={{
                   height: "60px",
                   borderRadius: "8px",
@@ -185,7 +185,6 @@ export default function ContactMobile() {
                   paddingRight: "40px",
                   paddingBottom: "16px",
                   paddingLeft: "40px",
-                  background: "#BEE56E",
                   boxShadow: "5px 5px 0px 0px #81A733",
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                   fontSize: "18px",
@@ -224,7 +223,12 @@ export default function ContactMobile() {
           />
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={14} delay={0.52}>
+        <ScrollAnimation
+          direction="up"
+          distance={14}
+          delay={0.52}
+          className="w-full self-stretch"
+        >
           <p
             className="mt-[42.40px] font-light text-center"
             style={{
@@ -232,7 +236,7 @@ export default function ContactMobile() {
               fontSize: "18px",
               lineHeight: "100%",
               letterSpacing: "0%",
-              width: "85%",
+              width: "100%",
             }}
           >
             496, 8th main, West wing, Domlur
@@ -243,7 +247,12 @@ export default function ContactMobile() {
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={16} delay={0.58}>
+        <ScrollAnimation
+          direction="up"
+          distance={16}
+          delay={0.58}
+          className="w-full self-stretch"
+        >
           <h3
             className="mt-[101px] font-bold text-center"
             style={{
@@ -251,7 +260,7 @@ export default function ContactMobile() {
               fontSize: "32px",
               lineHeight: "100%",
               letterSpacing: "0%",
-              width: "90%",
+              width: "100%",
             }}
           >
             Let&apos;s get to work.
@@ -286,25 +295,30 @@ export default function ContactMobile() {
         </ScrollAnimation>
 
         <ScrollAnimation direction="up" distance={14} delay={0.76}>
-          <button
-            className="font-normal text-center mt-[64.86px]"
-            style={{
-              height: "60px",
-              borderRadius: "8px",
-              paddingTop: "16px",
-              paddingRight: "40px",
-              paddingBottom: "16px",
-              paddingLeft: "40px",
-              background: "#BEE56E",
-              boxShadow: "5px 5px 0px 0px #81A733",
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "18px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
+          <a
+            href="https://calendly.com/ashishkohli7787/30min"
+            target="_blank"
+            rel="noreferrer"
           >
-            Book a Meeting!
-          </button>
+            <button
+              className="font-normal text-center mt-[64.86px] bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
+              style={{
+                height: "60px",
+                borderRadius: "8px",
+                paddingTop: "16px",
+                paddingRight: "40px",
+                paddingBottom: "16px",
+                paddingLeft: "40px",
+                boxShadow: "5px 5px 0px 0px #81A733",
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "18px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              Book a Meeting!
+            </button>
+          </a>
         </ScrollAnimation>
 
         <ScrollAnimation direction="up" distance={12} delay={0.82}>

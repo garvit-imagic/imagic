@@ -178,7 +178,7 @@ export default function StatsDesktop() {
 
             <ScrollAnimation direction="up" distance={16} delay={0.44}>
               <button
-                className="font-normal text-center"
+                className="font-normal text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                 style={{
                   width: "408px",
                   height: "78px",
@@ -187,7 +187,6 @@ export default function StatsDesktop() {
                   paddingRight: "60px",
                   paddingBottom: "16px",
                   paddingLeft: "60px",
-                  background: "#BEE56E",
                   boxShadow: "7px 7px 0px 0px #81A733",
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                   fontSize: "34px",

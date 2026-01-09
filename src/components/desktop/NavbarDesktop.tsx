@@ -9,12 +9,16 @@ import { navLinks } from "@/constants/navigation";
 export default function NavbarDesktop() {
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       elevation={0}
       sx={{
         backgroundColor: "white",
         borderBottom: "1px solid #DEDEDE",
         boxShadow: "none",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1300,
         display: { xs: "none", md: "block" },
       }}
     >
@@ -43,18 +47,17 @@ export default function NavbarDesktop() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-medium text-[21px] leading-[100%] hover:text-gray-600 transition-colors"
+                className="font-medium text-[21px] leading-[100%] text-black hover:text-[#8CC63F] transition-colors"
                 style={{
                   fontFamily: "Manrope, sans-serif",
                   letterSpacing: "0%",
-                  color: "#000000",
                 }}
               >
                 {link.label}
               </a>
             ))}
             <button
-              className="font-normal text-[20px] leading-[100%] text-center whitespace-nowrap ml-[22px]"
+              className="font-normal text-[20px] leading-[100%] text-center whitespace-nowrap ml-[22px] bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
               style={{
                 width: "225px",
                 height: "62px",
@@ -63,7 +66,6 @@ export default function NavbarDesktop() {
                 paddingRight: "60px",
                 paddingBottom: "16px",
                 paddingLeft: "60px",
-                background: "#BEE56E",
                 boxShadow: "7px 7px 0px 0px #81A733",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                 letterSpacing: "0%",

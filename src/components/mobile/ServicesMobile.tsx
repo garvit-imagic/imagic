@@ -12,32 +12,32 @@ const services: AccordionItem[] = [
   {
     title: "SPACE",
     content:
-      "Advanced space technology solutions including satellite systems, orbital mechanics, and space exploration tools.",
+      "Our journey into outer space began with ISRO. In the late 1980s, we created ISRO's official logo mark, shaping a visual identity for India's aspirations beyond Earth. Since then, we've contributed to some of the most complex missions ever, from Mangalyaan's historic journey to Mars to the Chandrayaan series that captivated India and reshaped lunar science. We've even reached for the stars with the Aditya-L1 mission to observe the Sun. Across these milestones, we crafted visual narratives and technical interfaces that turned scientific achievement into a source of collective pride. This was never just about missions and design--it was about celebrating moments that captured the imagination of the people.",
   },
   {
     title: "TECHNOLOGY",
     content:
-      "Comprehensive technology solutions spanning AI, ML, cloud computing, and enterprise software development.",
+      "Our work in technology spans IT and electrical systems that sustain modern infrastructure. Over the years, we've collaborated with leading technology organisations to shape identities, platforms, and interfaces for intricate software, hardware, and large-scale electrical ecosystems. From enterprise IT solutions to mission-critical electrical networks, our work focused on reducing complexity and bringing clarity to innovation at scale. Throughout our work, we translated advanced engineering into intuitive visual systems that enabled trust and long-term growth. Our focus was never limited to technology--it was about making progress clear, accessible, and human.",
   },
   {
     title: "DEFENSE",
     content:
-      "Secure and robust defense systems with advanced encryption, threat detection, and mission-critical applications.",
+      "In close collaboration with organisations such as DRDO, ADA, and Bharat Electronics, our work in the defense sector has taken shape. Over the years, we've contributed to identities, communication systems, and interfaces supporting advanced research, aerospace programs, and high-stakes engineering. Defined by confidentiality and sophistication, these environments demand designs focused on clarity, accuracy, and long-term usability. Across each project, we translate highly specialised engineering and strategic intent into structured visual systems that reinforce trust and operational excellence. Beyond defense, this work defines capability grounded in responsibility and purpose.",
   },
   {
     title: "MEDICINE",
     content:
-      "Healthcare technology solutions including telemedicine platforms, medical imaging AI, and patient management systems.",
+      "Partnering with healthcare innovators, we transform detailed medical knowledge into clear, human-centered communication. From digital platforms to patient-facing interfaces, our designs make advanced research, treatments, and healthcare systems accessible and trustworthy. Every project translates scientific rigor into visual clarity, helping both professionals and patients engage with critical information effortlessly. This work is about making health, knowledge, and care understandable and accessible.",
   },
   {
     title: "LIFESTYLE",
     content:
-      "Consumer-focused applications and platforms that enhance daily life, from fitness tracking to smart home integration.",
+      "In lifestyle and consumer brands, we focus on crafting identities that resonate emotionally and live naturally in everyday life. From fashion to wellness, we design experiences that capture culture, aspiration, and individuality. Across every initiative, we transform ideas into stories that feel authentic and lived-in, connecting products to people in meaningful ways. Beyond aesthetics, it was about crafting experiences people genuinely want to join.",
   },
   {
     title: "ARTS & CULTURE",
     content:
-      "Digital solutions for museums, galleries, and cultural institutions. Virtual exhibitions and interactive experiences.",
+      "Working with designers, artists, cultural institutions, and creative communities, we bring stories to life--stories meant to be felt as much as seen. From exhibitions to distinctively designed photo journals, our work connects heritage and contemporary expression, crafting experiences that honour the past while engaging the present. Every collaboration transforms creativity and tradition into narratives that inspire, provoke, and connect audiences. Intuitively, this work is about cultivating dialogue, evoking emotion, and creating cultural resonance.",
   },
 ];
 
@@ -67,22 +67,7 @@ export default function ServicesMobile() {
           </h2>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={16} delay={0.28}>
-          <p
-            className="font-normal text-center mt-[50px] mx-[36px]"
-            style={{
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "14px",
-              lineHeight: "22px",
-              letterSpacing: "0%",
-              color: "#616161",
-            }}
-          >
-            Across sectors it&apos;s the constant — the bridge between vision
-            and design, and the people each idea is meant to inspire, ultimately
-            driving real-world impact.
-          </p>
-        </ScrollAnimation>
+        <div />
       </div>
 
       <div className="mt-[50px] mx-[45px]">

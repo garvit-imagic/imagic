@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ScrollAnimation from "../ScrollAnimation";
 
 export default function HeroDesktop() {
@@ -34,41 +35,15 @@ export default function HeroDesktop() {
             </ScrollAnimation>
 
             <ScrollAnimation direction="left" distance={32} delay={0.28}>
-              <div className="max-w-[700px] min-w-[600px] h-[431px] bg-[#E5E5E5] flex items-center justify-center">
-                <div className="relative w-64 h-64">
-                  <svg
-                    viewBox="0 0 200 200"
-                    className="w-full h-full"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="planeGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="0%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          style={{ stopColor: "#FFE135", stopOpacity: 1 }}
-                        />
-                        <stop
-                          offset="50%"
-                          style={{ stopColor: "#FFC107", stopOpacity: 1 }}
-                        />
-                        <stop
-                          offset="100%"
-                          style={{ stopColor: "#FF9800", stopOpacity: 1 }}
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M100 20 L180 100 L100 120 L100 180 L90 180 L90 120 L20 100 Z"
-                      fill="url(#planeGradient)"
-                    />
-                  </svg>
-                </div>
+              <div className="max-w-[700px] min-w-[600px] h-[431px] bg-transparent flex items-center justify-center">
+                <Image
+                  src="/assets/images/Hero-desktop1.svg"
+                  alt="Hero visual"
+                  width={700}
+                  height={431}
+                  className="w-full h-full object-contain"
+                  priority
+                />
               </div>
             </ScrollAnimation>
           </div>

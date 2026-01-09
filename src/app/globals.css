@@ -18,6 +18,11 @@
   * {
     @apply border-gray-200;
   }
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   body {
     @apply bg-white text-black;
   }

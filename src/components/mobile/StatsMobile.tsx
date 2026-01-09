@@ -1,6 +1,69 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import ScrollAnimation from "../ScrollAnimation";
 
 export default function StatsMobile() {
+  const metricsRef = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [projectsCount, setProjectsCount] = useState(1);
+  const [teamCount, setTeamCount] = useState(1);
+
+  useEffect(() => {
+    if (!metricsRef.current || hasAnimated) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.3, rootMargin: "0px" }
+    );
+
+    observer.observe(metricsRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!hasAnimated) {
+      return;
+    }
+
+    const durationMs = 1400;
+    const startTime = performance.now();
+    const startProjects = 1;
+    const endProjects = 10;
+    const startTeam = 1;
+    const endTeam = 20;
+
+    const tick = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / durationMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      const nextProjects = Math.round(
+        startProjects + (endProjects - startProjects) * eased
+      );
+      const nextTeam = Math.round(startTeam + (endTeam - startTeam) * eased);
+
+      setProjectsCount(Math.min(nextProjects, endProjects));
+      setTeamCount(Math.min(nextTeam, endTeam));
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    const frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [hasAnimated]);
+
   return (
     <div className="md:hidden relative">
       <div
@@ -46,7 +109,10 @@ export default function StatsMobile() {
         </ScrollAnimation>
 
         <ScrollAnimation direction="up" distance={16} delay={0.38}>
-          <div className="flex flex-col items-center mt-[60px]">
+          <div
+            ref={metricsRef}
+            className="flex flex-col items-center mt-[60px]"
+          >
             <p
               className="font-normal text-center"
               style={{
@@ -67,7 +133,7 @@ export default function StatsMobile() {
                 letterSpacing: "0%",
               }}
             >
-              10K<span style={{ color: "#8CC63F" }}>+</span>
+              {projectsCount}K<span style={{ color: "#8CC63F" }}>+</span>
             </div>
           </div>
         </ScrollAnimation>
@@ -94,7 +160,8 @@ export default function StatsMobile() {
                 letterSpacing: "0%",
               }}
             >
-              20<span style={{ color: "#8CC63F" }}>+</span>
+              {teamCount}
+              <span style={{ color: "#8CC63F" }}>+</span>
             </div>
           </div>
         </ScrollAnimation>

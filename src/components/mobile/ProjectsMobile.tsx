@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { projects } from "@/data/projects";
 import InfoCardMobile from "./InfoCardMobile";
 import ImageCardMobile from "./ImageCardMobile";
@@ -12,14 +12,57 @@ export default function ProjectsMobile() {
     [key: string]: number;
   }>({});
   const [isPaused, setIsPaused] = useState<{ [key: string]: boolean }>({});
+  const [inView, setInView] = useState<{ [key: string]: boolean }>({});
+  const itemRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const visibleProjects = showAll ? projects : projects.slice(0, 2);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") {
+      const fallback: { [key: string]: boolean } = {};
+      visibleProjects.forEach((project) => {
+        fallback[project.id] = true;
+      });
+      setInView((prev) => ({ ...prev, ...fallback }));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLDivElement;
+          const projectId = target.dataset.projectId;
+          if (!projectId) {
+            return;
+          }
+          setInView((prev) => ({ ...prev, [projectId]: entry.isIntersecting }));
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -20% 0px" }
+    );
+
+    visibleProjects.forEach((project) => {
+      const ref = itemRefs.current[project.id];
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [visibleProjects]);
 
   useEffect(() => {
     const intervals: { [key: string]: NodeJS.Timeout } = {};
 
     visibleProjects.forEach((project) => {
-      if (!isPaused[project.id] && project.frontImage && project.backImage) {
+      if (
+        inView[project.id] &&
+        !isPaused[project.id] &&
+        project.frontImage &&
+        project.backImage
+      ) {
         intervals[project.id] = setInterval(() => {
           setCurrentImageIndex((prev) => ({
             ...prev,
@@ -32,7 +75,7 @@ export default function ProjectsMobile() {
     return () => {
       Object.values(intervals).forEach((interval) => clearInterval(interval));
     };
-  }, [visibleProjects, isPaused]);
+  }, [visibleProjects, isPaused, inView]);
 
   const handleInteraction = (projectId: string, pause: boolean) => {
     setIsPaused((prev) => ({ ...prev, [projectId]: pause }));
@@ -66,6 +109,10 @@ export default function ProjectsMobile() {
         {visibleProjects.map((project, index) => (
           <div
             key={project.id}
+            ref={(node) => {
+              itemRefs.current[project.id] = node;
+            }}
+            data-project-id={project.id}
             onMouseEnter={() => handleInteraction(project.id, true)}
             onMouseLeave={() => handleInteraction(project.id, false)}
             onTouchStart={() => handleInteraction(project.id, true)}
@@ -103,14 +150,13 @@ export default function ProjectsMobile() {
           <ScrollAnimation direction="up" distance={16} delay={0.4}>
             <button
               onClick={() => setShowAll(!showAll)}
-              className="font-normal text-center"
+              className="font-normal text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
               style={{
                 borderRadius: "8px",
                 paddingTop: "10px",
                 paddingRight: "30px",
                 paddingBottom: "10px",
                 paddingLeft: "30px",
-                background: "#BEE56E",
                 boxShadow: "5px 5px 0px 0px #81A733",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                 fontSize: "18px",

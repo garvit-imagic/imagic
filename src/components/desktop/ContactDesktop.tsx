@@ -50,7 +50,7 @@ export default function ContactDesktop() {
           </h2>
         </ScrollAnimation>
 
-        <div className="mt-[171px] mb-[130px] grid grid-cols-2 gap-[242px]">
+        <div className="mt-[171px] mb-[130px] grid grid-cols-2 gap-[242px] items-start">
           <div>
             <ScrollAnimation direction="up" distance={22} delay={0.3}>
               <h3
@@ -184,7 +184,7 @@ export default function ContactDesktop() {
 
                 <button
                   type="submit"
-                  className="font-normal text-[28px] leading-[100%] text-center mt-[52px]"
+                  className="font-normal text-[28px] leading-[100%] text-center mt-[52px] bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                   style={{
                     width: "fit-content",
                     height: "70px",
@@ -193,7 +193,6 @@ export default function ContactDesktop() {
                     paddingRight: "60px",
                     paddingBottom: "16px",
                     paddingLeft: "60px",
-                    background: "#BEE56E",
                     boxShadow: "7px 7px 0px 0px #81A733",
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     letterSpacing: "0%",
@@ -281,25 +280,30 @@ export default function ContactDesktop() {
             </ScrollAnimation>
 
             <ScrollAnimation direction="up" distance={16} delay={0.5}>
-              <button
-                className="font-normal text-[28px] leading-[100%] text-center"
-                style={{
-                  height: "70px",
-                  borderRadius: "8px",
-                  paddingTop: "16px",
-                  paddingRight: "60px",
-                  paddingBottom: "16px",
-                  paddingLeft: "60px",
-                  background: "#BEE56E",
-                  boxShadow: "7px 7px 0px 0px #81A733",
-                  fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                  letterSpacing: "0%",
-                  marginTop: "73px",
-                  width: "fit-content",
-                }}
+              <a
+                href="https://calendly.com/ashishkohli7787/30min"
+                target="_blank"
+                rel="noreferrer"
               >
-                Book a Meeting!
-              </button>
+                <button
+                  className="font-normal text-[28px] leading-[100%] text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
+                  style={{
+                    height: "70px",
+                    borderRadius: "8px",
+                    paddingTop: "16px",
+                    paddingRight: "60px",
+                    paddingBottom: "16px",
+                    paddingLeft: "60px",
+                    boxShadow: "7px 7px 0px 0px #81A733",
+                    fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                    letterSpacing: "0%",
+                    marginTop: "73px",
+                    width: "fit-content",
+                  }}
+                >
+                  Book a Meeting!
+                </button>
+              </a>
             </ScrollAnimation>
           </div>
         </div>
