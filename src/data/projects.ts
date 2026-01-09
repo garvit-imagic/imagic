@@ -14,8 +14,8 @@ export const projects: Project[] = [
     title: "Indian Space Research Organisation.",
     description:
       "Crafted visual identity for 140+ launches over 60 years, on mission-critical timelines.",
-    frontImage: "/assets/images/project1.jpg",
-    backImage: "/assets/images/project1-flip.jpg",
+    frontImage: "/assets/Images/project1.jpg",
+    backImage: "/assets/Images/project1-flip.jpg",
   },
   {
     id: "2",
@@ -23,8 +23,8 @@ export const projects: Project[] = [
     title: "Wipro",
     description:
       "Executed design-to-deployment marketing campaigns across India.",
-    frontImage: "/assets/images/project2.jpg",
-    backImage: "/assets/images/project2-flip.jpg",
+    frontImage: "/assets/Images/project2.jpg",
+    backImage: "/assets/Images/project2-flip.jpg",
   },
   {
     id: "3",
@@ -32,8 +32,8 @@ export const projects: Project[] = [
     title: "Defense Research and Development Organisation.",
     description:
       "Designed mission branding and defence event collaterals across multiple secure zones.",
-    frontImage: "/assets/images/project3.jpg",
-    backImage: "/assets/images/project3-flip.jpg",
+    frontImage: "/assets/Images/project3.jpg",
+    backImage: "/assets/Images/project3-flip.jpg",
   },
   {
     id: "4",
@@ -41,8 +41,8 @@ export const projects: Project[] = [
     title: "Aeronautical Development Agency",
     description:
       "Delivered 1500+ high-impact defence expo displays and installations.",
-    frontImage: "/assets/images/project4.jpg",
-    backImage: "/assets/images/project4-flip.jpg",
+    frontImage: "/assets/Images/project4.jpg",
+    backImage: "/assets/Images/project4-flip.jpg",
   },
   {
     id: "5",
@@ -50,17 +50,15 @@ export const projects: Project[] = [
     title: "Soma",
     description:
       "Designed communication and display assets for 10+ exhibitions and activations.",
-    frontImage: "/assets/images/project5.jpg",
-    backImage: "/assets/images/project5-flip.jpg",
+    frontImage: "/assets/Images/project5.jpg",
+    backImage: "/assets/Images/project5-flip.jpg",
   },
   {
     id: "6",
     number: "06",
     title: "Slow Livin",
-    description:
-      "Provided end-to-end Digital Design for Slow Livin website.",
-    frontImage: "/assets/images/project6.jpg",
-    backImage: "/assets/images/project6-flip.jpg",
+    description: "Provided end-to-end Digital Design for Slow Livin website.",
+    frontImage: "/assets/Images/project6.jpg",
+    backImage: "/assets/Images/project6-flip.jpg",
   },
 ];
-

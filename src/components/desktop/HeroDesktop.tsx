@@ -37,7 +37,7 @@ export default function HeroDesktop() {
             <ScrollAnimation direction="left" distance={32} delay={0.28}>
               <div className="max-w-[700px] min-w-[600px] h-[431px] bg-transparent flex items-center justify-center">
                 <Image
-                  src="/assets/images/Hero-desktop1.svg"
+                  src="/assets/Images/Hero-desktop1.svg"
                   alt="Hero visual"
                   width={700}
                   height={431}
