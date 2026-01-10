@@ -17,7 +17,6 @@ export default function ImageCardMobile({
     width: "305.39px",
     height: "388.96px",
     borderRadius: "30px",
-    backgroundColor: "#8DD461",
     position: "relative",
     overflow: "hidden",
     display: "flex",
