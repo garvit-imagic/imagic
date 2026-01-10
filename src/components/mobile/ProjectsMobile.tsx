@@ -8,37 +8,38 @@ import ScrollAnimation from "../ScrollAnimation";
 
 export default function ProjectsMobile() {
   const [showAll, setShowAll] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState<{
-    [key: string]: number;
-  }>({});
-  const [isPaused, setIsPaused] = useState<{ [key: string]: boolean }>({});
-  const [inView, setInView] = useState<{ [key: string]: boolean }>({});
+  const [visibleIds, setVisibleIds] = useState<Set<string>>(new Set());
   const itemRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const visibleProjects = showAll ? projects : projects.slice(0, 2);
 
   useEffect(() => {
     if (typeof IntersectionObserver === "undefined") {
-      const fallback: { [key: string]: boolean } = {};
-      visibleProjects.forEach((project) => {
-        fallback[project.id] = true;
-      });
-      setInView((prev) => ({ ...prev, ...fallback }));
+      const allVisible = new Set(visibleProjects.map((project) => project.id));
+      setVisibleIds(allVisible);
       return;
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          const target = entry.target as HTMLDivElement;
-          const projectId = target.dataset.projectId;
-          if (!projectId) {
-            return;
-          }
-          setInView((prev) => ({ ...prev, [projectId]: entry.isIntersecting }));
+        setVisibleIds((prev) => {
+          const next = new Set(prev);
+          entries.forEach((entry) => {
+            const target = entry.target as HTMLDivElement;
+            const projectId = target.dataset.projectId;
+            if (!projectId) {
+              return;
+            }
+            if (entry.isIntersecting) {
+              next.add(projectId);
+            } else {
+              next.delete(projectId);
+            }
+          });
+          return next;
         });
       },
-      { threshold: 0.2, rootMargin: "0px 0px -20% 0px" }
+      { threshold: 0.5, rootMargin: "0px" }
     );
 
     visibleProjects.forEach((project) => {
@@ -53,38 +54,8 @@ export default function ProjectsMobile() {
     };
   }, [visibleProjects]);
 
-  useEffect(() => {
-    const intervals: { [key: string]: NodeJS.Timeout } = {};
-
-    visibleProjects.forEach((project) => {
-      if (
-        inView[project.id] &&
-        !isPaused[project.id] &&
-        project.frontImage &&
-        project.backImage
-      ) {
-        intervals[project.id] = setInterval(() => {
-          setCurrentImageIndex((prev) => ({
-            ...prev,
-            [project.id]: prev[project.id] === 0 ? 1 : 0,
-          }));
-        }, 2000);
-      }
-    });
-
-    return () => {
-      Object.values(intervals).forEach((interval) => clearInterval(interval));
-    };
-  }, [visibleProjects, isPaused, inView]);
-
-  const handleInteraction = (projectId: string, pause: boolean) => {
-    setIsPaused((prev) => ({ ...prev, [projectId]: pause }));
-  };
-
-  const isFlipped = (project: (typeof projects)[0]) => {
-    const index = currentImageIndex[project.id] || 0;
-    return index === 1;
-  };
+  const isFlipped = (project: (typeof projects)[0]) =>
+    visibleIds.has(project.id);
 
   const itemDelay = (index: number) => 0.24 + index * 0.08;
 
@@ -113,10 +84,6 @@ export default function ProjectsMobile() {
               itemRefs.current[project.id] = node;
             }}
             data-project-id={project.id}
-            onMouseEnter={() => handleInteraction(project.id, true)}
-            onMouseLeave={() => handleInteraction(project.id, false)}
-            onTouchStart={() => handleInteraction(project.id, true)}
-            onTouchEnd={() => handleInteraction(project.id, false)}
           >
             <ScrollAnimation
               direction="up"
