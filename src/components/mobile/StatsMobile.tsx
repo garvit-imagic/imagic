@@ -35,7 +35,7 @@ export default function StatsMobile() {
       return;
     }
 
-    const durationMs = 1400;
+    const durationMs = 2000;
     const startTime = performance.now();
     const startProjects = 1;
     const endProjects = 10;
@@ -45,12 +45,12 @@ export default function StatsMobile() {
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / durationMs, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const eased = 1 - Math.pow(1 - progress, 2);
 
-      const nextProjects = Math.round(
+      const nextProjects = Math.floor(
         startProjects + (endProjects - startProjects) * eased
       );
-      const nextTeam = Math.round(startTeam + (endTeam - startTeam) * eased);
+      const nextTeam = Math.floor(startTeam + (endTeam - startTeam) * eased);
 
       setProjectsCount(Math.min(nextProjects, endProjects));
       setTeamCount(Math.min(nextTeam, endTeam));

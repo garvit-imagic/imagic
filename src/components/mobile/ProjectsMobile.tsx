@@ -81,9 +81,9 @@ export default function ProjectsMobile() {
     setIsPaused((prev) => ({ ...prev, [projectId]: pause }));
   };
 
-  const getCurrentImage = (project: (typeof projects)[0]) => {
+  const isFlipped = (project: (typeof projects)[0]) => {
     const index = currentImageIndex[project.id] || 0;
-    return index === 0 ? project.frontImage : project.backImage;
+    return index === 1;
   };
 
   const itemDelay = (index: number) => 0.24 + index * 0.08;
@@ -128,7 +128,11 @@ export default function ProjectsMobile() {
                   transition: "opacity 0.5s ease-in-out",
                 }}
               >
-                <ImageCardMobile image={getCurrentImage(project)} />
+                <ImageCardMobile
+                  frontImage={project.frontImage}
+                  backImage={project.backImage}
+                  isFlipped={isFlipped(project)}
+                />
               </div>
             </ScrollAnimation>
 
