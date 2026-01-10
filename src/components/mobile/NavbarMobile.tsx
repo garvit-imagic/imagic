@@ -91,7 +91,6 @@ export default function NavbarMobile() {
           style={{
             height: "56px",
             borderRadius: "8px",
-            boxShadow: "5px 5px 0px 0px #81A733",
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "18px",
             lineHeight: "100%",

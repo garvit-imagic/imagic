@@ -153,8 +153,8 @@ export default function ServicesDesktop() {
                     className="text-black"
                     style={{
                       fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                      fontSize: "24px",
-                      lineHeight: "140%",
+                      fontSize: "20px",
+                      lineHeight: "30px",
                     }}
                   >
                     {service.content}

@@ -106,8 +106,8 @@ export default function StatsDesktop() {
                   className="font-normal text-black"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                    fontSize: "28px",
-                    lineHeight: "100%",
+                    fontSize: "20px",
+                    lineHeight: "30px",
                     letterSpacing: "0%",
                     display: "inline-block",
                     width: "518px",
@@ -187,7 +187,6 @@ export default function StatsDesktop() {
                   paddingRight: "60px",
                   paddingBottom: "16px",
                   paddingLeft: "60px",
-                  boxShadow: "7px 7px 0px 0px #81A733",
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                   fontSize: "34px",
                   lineHeight: "100%",

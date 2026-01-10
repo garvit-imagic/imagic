@@ -66,7 +66,6 @@ export default function NavbarDesktop() {
                 paddingRight: "60px",
                 paddingBottom: "16px",
                 paddingLeft: "60px",
-                boxShadow: "7px 7px 0px 0px #81A733",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                 letterSpacing: "0%",
                 color: "#000000",

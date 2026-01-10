@@ -193,7 +193,6 @@ export default function ContactDesktop() {
                     paddingRight: "60px",
                     paddingBottom: "16px",
                     paddingLeft: "60px",
-                    boxShadow: "7px 7px 0px 0px #81A733",
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     letterSpacing: "0%",
                   }}
@@ -229,8 +228,8 @@ export default function ContactDesktop() {
                   className="mt-[42px] font-light"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                    fontSize: "27px",
-                    lineHeight: "100%",
+                    fontSize: "20px",
+                    lineHeight: "30px",
                     letterSpacing: "0%",
                   }}
                 >
@@ -267,8 +266,8 @@ export default function ContactDesktop() {
                   className="mt-[33.14px] font-light"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                    fontSize: "27px",
-                    lineHeight: "100%",
+                    fontSize: "20px",
+                    lineHeight: "30px",
                     letterSpacing: "0%",
                   }}
                 >
@@ -294,7 +293,6 @@ export default function ContactDesktop() {
                     paddingRight: "60px",
                     paddingBottom: "16px",
                     paddingLeft: "60px",
-                    boxShadow: "7px 7px 0px 0px #81A733",
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     letterSpacing: "0%",
                     marginTop: "73px",

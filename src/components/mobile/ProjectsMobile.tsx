@@ -128,7 +128,6 @@ export default function ProjectsMobile() {
                 paddingRight: "30px",
                 paddingBottom: "10px",
                 paddingLeft: "30px",
-                boxShadow: "5px 5px 0px 0px #81A733",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                 fontSize: "18px",
                 lineHeight: "100%",

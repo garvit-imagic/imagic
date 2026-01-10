@@ -37,7 +37,7 @@ export default function HeroDesktop() {
             <ScrollAnimation direction="left" distance={32} delay={0.28}>
               <div className="max-w-[700px] min-w-[600px] h-[431px] bg-transparent flex items-center justify-center">
                 <Image
-                  src="/assets/Images/Hero-desktop1.svg"
+                  src="/assets/Images/hero-desktop1.gif"
                   alt="Hero visual"
                   width={700}
                   height={431}
@@ -52,7 +52,15 @@ export default function HeroDesktop() {
         <div className="pr-[177px] pl-[144px] pt-[150px] pb-[165px]">
           <div className="flex items-center justify-between">
             <ScrollAnimation direction="up" distance={20} delay={0.24}>
-              <div className="w-[508px] h-[220px] bg-[#D5D5D5]"></div>
+              <div className="w-[508px] h-[220px]">
+                <Image
+                  src="/assets/Images/hero-desktop2.svg"
+                  alt="Hero secondary visual"
+                  width={508}
+                  height={220}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </ScrollAnimation>
 
             <ScrollAnimation direction="up" distance={20} delay={0.32}>
@@ -61,7 +69,8 @@ export default function HeroDesktop() {
                   className="font-normal leading-[100%] text-black"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                    fontSize: "26px",
+                    fontSize: "20px",
+                    lineHeight: "30px",
                     letterSpacing: "0%",
                   }}
                 >

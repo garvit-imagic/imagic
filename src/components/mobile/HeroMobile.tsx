@@ -38,7 +38,7 @@ export default function HeroMobile() {
           <ScrollAnimation direction="up" distance={14} delay={0.28}>
             <div className="w-[140px] h-[140px] mx-auto">
               <Image
-                src="/assets/Images/Hero-desktop1.svg"
+                src="/assets/Images/hero-desktop1.gif"
                 alt="Hero visual"
                 width={140}
                 height={140}
@@ -71,7 +71,15 @@ export default function HeroMobile() {
           </ScrollAnimation>
 
           <ScrollAnimation direction="up" distance={16} delay={0.4}>
-            <div className="w-[148px] h-[64px] bg-[#D5D5D5] rounded-2xl mx-auto"></div>
+            <div className="w-[148px] h-[64px] mx-auto">
+              <Image
+                src="/assets/Images/hero-desktop2.svg"
+                alt="Hero secondary visual"
+                width={148}
+                height={64}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </ScrollAnimation>
         </div>
       </div>

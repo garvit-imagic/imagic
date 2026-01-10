@@ -24,7 +24,7 @@ export default function InfoCardDesktop({
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "17px",
-            lineHeight: "100%",
+            lineHeight: "22px",
             letterSpacing: "0%",
           }}
         >
@@ -36,7 +36,7 @@ export default function InfoCardDesktop({
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "17px",
-            lineHeight: "100%",
+            lineHeight: "22px",
             letterSpacing: "0%",
           }}
         >
@@ -47,7 +47,7 @@ export default function InfoCardDesktop({
           style={{
             fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
             fontSize: "14px",
-            lineHeight: "100%",
+            lineHeight: "20px",
             letterSpacing: "0.06em",
             marginTop: "58.24px",
           }}
