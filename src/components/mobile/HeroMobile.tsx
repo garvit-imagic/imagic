@@ -38,7 +38,7 @@ export default function HeroMobile() {
           <ScrollAnimation direction="up" distance={14} delay={0.28}>
             <div className="w-[140px] h-[140px] mx-auto">
               <Image
-                src="/assets/images/Hero-desktop1.svg"
+                src="/assets/Images/Hero-desktop1.svg"
                 alt="Hero visual"
                 width={140}
                 height={140}
