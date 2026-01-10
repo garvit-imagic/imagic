@@ -180,15 +180,13 @@ export default function StatsDesktop() {
               <button
                 className="font-normal text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                 style={{
-                  width: "408px",
-                  height: "78px",
                   borderRadius: "8px",
                   paddingTop: "16px",
-                  paddingRight: "60px",
+                  paddingRight: "45px",
                   paddingBottom: "16px",
-                  paddingLeft: "60px",
+                  paddingLeft: "45px",
                   fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-                  fontSize: "34px",
+                  fontSize: "26px",
                   lineHeight: "100%",
                   letterSpacing: "0%",
                   cursor: "pointer",

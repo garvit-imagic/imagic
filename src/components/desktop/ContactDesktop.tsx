@@ -187,13 +187,13 @@ export default function ContactDesktop() {
                   className="font-normal text-[28px] leading-[100%] text-center mt-[52px] bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                   style={{
                     width: "fit-content",
-                    height: "70px",
                     borderRadius: "8px",
                     paddingTop: "16px",
                     paddingRight: "60px",
                     paddingBottom: "16px",
                     paddingLeft: "60px",
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                    fontSize: "24px",
                     letterSpacing: "0%",
                   }}
                 >
@@ -243,7 +243,7 @@ export default function ContactDesktop() {
             </ScrollAnimation>
 
             <ScrollAnimation direction="up" distance={20} delay={0.42}>
-              <div className="mt-[82.86px]">
+              <div className="mt-[65.86px]">
                 <h3
                   className="font-bold"
                   style={{
@@ -287,13 +287,13 @@ export default function ContactDesktop() {
                 <button
                   className="font-normal text-[28px] leading-[100%] text-center bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
                   style={{
-                    height: "70px",
                     borderRadius: "8px",
                     paddingTop: "16px",
                     paddingRight: "60px",
                     paddingBottom: "16px",
                     paddingLeft: "60px",
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                    fontSize: "24px",
                     letterSpacing: "0%",
                     marginTop: "73px",
                     width: "fit-content",

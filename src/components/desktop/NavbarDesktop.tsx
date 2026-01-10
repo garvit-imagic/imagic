@@ -59,14 +59,13 @@ export default function NavbarDesktop() {
             <button
               className="font-normal text-[20px] leading-[100%] text-center whitespace-nowrap ml-[22px] bg-[#BEE56E] transition-colors hover:bg-[#BAED50]"
               style={{
-                width: "225px",
-                height: "62px",
                 borderRadius: "8px",
                 paddingTop: "16px",
-                paddingRight: "60px",
+                paddingRight: "40px",
                 paddingBottom: "16px",
-                paddingLeft: "60px",
+                paddingLeft: "40px",
                 fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "18px",
                 letterSpacing: "0%",
                 color: "#000000",
               }}
