@@ -3,13 +3,12 @@
 import ScrollAnimation from "./ScrollAnimation";
 
 export default function MarqueeSection() {
-  // Marquee items with numbers and 6 spaces between number and text
   const marqueeItems = [
-    "01      Brand Strategy",
-    "02      Visual Design",
-    "03      Web Development",
-    "04      Digital Marketing",
-    "05      Content Creation",
+    { number: "01", label: "Brand Strategy" },
+    { number: "02", label: "Visual Design" },
+    { number: "03", label: "Web Development" },
+    { number: "04", label: "Digital Marketing" },
+    { number: "05", label: "Content Creation" },
   ];
 
   return (
@@ -23,10 +22,10 @@ export default function MarqueeSection() {
             {Array(8)
               .fill(marqueeItems)
               .flat()
-              .map((text, index) => (
+              .map((item, index) => (
                 <span
                   key={index}
-                  className="inline-block font-semibold flex-shrink-0"
+                  className="inline-flex items-center font-semibold flex-shrink-0"
                   style={{
                     fontFamily: "var(--font-manrope), Manrope, sans-serif",
                     fontSize: "19px",
@@ -35,7 +34,8 @@ export default function MarqueeSection() {
                     marginRight: "276px",
                   }}
                 >
-                  {text}
+                  <span>{item.number}</span>
+                  <span className="ml-[24px]">{item.label}</span>
                 </span>
               ))}
           </div>
@@ -57,10 +57,10 @@ export default function MarqueeSection() {
             {Array(12)
               .fill(marqueeItems)
               .flat()
-              .map((text, index) => (
+              .map((item, index) => (
                 <span
                   key={index}
-                  className="inline-block font-semibold flex-shrink-0"
+                  className="inline-flex items-center font-semibold flex-shrink-0"
                   style={{
                     fontFamily: "var(--font-manrope), Manrope, sans-serif",
                     fontSize: "12px",
@@ -69,7 +69,8 @@ export default function MarqueeSection() {
                     marginRight: "108px",
                   }}
                 >
-                  {text}
+                  <span>{item.number}</span>
+                  <span className="ml-[16px]">{item.label}</span>
                 </span>
               ))}
           </div>
