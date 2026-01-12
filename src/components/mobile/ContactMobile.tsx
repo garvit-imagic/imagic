@@ -212,12 +212,13 @@ export default function ContactMobile() {
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={14} delay={0.46}>
+        <ScrollAnimation direction="up" distance={14} delay={0.46} className="w-full flex justify-center">
           <div
-            className="mt-[42px] mx-auto"
+            className="mt-[42px]"
             style={{
               width: "25%",
-              borderTop: "2px solid #BEE56E",
+              height: "2px",
+              backgroundColor: "#BEE56E",
             }}
           />
         </ScrollAnimation>
@@ -266,12 +267,13 @@ export default function ContactMobile() {
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={14} delay={0.64}>
+        <ScrollAnimation direction="up" distance={14} delay={0.64} className="w-full flex justify-center">
           <div
-            className="mt-[42px] mx-auto"
+            className="mt-[42px]"
             style={{
               width: "25%",
-              borderTop: "2px solid #BEE56E",
+              height: "2px",
+              backgroundColor: "#BEE56E",
             }}
           />
         </ScrollAnimation>

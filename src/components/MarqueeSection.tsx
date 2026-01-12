@@ -32,7 +32,7 @@ export default function MarqueeSection() {
                     fontSize: "19px",
                     lineHeight: "100%",
                     letterSpacing: "0%",
-                    marginRight: "106px",
+                    marginRight: "276px",
                   }}
                 >
                   {text}
@@ -66,7 +66,7 @@ export default function MarqueeSection() {
                     fontSize: "12px",
                     lineHeight: "100%",
                     letterSpacing: "0%",
-                    marginRight: "58px",
+                    marginRight: "108px",
                   }}
                 >
                   {text}

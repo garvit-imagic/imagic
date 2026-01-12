@@ -40,14 +40,14 @@ export const projects: Project[] = [
     number: "04",
     title: "Aeronautical Development Agency",
     description:
-      "Delivered 1500+ high-impact defence expo displays and installations.",
+      "Delivered 1000+ high-impact defence expo displays and installations.",
     frontImage: "/assets/Images/project4.jpg",
     backImage: "/assets/Images/project4-flip.jpg",
   },
   {
     id: "5",
     number: "05",
-    title: "Soma",
+    title: "Hitachi",
     description:
       "Designed communication and display assets for 10+ exhibitions and activations.",
     frontImage: "/assets/Images/project5.jpg",
@@ -56,8 +56,8 @@ export const projects: Project[] = [
   {
     id: "6",
     number: "06",
-    title: "Slow Livin",
-    description: "Provided end-to-end Digital Design for Slow Livin website.",
+    title: "Bharat Electronics",
+    description: "Provided end-to-end design and installation for defence expos and product demos.",
     frontImage: "/assets/Images/project6.jpg",
     backImage: "/assets/Images/project6-flip.jpg",
   },
