@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
+
+// Import components that should load immediately
+const Navbar = dynamic(() => import("@/components/Navbar"));
+const HeroSection = dynamic(() => import("@/components/HeroSection"));
 
 // Lazy load non-critical components with loading states
 const MarqueeSection = dynamic(() => import("@/components/MarqueeSection"), {
