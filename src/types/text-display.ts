@@ -24,5 +24,5 @@ export interface TextDisplayConfig {
   containerClassName?: string; // Tailwind classes for main container
   animate?: boolean;
   animationDelay?: number;
-  animationDirection?: 'up' | 'down' | 'left' | 'right';
+  animationDirection?: "up" | "down" | "left" | "right";
 }

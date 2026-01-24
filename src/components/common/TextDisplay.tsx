@@ -1,17 +1,20 @@
-import React from 'react';
-import ScrollAnimation from '../ScrollAnimation';
-import type { TextDisplayConfig, TextRow, TextLine, TextSegment } from '@/types/text-display';
+import React from "react";
+import ScrollAnimation from "../ScrollAnimation";
+import type {
+  TextDisplayConfig,
+  TextRow,
+  TextLine,
+  TextSegment,
+} from "@/types/text-display";
 
 interface TextDisplayProps {
   config: TextDisplayConfig;
 }
 
-const TextSegmentComponent: React.FC<{ segment: TextSegment }> = ({ segment }) => {
-  return (
-    <span className={segment.className}>
-      {segment.text}
-    </span>
-  );
+const TextSegmentComponent: React.FC<{ segment: TextSegment }> = ({
+  segment,
+}) => {
+  return <span className={segment.className}>{segment.text}</span>;
 };
 
 const TextLineComponent: React.FC<{ line: TextLine }> = ({ line }) => {
@@ -49,7 +52,7 @@ export default function TextDisplay({ config }: TextDisplayProps) {
   if (config.animate) {
     return (
       <ScrollAnimation
-        direction={config.animationDirection || 'up'}
+        direction={config.animationDirection || "up"}
         distance={24}
         delay={config.animationDelay || 0.2}
       >
