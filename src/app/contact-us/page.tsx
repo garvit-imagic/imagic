@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroWithBackground from "@/components/common/HeroWithBackground";
 import MarqueeSection from "@/components/MarqueeSection";
@@ -5,6 +6,15 @@ import ImageTextSection from "@/components/common/ImageTextSection";
 import ContactSection from "@/components/ContactSection";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { contactUsData } from "@/data/contactUs";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with IMagic Creatives. Let's discuss how we can help bring your brand vision to life through innovative design and creative solutions.",
+  openGraph: {
+    title: "Contact Us | IMagic Creatives",
+    description: "Get in touch with IMagic Creatives for your design and branding needs.",
+  },
+};
 
 export default function ContactUsPage() {
   return (

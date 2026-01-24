@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import ScrollAnimation from "../ScrollAnimation";
 
 interface HeroWithBackgroundProps {
   backgroundImage: string;
@@ -38,7 +35,7 @@ export default function HeroWithBackground({
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <ScrollAnimation direction="up" distance={32} delay={0.2}>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h1
               className="font-bold text-center"
               style={{
@@ -53,7 +50,7 @@ export default function HeroWithBackground({
             >
               {text}
             </h1>
-          </ScrollAnimation>
+          </div>
         </div>
       </div>
 
@@ -69,7 +66,7 @@ export default function HeroWithBackground({
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <ScrollAnimation direction="up" distance={24} delay={0.2}>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h1
               className="font-bold text-center"
               style={{
@@ -84,7 +81,7 @@ export default function HeroWithBackground({
             >
               {text}
             </h1>
-          </ScrollAnimation>
+          </div>
         </div>
       </div>
     </section>

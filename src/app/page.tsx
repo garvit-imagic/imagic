@@ -1,42 +1,48 @@
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import MarqueeSection from "@/components/MarqueeSection";
-import CompanyLogos from "@/components/CompanyLogos";
-import ProjectsSection from "@/components/ProjectsSection";
-import StatsSection from "@/components/StatsSection";
-import ImageCarousel from "@/components/ImageCarousel";
-import ServicesAccordion from "@/components/ServicesAccordion";
-import ContactSection from "@/components/ContactSection";
-import ScrollAnimation from "@/components/ScrollAnimation";
+
+// Lazy load non-critical components with loading states
+const MarqueeSection = dynamic(() => import('@/components/MarqueeSection'), {
+  loading: () => <div className="h-20 bg-gray-50 animate-pulse" />,
+});
+
+const CompanyLogos = dynamic(() => import('@/components/CompanyLogos'), {
+  loading: () => <div className=" bg-gray-50 animate-pulse" />,
+});
+
+const ProjectsSection = dynamic(() => import('@/components/ProjectsSection'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />,
+});
+
+const StatsSection = dynamic(() => import('@/components/StatsSection'), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+});
+
+const ImageCarousel = dynamic(() => import('@/components/ImageCarousel'), {
+  loading: () => <div className="h-96 bg-gray-100 animate-pulse" />,
+});
+
+const ServicesAccordion = dynamic(() => import('@/components/ServicesAccordion'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />,
+});
+
+const ContactSection = dynamic(() => import('@/components/ContactSection'), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+});
 
 export default function Home() {
   return (
     <main className="min-h-screen pt-[80px]">
       <Navbar />
-      <ScrollAnimation direction="up" distance={40}>
-        <HeroSection />
-      </ScrollAnimation>
-      <ScrollAnimation direction="down" distance={24} delay={0.05}>
-        <MarqueeSection />
-      </ScrollAnimation>
-      <ScrollAnimation direction="up" distance={36}>
-        <CompanyLogos />
-      </ScrollAnimation>
-      <ScrollAnimation direction="up" distance={32}>
-        <ProjectsSection />
-      </ScrollAnimation>
-      <ScrollAnimation direction="up" distance={28}>
-        <StatsSection />
-      </ScrollAnimation>
-      <ScrollAnimation direction="right" distance={40}>
-        <ImageCarousel />
-      </ScrollAnimation>
-      <ScrollAnimation direction="left" distance={40}>
-        <ServicesAccordion />
-      </ScrollAnimation>
-      <ScrollAnimation direction="up" distance={32}>
-        <ContactSection />
-      </ScrollAnimation>
+      <HeroSection />
+      <MarqueeSection />
+      <CompanyLogos />
+      <ProjectsSection />
+      <StatsSection />
+      <ImageCarousel />
+      <ServicesAccordion />
+      <ContactSection />
     </main>
   );
 }

@@ -1,3 +1,9 @@
+// Re-export all types from a single entry point
+export * from './components';
+export * from './utils';
+export * from './api';
+
+// Existing base types
 export interface BaseComponent {
   id?: string;
   className?: string;

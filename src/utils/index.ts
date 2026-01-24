@@ -16,4 +16,37 @@ export const truncate = (str: string, length: number): string => {
   return str.slice(0, length) + "...";
 };
 
-// Add more utility functions as needed
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+// Re-export utilities
+export * from './performance';
+export * from './seo';
+export * from './analytics';
+export * from './validation';
+export * from './string';
+export * from './number';
+export * from './date';
+
