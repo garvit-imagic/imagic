@@ -1,6 +1,7 @@
 # Component Optimization Guide
 
 ## Overview
+
 This guide provides recommendations for reducing client-side JavaScript and optimizing components in the IMagic project.
 
 ## Current State Analysis
@@ -33,6 +34,7 @@ This guide provides recommendations for reducing client-side JavaScript and opti
 **Solution**: Replace ScrollAnimation with CSS-only animations for better performance.
 
 #### Before (Client Component):
+
 ```tsx
 "use client";
 import ScrollAnimation from "../ScrollAnimation";
@@ -47,12 +49,13 @@ export default function ImageTextSection({ text }) {
 ```
 
 #### After (Server Component):
+
 ```tsx
 // No "use client" directive - Server Component!
 
 export default function ImageTextSection({ text }) {
   return (
-    <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+    <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
       {text}
     </div>
   );
@@ -60,6 +63,7 @@ export default function ImageTextSection({ text }) {
 ```
 
 **Components that can benefit**:
+
 - ImageTextSection.tsx
 - HeroWithBackground.tsx (if no interactive elements)
 
@@ -70,9 +74,10 @@ export default function ImageTextSection({ text }) {
 **Solution**: Extract interactive parts into small client components, keep parent as server component.
 
 #### Example: Contact Form
+
 ```tsx
 // ContactPage.tsx - Server Component (no "use client")
-import ContactForm from './ContactForm'; // This is the client component
+import ContactForm from "./ContactForm"; // This is the client component
 
 export default function ContactPage() {
   return (
@@ -88,10 +93,10 @@ export default function ContactPage() {
 ```tsx
 // ContactForm.tsx - Client Component
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ContactForm() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   // ... form logic
 }
 ```
@@ -102,26 +107,30 @@ For scroll-based animations without framer-motion:
 
 ```tsx
 "use client";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 export default function AnimatedSection({ children }) {
   const ref = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
+          entry.target.classList.add("animate-fade-in-up");
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
-    
+
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
-  
-  return <div ref={ref} className="opacity-0">{children}</div>;
+
+  return (
+    <div ref={ref} className="opacity-0">
+      {children}
+    </div>
+  );
 }
 ```
 
@@ -130,6 +139,7 @@ This is lighter than framer-motion and achieves similar results.
 ## Recommended Action Plan
 
 ### Phase 1: Low-Hanging Fruit (Quick Wins)
+
 1. **Convert HeroWithBackground to Server Component**
    - Remove ScrollAnimation wrapper
    - Use CSS animation classes directly
@@ -140,18 +150,21 @@ This is lighter than framer-motion and achieves similar results.
    - Add animation classes to elements
 
 ### Phase 2: Form Optimization
+
 3. **Split Contact Components**
    - ContactDesktop/Mobile parent: Server Component
    - Extract form to ContactForm.tsx: Client Component
    - Reduces client bundle by keeping headers/text server-side
 
 ### Phase 3: Replace ScrollAnimation Selectively
+
 4. **Create OptimizedScrollAnimation Component**
    - Lighter alternative using IntersectionObserver + CSS
    - No framer-motion dependency for simple animations
    - Use original ScrollAnimation only for complex animations
 
 ### Phase 4: Services & Projects
+
 5. **Audit Services Components**
    - Check if accordion needs full client-side rendering
    - Consider server-rendering static content
@@ -162,11 +175,13 @@ This is lighter than framer-motion and achieves similar results.
 ## Expected Performance Gains
 
 ### Before Optimization:
+
 - First Load JS: ~420 KB
 - Many components client-rendered
 - Larger Time to Interactive (TTI)
 
 ### After Optimization (Estimated):
+
 - First Load JS: ~300-350 KB (15-30% reduction)
 - More content server-rendered
 - Faster TTI and better SEO
@@ -175,22 +190,19 @@ This is lighter than framer-motion and achieves similar results.
 ## Implementation Priority
 
 **High Priority** (Biggest Impact):
+
 1. ✅ CSS animations added (globals.css)
 2. 🔄 Convert HeroWithBackground (simple, high-visibility)
 3. 🔄 Convert ImageTextSection (reusable, used multiple times)
 
-**Medium Priority**:
-4. 🔄 Split Contact forms
-5. 🔄 Create OptimizedScrollAnimation alternative
+**Medium Priority**: 4. 🔄 Split Contact forms 5. 🔄 Create OptimizedScrollAnimation alternative
 
-**Low Priority** (Audit First):
-6. ⏳ Services components
-7. ⏳ Projects components
-8. ⏳ Other desktop/mobile pairs
+**Low Priority** (Audit First): 6. ⏳ Services components 7. ⏳ Projects components 8. ⏳ Other desktop/mobile pairs
 
 ## Code Examples for CSS Animations
 
 We've already added these animations to `globals.css`:
+
 - `animate-fade-in-up`
 - `animate-fade-in-down`
 - `animate-fade-in-left`
@@ -199,14 +211,16 @@ We've already added these animations to `globals.css`:
 - `animate-scale-in`
 
 ### Usage:
+
 ```tsx
 // Instead of ScrollAnimation:
-<div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+<div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
   Content appears with fade + slide up
 </div>
 ```
 
 ### With Delays:
+
 ```tsx
 <div className="animate-fade-in-up delay-100">First (0.1s delay)</div>
 <div className="animate-fade-in-up delay-200">Second (0.2s delay)</div>
@@ -216,6 +230,7 @@ We've already added these animations to `globals.css`:
 ## Testing Checklist
 
 After each optimization:
+
 - [ ] Run `npm run build` - verify no errors
 - [ ] Check First Load JS size (should decrease)
 - [ ] Visual test - animations still work

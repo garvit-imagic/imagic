@@ -1,8 +1,8 @@
-import { useEffect, useState, RefObject } from 'react';
+import { useEffect, useState, RefObject } from "react";
 
 export function useScrollAnimation(
   ref: RefObject<HTMLElement>,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
 ) {
   const [isInView, setIsInView] = useState(false);
 

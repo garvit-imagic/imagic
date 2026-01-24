@@ -25,7 +25,10 @@ export default function ImageTextSection({
       <div className="hidden md:block">
         <div className="flex flex-col items-center">
           {/* Icon */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div
               className="flex items-center justify-center"
               style={{ marginTop: "189px" }}
@@ -41,7 +44,10 @@ export default function ImageTextSection({
           </div>
 
           {/* Text */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
             <div
               className="flex items-center justify-center"
               style={{ marginTop: "115px" }}
@@ -67,7 +73,10 @@ export default function ImageTextSection({
       <div className="md:hidden">
         <div className="flex flex-col items-center px-4">
           {/* Icon */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div
               className="flex items-center justify-center"
               style={{ marginTop: "80px" }}
@@ -83,7 +92,10 @@ export default function ImageTextSection({
           </div>
 
           {/* Text */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.28s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.28s" }}
+          >
             <div
               className="flex items-center justify-center"
               style={{ marginTop: "60px" }}

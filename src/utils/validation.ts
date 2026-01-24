@@ -20,21 +20,27 @@ export const isValidURL = (url: string): boolean => {
 };
 
 export const sanitizeInput = (input: string): string => {
-  return input.trim().replace(/[<>]/g, '');
+  return input.trim().replace(/[<>]/g, "");
 };
 
 export const validateRequired = (value: any): boolean => {
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     return value.trim().length > 0;
   }
   return value !== null && value !== undefined;
 };
 
-export const validateMinLength = (value: string, minLength: number): boolean => {
+export const validateMinLength = (
+  value: string,
+  minLength: number,
+): boolean => {
   return value.length >= minLength;
 };
 
-export const validateMaxLength = (value: string, maxLength: number): boolean => {
+export const validateMaxLength = (
+  value: string,
+  maxLength: number,
+): boolean => {
   return value.length <= maxLength;
 };
 

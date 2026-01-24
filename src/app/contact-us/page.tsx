@@ -9,10 +9,12 @@ import { contactUsData } from "@/data/contactUs";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with IMagic Creatives. Let's discuss how we can help bring your brand vision to life through innovative design and creative solutions.",
+  description:
+    "Get in touch with IMagic Creatives. Let's discuss how we can help bring your brand vision to life through innovative design and creative solutions.",
   openGraph: {
     title: "Contact Us | IMagic Creatives",
-    description: "Get in touch with IMagic Creatives for your design and branding needs.",
+    description:
+      "Get in touch with IMagic Creatives for your design and branding needs.",
   },
 };
 

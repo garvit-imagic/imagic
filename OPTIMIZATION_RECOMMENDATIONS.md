@@ -42,16 +42,16 @@ After comprehensive analysis of both IMagic and FE-Drivefitt2 projects, I've ide
 // next.config.js - Add image optimization
 const nextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'your-cdn-domain.com', // Add when ready
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "your-cdn-domain.com", // Add when ready
+        port: "",
+        pathname: "/**",
       },
     ],
   },
@@ -84,12 +84,13 @@ const nextConfig = {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://imagiccreatives.com'), // Update with actual domain
+  metadataBase: new URL("https://imagiccreatives.com"), // Update with actual domain
   title: {
     default: "IMagic Creatives - Where Ideas Take Flight",
-    template: "%s | IMagic Creatives"
+    template: "%s | IMagic Creatives",
   },
-  description: "Imagic Creatives is an integrated design studio shaping how the world experiences brands through immersive visuals and experiences.",
+  description:
+    "Imagic Creatives is an integrated design studio shaping how the world experiences brands through immersive visuals and experiences.",
   keywords: [
     "design studio",
     "brand design",
@@ -98,7 +99,7 @@ export const metadata: Metadata = {
     "brand experience",
     "immersive design",
     "graphic design",
-    "branding agency"
+    "branding agency",
   ],
   authors: [{ name: "IMagic Creatives" }],
   creator: "IMagic Creatives",
@@ -109,26 +110,26 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://imagiccreatives.com',
-    siteName: 'IMagic Creatives',
-    title: 'IMagic Creatives - Where Ideas Take Flight',
-    description: 'Integrated design studio shaping brand experiences',
+    type: "website",
+    locale: "en_US",
+    url: "https://imagiccreatives.com",
+    siteName: "IMagic Creatives",
+    title: "IMagic Creatives - Where Ideas Take Flight",
+    description: "Integrated design studio shaping brand experiences",
     images: [
       {
-        url: '/og-image.jpg', // Create this 1200x630px image
+        url: "/og-image.jpg", // Create this 1200x630px image
         width: 1200,
         height: 630,
-        alt: 'IMagic Creatives'
-      }
+        alt: "IMagic Creatives",
+      },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'IMagic Creatives - Where Ideas Take Flight',
-    description: 'Integrated design studio shaping brand experiences',
-    images: ['/twitter-image.jpg'], // Create this 1200x600px image
+    card: "summary_large_image",
+    title: "IMagic Creatives - Where Ideas Take Flight",
+    description: "Integrated design studio shaping brand experiences",
+    images: ["/twitter-image.jpg"], // Create this 1200x600px image
   },
   robots: {
     index: true,
@@ -136,13 +137,13 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add when available
+    google: "your-google-verification-code", // Add when available
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },
@@ -151,38 +152,38 @@ export const metadata: Metadata = {
 
 ```typescript
 // src/app/robots.ts - Create this file
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/_next/', '/admin/'],
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/api/", "/_next/", "/admin/"],
     },
-    sitemap: 'https://imagiccreatives.com/sitemap.xml',
+    sitemap: "https://imagiccreatives.com/sitemap.xml",
   };
 }
 ```
 
 ```typescript
 // src/app/sitemap.ts - Create this file
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://imagiccreatives.com';
+  const baseUrl = "https://imagiccreatives.com";
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/contact-us`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     // Add more pages as they're created
@@ -192,27 +193,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 ```typescript
 // src/app/manifest.ts - Create this file
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'IMagic Creatives',
-    short_name: 'IMagic',
-    description: 'Integrated design studio shaping brand experiences',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#8CC63F',
+    name: "IMagic Creatives",
+    short_name: "IMagic",
+    description: "Integrated design studio shaping brand experiences",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#8CC63F",
     icons: [
       {
-        src: '/icon-192.png',
-        sizes: '192x192',
-        type: 'image/png',
+        src: "/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
       },
       {
-        src: '/icon-512.png',
-        sizes: '512x512',
-        type: 'image/png',
+        src: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
   };
@@ -251,11 +252,11 @@ src/
 
 ```typescript
 // src/hooks/useScrollAnimation.ts - Create custom hook
-import { useEffect, useState, RefObject } from 'react';
+import { useEffect, useState, RefObject } from "react";
 
 export function useScrollAnimation(
   ref: RefObject<HTMLElement>,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
 ) {
   const [isInView, setIsInView] = useState(false);
 
@@ -278,7 +279,7 @@ export function useScrollAnimation(
 
 ```typescript
 // src/hooks/useMediaQuery.ts - Create responsive hook
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
@@ -289,8 +290,8 @@ export function useMediaQuery(query: string): boolean {
       setMatches(media.matches);
     }
     const listener = () => setMatches(media.matches);
-    media.addEventListener('change', listener);
-    return () => media.removeEventListener('change', listener);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
   }, [matches, query]);
 
   return matches;
@@ -450,21 +451,21 @@ export default function RootLayout({
 
 ```typescript
 // src/components/WebVitals.tsx - Create this file
-'use client';
+"use client";
 
-import { useReportWebVitals } from 'next/web-vitals';
+import { useReportWebVitals } from "next/web-vitals";
 
 export function WebVitals() {
   useReportWebVitals((metric) => {
     console.log(metric); // Or send to analytics service
-  
+
     // Send to your analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', metric.name, {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", metric.name, {
         value: Math.round(
-          metric.name === 'CLS' ? metric.value * 1000 : metric.value
+          metric.name === "CLS" ? metric.value * 1000 : metric.value,
         ),
-        event_category: 'Web Vitals',
+        event_category: "Web Vitals",
         event_label: metric.id,
         non_interaction: true,
       });
@@ -491,22 +492,25 @@ const nextConfig = {
   // Performance
   reactStrictMode: true,
   swcMinify: true,
-  
+
   // Compiler optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn']
-    } : false,
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? {
+            exclude: ["error", "warn"],
+          }
+        : false,
   },
 
   // Image optimization
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
+    contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
@@ -514,56 +518,56 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
           },
           {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
           },
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
           },
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
           },
           {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
-          }
-        ]
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
       },
       {
-        source: '/fonts/:path*',
+        source: "/fonts/:path*",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
       },
       {
-        source: '/_next/static/:path*',
+        source: "/_next/static/:path*",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      }
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
     ];
   },
 
@@ -571,16 +575,16 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: [
-      '@mui/material',
-      '@mui/icons-material',
-      'framer-motion',
+      "@mui/material",
+      "@mui/icons-material",
+      "framer-motion",
     ],
   },
 
   // Production-only optimizations
   poweredByHeader: false,
   compress: true,
-  
+
   // When CDN is ready
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://cdn.yourdomain.com' : '',
 };
@@ -606,18 +610,18 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-open-sans",
-  display: 'swap', // ✅ Add this - prevents invisible text
-  preload: true,   // ✅ Add this - preload font
-  fallback: ['system-ui', 'arial'], // ✅ Add fallback
+  display: "swap", // ✅ Add this - prevents invisible text
+  preload: true, // ✅ Add this - preload font
+  fallback: ["system-ui", "arial"], // ✅ Add fallback
 });
 
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-manrope",
-  display: 'swap',
+  display: "swap",
   preload: true,
-  fallback: ['system-ui', 'sans-serif'],
+  fallback: ["system-ui", "sans-serif"],
 });
 ```
 
@@ -644,12 +648,12 @@ export interface ImageProps {
   width?: number;
   height?: number;
   priority?: boolean;
-  loading?: 'lazy' | 'eager';
+  loading?: "lazy" | "eager";
   quality?: number;
 }
 
 export interface AnimationConfig {
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
   distance?: number;
   duration?: number;
   delay?: number;
@@ -751,16 +755,16 @@ export const prefetchImages = async (urls: string[]) => {
 // src/utils/seo.ts
 export const generateStructuredData = (type: string, data: any) => {
   return {
-    '@context': 'https://schema.org',
-    '@type': type,
+    "@context": "https://schema.org",
+    "@type": type,
     ...data,
   };
 };
 
 // src/utils/analytics.ts
 export const trackEvent = (eventName: string, properties?: any) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', eventName, properties);
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag("event", eventName, properties);
   }
 };
 ```
@@ -804,38 +808,38 @@ export default function Loading() {
 
 ## 📊 Comparison: IMagic vs FE-Drivefitt2
 
-| Feature                        | IMagic                   | FE-Drivefitt2            | Gap                                            |
-| ------------------------------ | ------------------------ | ------------------------ | ---------------------------------------------- |
+| Feature                  | IMagic                   | FE-Drivefitt2            | Gap                                            |
+| ------------------------ | ------------------------ | ------------------------ | ---------------------------------------------- |
 | **Architecture**         |                          |                          |                                                |
-| Project Structure              | Basic                    | Advanced ✅              | Missing: hooks, contexts, lib, services, store |
-| Component Organization         | Good (desktop/mobile) ✅ | Good (feature-based) ✅  | Equal                                          |
-| State Management               | None ❌                  | Redux Toolkit ✅         | Need to add                                    |
-| Custom Hooks                   | None ❌                  | Multiple ✅              | Need to add                                    |
+| Project Structure        | Basic                    | Advanced ✅              | Missing: hooks, contexts, lib, services, store |
+| Component Organization   | Good (desktop/mobile) ✅ | Good (feature-based) ✅  | Equal                                          |
+| State Management         | None ❌                  | Redux Toolkit ✅         | Need to add                                    |
+| Custom Hooks             | None ❌                  | Multiple ✅              | Need to add                                    |
 | **Performance**          |                          |                          |                                                |
-| Image Optimization             | Poor ❌ (20MB images!)   | Good ✅ (CDN + WebP)     | Critical issue                                 |
-| Code Splitting                 | None ❌                  | Yes ✅                   | Need dynamic imports                           |
-| Lazy Loading                   | None ❌                  | Yes ✅                   | Need implementation                            |
-| Bundle Size                    | Large ❌                 | Optimized ✅             | Need optimization                              |
+| Image Optimization       | Poor ❌ (20MB images!)   | Good ✅ (CDN + WebP)     | Critical issue                                 |
+| Code Splitting           | None ❌                  | Yes ✅                   | Need dynamic imports                           |
+| Lazy Loading             | None ❌                  | Yes ✅                   | Need implementation                            |
+| Bundle Size              | Large ❌                 | Optimized ✅             | Need optimization                              |
 | **SEO & Meta**           |                          |                          |                                                |
-| robots.txt                     | None ❌                  | Yes ✅                   | Need to add                                    |
-| sitemap.xml                    | None ❌                  | Yes ✅                   | Need to add                                    |
-| Meta Tags                      | Basic ❌                 | Comprehensive ✅         | Need enhancement                               |
-| OG Images                      | None ❌                  | Yes ✅                   | Need to add                                    |
-| Schema Markup                  | None ❌                  | Not checked              | Consider adding                                |
+| robots.txt               | None ❌                  | Yes ✅                   | Need to add                                    |
+| sitemap.xml              | None ❌                  | Yes ✅                   | Need to add                                    |
+| Meta Tags                | Basic ❌                 | Comprehensive ✅         | Need enhancement                               |
+| OG Images                | None ❌                  | Yes ✅                   | Need to add                                    |
+| Schema Markup            | None ❌                  | Not checked              | Consider adding                                |
 | **Monitoring**           |                          |                          |                                                |
-| Analytics                      | None ❌                  | Google Analytics ✅      | Need to add                                    |
-| Performance Monitoring         | None ❌                  | Vercel Speed Insights ✅ | Need to add                                    |
-| Error Tracking                 | None ❌                  | Basic ✅                 | Need to add                                    |
-| Web Vitals                     | None ❌                  | Yes ✅                   | Need to add                                    |
+| Analytics                | None ❌                  | Google Analytics ✅      | Need to add                                    |
+| Performance Monitoring   | None ❌                  | Vercel Speed Insights ✅ | Need to add                                    |
+| Error Tracking           | None ❌                  | Basic ✅                 | Need to add                                    |
+| Web Vitals               | None ❌                  | Yes ✅                   | Need to add                                    |
 | **Developer Experience** |                          |                          |                                                |
-| TypeScript Usage               | Basic                    | Advanced ✅              | Need improvement                               |
-| Error Handling                 | None ❌                  | Good ✅                  | Need to add                                    |
-| Environment Variables          | None visible             | Well organized ✅        | Need to add                                    |
-| API Layer                      | None ❌                  | Organized services ✅    | Not needed yet                                 |
+| TypeScript Usage         | Basic                    | Advanced ✅              | Need improvement                               |
+| Error Handling           | None ❌                  | Good ✅                  | Need to add                                    |
+| Environment Variables    | None visible             | Well organized ✅        | Need to add                                    |
+| API Layer                | None ❌                  | Organized services ✅    | Not needed yet                                 |
 | **Next.js Config**       |                          |                          |                                                |
-| Optimization                   | Minimal ❌               | Comprehensive ✅         | Need enhancement                               |
-| Security Headers               | None ❌                  | Yes ✅                   | Need to add                                    |
-| Image Config                   | None ❌                  | CDN configured ✅        | Need when CDN ready                            |
+| Optimization             | Minimal ❌               | Comprehensive ✅         | Need enhancement                               |
+| Security Headers         | None ❌                  | Yes ✅                   | Need to add                                    |
+| Image Config             | None ❌                  | CDN configured ✅        | Need when CDN ready                            |
 
 ---
 
@@ -959,9 +963,9 @@ npm install -D @next/bundle-analyzer
 ```
 
 3. **Use Server Components by default**:
-
    - Only add `"use client"` when truly needed
    - Most components can be server-side
+
 4. **Implement proper caching**:
 
 ```typescript

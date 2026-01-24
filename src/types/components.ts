@@ -12,7 +12,7 @@ export interface ImageProps {
   width?: number;
   height?: number;
   priority?: boolean;
-  loading?: 'lazy' | 'eager';
+  loading?: "lazy" | "eager";
   quality?: number;
   fill?: boolean;
   sizes?: string;
@@ -26,7 +26,7 @@ export interface ResponsiveImageProps {
 
 // Animation configuration
 export interface AnimationConfig {
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
   distance?: number;
   duration?: number;
   delay?: number;
@@ -76,7 +76,7 @@ export interface HeroSectionProps extends SectionProps {
 export interface FormFieldProps {
   name: string;
   label: string;
-  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox';
+  type: "text" | "email" | "tel" | "textarea" | "select" | "checkbox";
   placeholder?: string;
   required?: boolean;
   validation?: RegExp;
@@ -179,7 +179,7 @@ export interface AccordionProps extends BaseComponentProps {
 export interface MarqueeProps extends BaseComponentProps {
   items: string[];
   speed?: number;
-  direction?: 'left' | 'right';
+  direction?: "left" | "right";
   pauseOnHover?: boolean;
 }
 
@@ -229,14 +229,14 @@ export interface ModalProps extends BaseComponentProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  size?: "sm" | "md" | "lg" | "xl" | "full";
   closeOnBackdrop?: boolean;
   closeOnEscape?: boolean;
   showCloseButton?: boolean;
 }
 
 // Toast/Notification types
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type ToastType = "success" | "error" | "warning" | "info";
 
 export interface ToastProps {
   type: ToastType;
@@ -249,8 +249,8 @@ export interface ToastProps {
 export interface SkeletonProps extends BaseComponentProps {
   width?: string | number;
   height?: string | number;
-  variant?: 'text' | 'circular' | 'rectangular';
-  animation?: 'pulse' | 'wave' | 'none';
+  variant?: "text" | "circular" | "rectangular";
+  animation?: "pulse" | "wave" | "none";
 }
 
 // Error types
@@ -261,7 +261,7 @@ export interface ErrorBoundaryState {
 }
 
 // Device detection types
-export type DeviceType = 'mobile' | 'tablet' | 'desktop';
+export type DeviceType = "mobile" | "tablet" | "desktop";
 
 export interface DeviceInfo {
   type: DeviceType;
@@ -282,7 +282,7 @@ export interface WebVitalsMetric {
   id: string;
   name: string;
   value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
+  rating: "good" | "needs-improvement" | "poor";
   delta: number;
   navigationType: string;
 }

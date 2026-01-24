@@ -35,7 +35,10 @@ export default function HeroWithBackground({
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <h1
               className="font-bold text-center"
               style={{
@@ -66,7 +69,10 @@ export default function HeroWithBackground({
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <h1
               className="font-bold text-center"
               style={{

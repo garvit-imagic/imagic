@@ -13,39 +13,41 @@
 Create these three files:
 
 **File 1**: `src/app/robots.ts`
+
 ```typescript
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/_next/', '/admin/'],
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/api/", "/_next/", "/admin/"],
     },
-    sitemap: 'https://imagiccreatives.com/sitemap.xml', // Update with your domain
+    sitemap: "https://imagiccreatives.com/sitemap.xml", // Update with your domain
   };
 }
 ```
 
 **File 2**: `src/app/sitemap.ts`
+
 ```typescript
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://imagiccreatives.com'; // Update with your domain
+  const baseUrl = "https://imagiccreatives.com"; // Update with your domain
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/contact-us`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
   ];
@@ -53,28 +55,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ```
 
 **File 3**: `src/app/manifest.ts`
+
 ```typescript
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'IMagic Creatives',
-    short_name: 'IMagic',
-    description: 'Integrated design studio shaping brand experiences',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#8CC63F',
+    name: "IMagic Creatives",
+    short_name: "IMagic",
+    description: "Integrated design studio shaping brand experiences",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#8CC63F",
     icons: [
       {
-        src: '/icon-192.png', // Create these icons
-        sizes: '192x192',
-        type: 'image/png',
+        src: "/icon-192.png", // Create these icons
+        sizes: "192x192",
+        type: "image/png",
       },
       {
-        src: '/icon-512.png',
-        sizes: '512x512',
-        type: 'image/png',
+        src: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
   };
@@ -91,6 +94,7 @@ npm install @vercel/analytics @vercel/speed-insights
 ```
 
 Update `src/app/layout.tsx`:
+
 ```typescript
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -123,15 +127,18 @@ Replace entire `next.config.js` with:
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  
+
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn']
-    } : false,
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? {
+            exclude: ["error", "warn"],
+          }
+        : false,
   },
 
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
@@ -140,22 +147,22 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
-          { key: 'X-DNS-Prefetch-Control', value: 'on' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-        ]
+          { key: "X-DNS-Prefetch-Control", value: "on" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+        ],
       },
     ];
   },
 
   experimental: {
     optimizePackageImports: [
-      '@mui/material',
-      '@mui/icons-material',
-      'framer-motion',
+      "@mui/material",
+      "@mui/icons-material",
+      "framer-motion",
     ],
   },
 
@@ -171,6 +178,7 @@ module.exports = nextConfig;
 ### Step 4: Add Error Handling (15 minutes)
 
 **File 1**: `src/app/error.tsx`
+
 ```typescript
 'use client';
 
@@ -209,6 +217,7 @@ export default function Error({
 ```
 
 **File 2**: `src/app/not-found.tsx`
+
 ```typescript
 import Link from 'next/link';
 
@@ -236,6 +245,7 @@ export default function NotFound() {
 ```
 
 **File 3**: `src/app/loading.tsx`
+
 ```typescript
 export default function Loading() {
   return (
@@ -262,18 +272,18 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-open-sans",
-  display: 'swap',      // ← ADD THIS
-  preload: true,        // ← ADD THIS
-  fallback: ['system-ui', 'arial'], // ← ADD THIS
+  display: "swap", // ← ADD THIS
+  preload: true, // ← ADD THIS
+  fallback: ["system-ui", "arial"], // ← ADD THIS
 });
 
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-manrope",
-  display: 'swap',      // ← ADD THIS
-  preload: true,        // ← ADD THIS
-  fallback: ['system-ui', 'sans-serif'], // ← ADD THIS
+  display: "swap", // ← ADD THIS
+  preload: true, // ← ADD THIS
+  fallback: ["system-ui", "sans-serif"], // ← ADD THIS
 });
 ```
 
@@ -285,12 +295,13 @@ Update `src/app/layout.tsx`:
 
 ```typescript
 export const metadata: Metadata = {
-  metadataBase: new URL('https://imagiccreatives.com'), // Update with your domain
+  metadataBase: new URL("https://imagiccreatives.com"), // Update with your domain
   title: {
     default: "IMagic Creatives - Where Ideas Take Flight",
-    template: "%s | IMagic Creatives"
+    template: "%s | IMagic Creatives",
   },
-  description: "Imagic Creatives is an integrated design studio shaping how the world experiences brands through immersive visuals and experiences.",
+  description:
+    "Imagic Creatives is an integrated design studio shaping how the world experiences brands through immersive visuals and experiences.",
   keywords: [
     "design studio",
     "brand design",
@@ -299,7 +310,7 @@ export const metadata: Metadata = {
     "brand experience",
     "immersive design",
     "graphic design",
-    "branding agency"
+    "branding agency",
   ],
   authors: [{ name: "IMagic Creatives" }],
   creator: "IMagic Creatives",
@@ -310,26 +321,26 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://imagiccreatives.com',
-    siteName: 'IMagic Creatives',
-    title: 'IMagic Creatives - Where Ideas Take Flight',
-    description: 'Integrated design studio shaping brand experiences',
+    type: "website",
+    locale: "en_US",
+    url: "https://imagiccreatives.com",
+    siteName: "IMagic Creatives",
+    title: "IMagic Creatives - Where Ideas Take Flight",
+    description: "Integrated design studio shaping brand experiences",
     images: [
       {
-        url: '/og-image.jpg', // Create this 1200x630px image
+        url: "/og-image.jpg", // Create this 1200x630px image
         width: 1200,
         height: 630,
-        alt: 'IMagic Creatives'
-      }
+        alt: "IMagic Creatives",
+      },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'IMagic Creatives - Where Ideas Take Flight',
-    description: 'Integrated design studio shaping brand experiences',
-    images: ['/twitter-image.jpg'], // Create this 1200x600px image
+    card: "summary_large_image",
+    title: "IMagic Creatives - Where Ideas Take Flight",
+    description: "Integrated design studio shaping brand experiences",
+    images: ["/twitter-image.jpg"], // Create this 1200x600px image
   },
   robots: {
     index: true,
@@ -337,9 +348,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -350,6 +361,7 @@ export const metadata: Metadata = {
 ## 🖼️ CRITICAL: Image Optimization (Do Before Anything Else!)
 
 ### Option 1: Online Tools (Quick)
+
 1. Go to https://squoosh.app/
 2. Upload each image
 3. Settings:
@@ -381,6 +393,7 @@ done
 ### Option 3: Use This NPM Script
 
 Add to `package.json`:
+
 ```json
 {
   "scripts": {
@@ -390,11 +403,13 @@ Add to `package.json`:
 ```
 
 Then run:
+
 ```bash
 npm run optimize-images
 ```
 
 ### Critical Images to Prioritize:
+
 1. `HOME PAGE DESKTOP.jpg` (20MB → ~500KB)
 2. `D7.jpg` (11MB → ~400KB)
 3. `HOME PAGE MOBILE.png` (5.8MB → ~300KB)
@@ -407,18 +422,21 @@ npm run optimize-images
 ## 📊 Test Your Changes
 
 ### 1. Build and Test Locally
+
 ```bash
 npm run build
 npm start
 ```
 
 ### 2. Run Lighthouse
+
 - Open Chrome DevTools (F12)
 - Go to "Lighthouse" tab
 - Click "Analyze page load"
 - Check Performance score
 
 ### 3. Check Bundle Size
+
 ```bash
 npm run build
 # Look for output: ƒ (size in KB)
@@ -428,13 +446,13 @@ npm run build
 
 ## 🎯 Expected Results After Phase 1
 
-| Metric | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| Page Size | 15-25MB | 2-3MB | 85-90% ⬇️ |
-| Lighthouse Score | 30-40 | 75-85 | 100%+ ⬆️ |
-| LCP | 8-10s | 2-3s | 70% ⬇️ |
-| FCP | 4-5s | 1-1.5s | 70% ⬇️ |
-| SEO Score | 70 | 95+ | 35% ⬆️ |
+| Metric           | Before  | After  | Improvement |
+| ---------------- | ------- | ------ | ----------- |
+| Page Size        | 15-25MB | 2-3MB  | 85-90% ⬇️   |
+| Lighthouse Score | 30-40   | 75-85  | 100%+ ⬆️    |
+| LCP              | 8-10s   | 2-3s   | 70% ⬇️      |
+| FCP              | 4-5s    | 1-1.5s | 70% ⬇️      |
+| SEO Score        | 70      | 95+    | 35% ⬆️      |
 
 ---
 
@@ -452,6 +470,7 @@ See `OPTIMIZATION_RECOMMENDATIONS.md` for full Phase 2 details.
 ## ❓ Troubleshooting
 
 ### Build Errors?
+
 ```bash
 rm -rf .next
 npm install
@@ -459,11 +478,13 @@ npm run build
 ```
 
 ### Images not loading?
+
 - Check file paths
 - Ensure images exist in public folder
 - Check next.config.js image configuration
 
 ### Analytics not working?
+
 - Deploy to Vercel first
 - Analytics work in production, not localhost
 
@@ -472,7 +493,7 @@ npm run build
 ## 📝 Checklist
 
 - [ ] Created robots.ts
-- [ ] Created sitemap.ts  
+- [ ] Created sitemap.ts
 - [ ] Created manifest.ts
 - [ ] Installed analytics packages
 - [ ] Updated layout.tsx with Analytics

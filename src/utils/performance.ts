@@ -14,11 +14,11 @@ export const prefetchImages = async (urls: string[]): Promise<void> => {
 };
 
 export const preloadCriticalImages = (images: string[]) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     images.forEach((src) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
       link.href = src;
       document.head.appendChild(link);
     });

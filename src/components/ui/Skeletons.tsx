@@ -1,4 +1,4 @@
-import Skeleton from './Skeleton';
+import Skeleton from "./Skeleton";
 
 export function CardSkeleton() {
   return (
@@ -26,13 +26,12 @@ export function HeroSkeleton() {
   );
 }
 
-export function ImageSkeleton({ aspectRatio = '16/9' }: { aspectRatio?: string }) {
-  return (
-    <div 
-      className="w-full skeleton rounded-lg" 
-      style={{ aspectRatio }}
-    />
-  );
+export function ImageSkeleton({
+  aspectRatio = "16/9",
+}: {
+  aspectRatio?: string;
+}) {
+  return <div className="w-full skeleton rounded-lg" style={{ aspectRatio }} />;
 }
 
 export function TextSkeleton({ lines = 3 }: { lines?: number }) {
@@ -42,7 +41,7 @@ export function TextSkeleton({ lines = 3 }: { lines?: number }) {
         <Skeleton
           key={i}
           variant="text"
-          width={i === lines - 1 ? '60%' : '100%'}
+          width={i === lines - 1 ? "60%" : "100%"}
         />
       ))}
     </div>
@@ -80,7 +79,12 @@ export function StatsSkeleton() {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8">
       {Array.from({ length: 4 }).map((_, i) => (
         <div key={i} className="text-center">
-          <Skeleton variant="text" height={60} className="mb-2 mx-auto" width={120} />
+          <Skeleton
+            variant="text"
+            height={60}
+            className="mb-2 mx-auto"
+            width={120}
+          />
           <Skeleton variant="text" width="80%" className="mx-auto" />
         </div>
       ))}
