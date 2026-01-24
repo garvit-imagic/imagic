@@ -1,11 +1,15 @@
 import ContactDesktop from "./desktop/ContactDesktop";
 import ContactMobile from "./mobile/ContactMobile";
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  showHeading?: boolean;
+}
+
+export default function ContactSection({ showHeading = true }: ContactSectionProps) {
   return (
     <section className="w-full relative">
-      <ContactDesktop />
-      <ContactMobile />
+      <ContactDesktop showHeading={showHeading} />
+      <ContactMobile showHeading={showHeading} />
     </section>
   );
 }

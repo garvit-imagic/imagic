@@ -4,7 +4,11 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import ScrollAnimation from "../ScrollAnimation";
 
-export default function ContactDesktop() {
+interface ContactDesktopProps {
+  showHeading?: boolean;
+}
+
+export default function ContactDesktop({ showHeading = true }: ContactDesktopProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,19 +40,21 @@ export default function ContactDesktop() {
       />
 
       <div className="relative z-10 mt-[100px] mx-[144px]">
-        <ScrollAnimation direction="up" distance={26} delay={0.22}>
-          <h2
-            className="font-bold"
-            style={{
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "80px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Let&apos;s <span style={{ color: "#8CC63F" }}>Talk</span>.
-          </h2>
-        </ScrollAnimation>
+        {showHeading && (
+          <ScrollAnimation direction="up" distance={26} delay={0.22}>
+            <h2
+              className="font-bold"
+              style={{
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "80px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              Let&apos;s <span style={{ color: "#8CC63F" }}>Talk</span>.
+            </h2>
+          </ScrollAnimation>
+        )}
 
         <div className="mt-[171px] mb-[130px] grid grid-cols-2 gap-[242px] items-start">
           <div>

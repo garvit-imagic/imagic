@@ -2,14 +2,25 @@
 
 import ScrollAnimation from "./ScrollAnimation";
 
-export default function MarqueeSection() {
-  const marqueeItems = [
+interface MarqueeItem {
+  number: string;
+  label: string;
+}
+
+interface MarqueeSectionProps {
+  items?: MarqueeItem[];
+}
+
+export default function MarqueeSection({ items }: MarqueeSectionProps) {
+  const defaultMarqueeItems: MarqueeItem[] = [
     { number: "01", label: "Brand Strategy" },
     { number: "02", label: "Visual Design" },
     { number: "03", label: "Web Development" },
     { number: "04", label: "Digital Marketing" },
     { number: "05", label: "Content Creation" },
   ];
+
+  const marqueeItems = items || defaultMarqueeItems;
 
   return (
     <section className="w-full relative z-20">
@@ -31,7 +42,7 @@ export default function MarqueeSection() {
                     fontSize: "19px",
                     lineHeight: "100%",
                     letterSpacing: "0%",
-                    marginRight: "276px",
+                    marginRight: "200px",
                   }}
                 >
                   <span>{item.number}</span>

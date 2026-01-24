@@ -4,7 +4,11 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import ScrollAnimation from "../ScrollAnimation";
 
-export default function ContactMobile() {
+interface ContactMobileProps {
+  showHeading?: boolean;
+}
+
+export default function ContactMobile({ showHeading = true }: ContactMobileProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,19 +40,21 @@ export default function ContactMobile() {
       />
 
       <div className="relative z-10 flex flex-col items-center px-[24px]">
-        <ScrollAnimation direction="up" distance={18} delay={0.2}>
-          <h2
-            className="pt-[100px] font-bold text-center"
-            style={{
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Let&apos;s <span style={{ color: "#8CC63F" }}>Talk.</span>
-          </h2>
-        </ScrollAnimation>
+        {showHeading && (
+          <ScrollAnimation direction="up" distance={18} delay={0.2}>
+            <h2
+              className="pt-[100px] font-bold text-center"
+              style={{
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontSize: "32px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              Let&apos;s <span style={{ color: "#8CC63F" }}>Talk.</span>
+            </h2>
+          </ScrollAnimation>
+        )}
 
         <ScrollAnimation direction="up" distance={16} delay={0.28}>
           <h3
