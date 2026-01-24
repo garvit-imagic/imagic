@@ -5,7 +5,9 @@ interface ContactSectionProps {
   showHeading?: boolean;
 }
 
-export default function ContactSection({ showHeading = true }: ContactSectionProps) {
+export default function ContactSection({
+  showHeading = true,
+}: ContactSectionProps) {
   return (
     <section className="w-full relative">
       <ContactDesktop showHeading={showHeading} />

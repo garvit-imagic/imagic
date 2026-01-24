@@ -8,7 +8,9 @@ interface ContactDesktopProps {
   showHeading?: boolean;
 }
 
-export default function ContactDesktop({ showHeading = true }: ContactDesktopProps) {
+export default function ContactDesktop({
+  showHeading = true,
+}: ContactDesktopProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +18,7 @@ export default function ContactDesktop({ showHeading = true }: ContactDesktopPro
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,

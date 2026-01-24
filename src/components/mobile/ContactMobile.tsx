@@ -8,7 +8,9 @@ interface ContactMobileProps {
   showHeading?: boolean;
 }
 
-export default function ContactMobile({ showHeading = true }: ContactMobileProps) {
+export default function ContactMobile({
+  showHeading = true,
+}: ContactMobileProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +18,7 @@ export default function ContactMobile({ showHeading = true }: ContactMobileProps
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -70,7 +72,12 @@ export default function ContactMobile({ showHeading = true }: ContactMobileProps
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={16} delay={0.34} className="w-full">
+        <ScrollAnimation
+          direction="up"
+          distance={16}
+          delay={0.34}
+          className="w-full"
+        >
           <form onSubmit={handleSubmit} className="w-full  px-[24px]">
             <div className="pt-[46px]">
               <TextField
@@ -218,7 +225,12 @@ export default function ContactMobile({ showHeading = true }: ContactMobileProps
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={14} delay={0.46} className="w-full flex justify-center">
+        <ScrollAnimation
+          direction="up"
+          distance={14}
+          delay={0.46}
+          className="w-full flex justify-center"
+        >
           <div
             className="mt-[42px]"
             style={{
@@ -273,7 +285,12 @@ export default function ContactMobile({ showHeading = true }: ContactMobileProps
           </h3>
         </ScrollAnimation>
 
-        <ScrollAnimation direction="up" distance={14} delay={0.64} className="w-full flex justify-center">
+        <ScrollAnimation
+          direction="up"
+          distance={14}
+          delay={0.64}
+          className="w-full flex justify-center"
+        >
           <div
             className="mt-[42px]"
             style={{

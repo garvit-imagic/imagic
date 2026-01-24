@@ -10,7 +10,7 @@ export default function ContactUsPage() {
   return (
     <main className="min-h-screen pt-[80px]">
       <Navbar />
-      
+
       {/* Hero Section with Background */}
       <ScrollAnimation direction="up" distance={40}>
         <HeroWithBackground
