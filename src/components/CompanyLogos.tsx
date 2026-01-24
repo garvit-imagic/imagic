@@ -26,7 +26,7 @@ export default function CompanyLogos() {
                 alt="Company Logos"
                 width={1200}
                 height={400}
-                className="w-auto h-auto max-w-full"
+                className="max-w-full"
                 priority
               />
             </div>
@@ -43,7 +43,7 @@ export default function CompanyLogos() {
               alt="Company Logos"
               width={600}
               height={300}
-              className="w-auto h-auto max-w-full"
+              className="max-w-full"
               priority
             />
           </div>
