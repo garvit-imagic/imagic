@@ -4,7 +4,7 @@ export default function CultureTextSection1() {
   const { section1 } = cultureText;
 
   return (
-    <section className="w-full mb-[410px]">
+    <section className="w-full mb-[114px]">
       {/* Desktop Version */}
       <div className="hidden md:block ml-[100px] mr-[70px] mt-[145px]">
         {/* Row 1 - "Serious about design" */}

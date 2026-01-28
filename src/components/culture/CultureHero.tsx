@@ -19,12 +19,12 @@ export default function CultureHero() {
 
       {/* Mobile Hero */}
       <div className="md:hidden w-full">
-        <div className="relative w-full h-[calc(100vh-80px)]">
+        <div className="relative w-full aspect-[375/515]">
           <Image
             src={cultureImages.hero.mobile}
             alt="Culture Hero"
             fill
-            className="object-contain"
+            className="object-cover"
             priority
           />
         </div>

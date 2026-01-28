@@ -67,7 +67,7 @@ export default function CultureTextSection2() {
           <div className="font-normal text-[18px] leading-[100%] tracking-[0%]">
             {section2.row2.line1}
           </div>
-          <div className="font-bold text-[18px] leading-[100%] tracking-[0%] mt-3">
+          <div className="font-bold text-[18px] leading-[100%] tracking-[0%] mt-3 ml-[20px]">
             {section2.row2.line2}
           </div>
         </div>
