@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import CultureHero from "@/components/culture/CultureHero";
 import CultureTextSection1 from "@/components/culture/CultureTextSection1";

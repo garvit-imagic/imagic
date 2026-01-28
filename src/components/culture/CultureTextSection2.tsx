@@ -1,4 +1,7 @@
+"use client";
+
 import { cultureText } from "@/data/cultureData";
+import ScrollAnimation from "../ScrollAnimation";
 
 export default function CultureTextSection2() {
   const { section2 } = cultureText;
@@ -7,94 +10,98 @@ export default function CultureTextSection2() {
     <section className="w-full">
       {/* Desktop Version */}
       <div className="hidden md:block mx-[100px] mb-[186px]">
-        {/* Row 1 - "We're driven by a simple truth:" */}
-        <div className="mb-[315px] text-center">
-          <h2 className="font-bold text-[70px] leading-[100%] tracking-[0%]">
-            {section2.row1.text}
-            <span className="font-normal">{section2.row1.lightText}</span>
-          </h2>
-        </div>
-
-        {/* Row 2 - "Great work starts with open conversations." */}
-        <div className="mb-[405px] text-left pr-[-10px]">
-          <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
-            {section2.row2.line1}
+        <ScrollAnimation direction="up" distance={24} delay={0.3}>
+          {/* Row 1 - "We're driven by a simple truth:" */}
+          <div className="mb-[315px] text-center">
+            <h2 className="font-bold text-[70px] leading-[100%] tracking-[0%]">
+              {section2.row1.text}
+              <span className="font-normal">{section2.row1.lightText}</span>
+            </h2>
           </div>
-          <div className="font-bold text-[64px] leading-[100%] tracking-[0%] mt-[10px] ml-[30px]">
-            {section2.row2.line2}
-          </div>
-        </div>
 
-        {/* Row 3 - Paragraph (60% width, right aligned) */}
-        <div className="mb-[259px] flex justify-end">
-          <p className="w-[52%] font-normal text-[32px] leading-[120%] tracking-[0%]">
-            {section2.row3}
-          </p>
-        </div>
-
-        {/* Row 4 - Paragraph (30% width, left aligned) */}
-        <div className="mb-[281px]">
-          <p className="w-[43%] font-normal text-[32px] leading-[120%] tracking-[0%] text-left">
-            {section2.row4}
-          </p>
-        </div>
-
-        {/* Row 5 - "Let's make it work !" */}
-        <div className="text-right">
-          <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
-            {section2.row5.line1}
+          {/* Row 2 - "Great work starts with open conversations." */}
+          <div className="mb-[405px] text-left pr-[-10px]">
+            <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
+              {section2.row2.line1}
+            </div>
+            <div className="font-bold text-[64px] leading-[100%] tracking-[0%] mt-[10px] ml-[30px]">
+              {section2.row2.line2}
+            </div>
           </div>
-          <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
-            {section2.row5.line2}
+
+          {/* Row 3 - Paragraph (60% width, right aligned) */}
+          <div className="mb-[259px] flex justify-end">
+            <p className="w-[52%] font-normal text-[32px] leading-[120%] tracking-[0%]">
+              {section2.row3}
+            </p>
           </div>
+
+          {/* Row 4 - Paragraph (30% width, left aligned) */}
+          <div className="mb-[281px]">
+            <p className="w-[43%] font-normal text-[32px] leading-[120%] tracking-[0%] text-left">
+              {section2.row4}
+            </p>
+          </div>
+
+          {/* Row 5 - "Let's make it work !" */}
+          <div className="text-right">
+            <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
+              {section2.row5.line1}
+            </div>
+            <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
+              {section2.row5.line2}
+            </div>
         </div>
+        </ScrollAnimation>
       </div>
 
       {/* Mobile Version */}
       <div className="md:hidden text-center">
-        {/* Row 1 */}
-        <div className="mb-[114px] text-center">
-          <h2 className="font-bold text-[25.77px] leading-[100%] tracking-[0%]">
-            {section2.row1.text}
-          </h2>
-          <h2 className="font-normal italic text-[25.77px] leading-[100%] tracking-[0%] mt-3">
-            {section2.row1.lightText}
-          </h2>
-        </div>
-
-        {/* Row 2 */}
-        <div className="mb-[114px]">
-          <div className="font-normal text-[18px] leading-[100%] tracking-[0%]">
-            {section2.row2.line1}
+        <ScrollAnimation direction="up" distance={18} delay={0.3}>
+          {/* Row 1 */}
+          <div className="mb-[114px] text-center">
+            <h2 className="font-bold text-[25.77px] leading-[100%] tracking-[0%]">
+              {section2.row1.text}
+            </h2>
+            <h2 className="font-normal italic text-[25.77px] leading-[100%] tracking-[0%] mt-3">
+              {section2.row1.lightText}
+            </h2>
           </div>
-          <div className="font-bold text-[18px] leading-[100%] tracking-[0%] mt-3 ml-[20px]">
-            {section2.row2.line2}
-          </div>
-        </div>
 
-        {/* Row 3 */}
-        <div className="mb-[114px] mx-[63px]">
-          <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
-            {section2.row3}
-          </p>
-        </div>
-
-        {/* Row 4 */}
-        <div className="mb-[114px] mx-[63px]">
-          <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
-            {section2.row4}
-          </p>
-        </div>
-
-        {/* Row 5 */}
-        <div className="mb-[114px]">
-          <div className="font-normal text-[30px] leading-[100%] tracking-[0%]">
-            {section2.row5.line1}
+          {/* Row 2 */}
+          <div className="mb-[114px]">
+            <div className="font-normal text-[18px] leading-[100%] tracking-[0%]">
+              {section2.row2.line1}
+            </div>
+            <div className="font-bold text-[18px] leading-[100%] tracking-[0%] mt-3 ml-[20px]">
+              {section2.row2.line2}
+            </div>
           </div>
-          <div className="font-normal text-[30px] leading-[100%] tracking-[0%] mt-4">
-            {section2.row5.line2}
+
+          {/* Row 3 */}
+          <div className="mb-[114px] mx-[63px]">
+            <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
+              {section2.row3}
+            </p>
           </div>
+
+          {/* Row 4 */}
+          <div className="mb-[114px] mx-[63px]">
+            <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
+              {section2.row4}
+            </p>
+          </div>
+
+          {/* Row 5 */}
+          <div className="mb-[114px]">
+            <div className="font-normal text-[30px] leading-[100%] tracking-[0%]">
+              {section2.row5.line1}
+            </div>
+            <div className="font-normal text-[30px] leading-[100%] tracking-[0%] mt-4">
+              {section2.row5.line2}
+            </div>
         </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
