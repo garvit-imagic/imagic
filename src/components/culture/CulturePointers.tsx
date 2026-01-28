@@ -5,10 +5,10 @@ export default function CulturePointers() {
     <section className="w-full">
       {/* Desktop Version */}
       <div className="hidden md:block mx-[100px] mb-[330px]">
-        <div className="flex gap-[310px]">
+        <div className="flex gap-[210px]">
           {/* Column 1 - Heading */}
           <div className="self-start">
-            <h2 className="font-light text-[48px] leading-[100%] tracking-[0%] whitespace-pre-line">
+            <h2 className="font-light text-[48px] leading-[120%] tracking-[0%] whitespace-pre-line">
               {cultureText.pointers.heading}
             </h2>
           </div>
@@ -20,7 +20,7 @@ export default function CulturePointers() {
                 <div className="px-[15px]">
                   {/* First line - Number and Heading */}
                   <div className="font-normal text-[24px] leading-[100%] tracking-[0%]">
-                    <span className="font-bold">{pointer.number}</span>{" "}
+                    <span>{pointer.number}</span>{" "}
                     {pointer.heading}
                   </div>
                   {/* Second line - Description */}

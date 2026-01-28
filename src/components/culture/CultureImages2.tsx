@@ -8,34 +8,31 @@ export default function CultureImages2() {
       <div className="hidden md:block mx-[157px] mb-[315px]">
         {/* Row 1 - Single image (left aligned) */}
         <div className="mb-[59px]">
-          <div className="w-fit">
+          <div className="w-[65%] aspect-[785/635] relative">
             <Image
               src={cultureImages.set2[0]}
               alt="Culture image 1"
-              width={800}
-              height={500}
+              fill
               className="rounded-[40px] object-cover"
             />
           </div>
         </div>
 
         {/* Row 2 - Two images (aligned to extremes) */}
-        <div className="flex justify-between">
-          <div className="w-fit">
+        <div className="flex justify-between gap-[59px]">
+          <div className="w-[30%] aspect-[441/635] relative mx-[40px]">
             <Image
               src={cultureImages.set2[1]}
               alt="Culture image 2"
-              width={600}
-              height={400}
+              fill
               className="rounded-[40px] object-cover"
             />
           </div>
-          <div className="w-fit">
+          <div className="w-[30%] aspect-[441/635] relative">
             <Image
               src={cultureImages.set2[2]}
               alt="Culture image 3"
-              width={600}
-              height={400}
+              fill
               className="rounded-[40px] object-cover"
             />
           </div>

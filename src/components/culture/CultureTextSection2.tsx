@@ -8,39 +8,39 @@ export default function CultureTextSection2() {
       {/* Desktop Version */}
       <div className="hidden md:block mx-[100px] mb-[186px]">
         {/* Row 1 - "We're driven by a simple truth:" */}
-        <div className="mb-[315px]">
-          <h2 className="font-bold text-[80px] leading-[100%] tracking-[0%]">
+        <div className="mb-[315px] text-center">
+          <h2 className="font-bold text-[70px] leading-[100%] tracking-[0%]">
             {section2.row1.text}
             <span className="font-normal">{section2.row1.lightText}</span>
           </h2>
         </div>
 
         {/* Row 2 - "Great work starts with open conversations." */}
-        <div className="mb-[405px] text-left">
+        <div className="mb-[405px] text-left pr-[-10px]">
           <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
             {section2.row2.line1}
           </div>
-          <div className="font-bold text-[64px] leading-[100%] tracking-[0%]">
+          <div className="font-bold text-[64px] leading-[100%] tracking-[0%] mt-[10px] ml-[30px]">
             {section2.row2.line2}
           </div>
         </div>
 
         {/* Row 3 - Paragraph (60% width, right aligned) */}
         <div className="mb-[259px] flex justify-end">
-          <p className="w-[60%] font-normal text-[32px] leading-[100%] tracking-[0%] text-right">
+          <p className="w-[52%] font-normal text-[32px] leading-[120%] tracking-[0%]">
             {section2.row3}
           </p>
         </div>
 
         {/* Row 4 - Paragraph (30% width, left aligned) */}
         <div className="mb-[281px]">
-          <p className="w-[30%] font-normal text-[32px] leading-[100%] tracking-[0%] text-left">
+          <p className="w-[43%] font-normal text-[32px] leading-[120%] tracking-[0%] text-left">
             {section2.row4}
           </p>
         </div>
 
         {/* Row 5 - "Let's make it work !" */}
-        <div className="text-left">
+        <div className="text-right">
           <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
             {section2.row5.line1}
           </div>

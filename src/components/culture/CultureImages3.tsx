@@ -8,12 +8,11 @@ export default function CultureImages3() {
       <div className="hidden md:block mx-[100px] mb-[185px]">
         {/* Row 1 - Image right aligned */}
         <div className="mb-[150px] flex justify-end">
-          <div className="w-fit">
+          <div className="w-[60%] aspect-[862/635] relative">
             <Image
               src={cultureImages.set3[0]}
               alt="Culture image 6"
-              width={800}
-              height={500}
+              fill
               className="rounded-[40px] object-cover"
             />
           </div>
@@ -21,12 +20,11 @@ export default function CultureImages3() {
 
         {/* Row 2 - Image left aligned */}
         <div className="flex justify-start">
-          <div className="w-fit">
+          <div className="w-[30%] aspect-[508/635] relative">
             <Image
               src={cultureImages.set3[1]}
               alt="Culture image 7"
-              width={800}
-              height={500}
+              fill
               className="rounded-[40px] object-cover"
             />
           </div>

@@ -6,7 +6,7 @@ export default function CultureHero() {
     <section className="w-full">
       {/* Desktop Hero */}
       <div className="hidden md:block w-full">
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-[calc(100vh-80px)]">
           <Image
             src={cultureImages.hero.desktop}
             alt="Culture Hero"
@@ -19,7 +19,7 @@ export default function CultureHero() {
 
       {/* Mobile Hero */}
       <div className="md:hidden w-full">
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-[calc(100vh-80px)]">
           <Image
             src={cultureImages.hero.mobile}
             alt="Culture Hero"

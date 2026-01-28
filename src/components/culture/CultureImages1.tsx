@@ -5,19 +5,24 @@ export default function CultureImages1() {
   return (
     <section className="w-full">
       {/* Desktop Version */}
-      <div className="hidden md:block mr-[135px] mb-[317px]">
-        <div className="flex justify-end gap-[59px]">
-          {cultureImages.set1.map((image, index) => (
-            <div key={index} className="relative">
-              <Image
-                src={image}
-                alt={`Culture image ${index + 4}`}
-                width={600}
-                height={501}
-                className="rounded-[40px] object-cover"
-              />
-            </div>
-          ))}
+      <div className="hidden md:block mx-[135px] mb-[317px]">
+        <div className="flex justify-end items-start gap-[59px]">
+          <div className="w-[33%] aspect-[501/635] relative">
+            <Image
+              src={cultureImages.set1[0]}
+              alt="Culture image 4"
+              fill
+              className="rounded-[40px] object-cover"
+            />
+          </div>
+          <div className="w-[33%] aspect-[501/635] relative">
+            <Image
+              src={cultureImages.set1[1]}
+              alt="Culture image 5"
+              fill
+              className="rounded-[40px] object-cover"
+            />
+          </div>
         </div>
       </div>
 
