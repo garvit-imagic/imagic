@@ -11,7 +11,7 @@ export default function CultureHero() {
             src={cultureImages.hero.desktop}
             alt="Culture Hero"
             fill
-            className="object-contain"
+            className="object-contain pt-[20px]"
             priority
           />
         </div>
