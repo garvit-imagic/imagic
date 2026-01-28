@@ -53,9 +53,11 @@ export default function CultureTextSection2() {
       {/* Mobile Version */}
       <div className="md:hidden text-center">
         {/* Row 1 */}
-        <div className="mb-[114px]">
-          <h2 className="font-normal italic text-[25.77px] leading-[100%] tracking-[0%]">
+        <div className="mb-[114px] text-center">
+          <h2 className="font-bold text-[25.77px] leading-[100%] tracking-[0%]">
             {section2.row1.text}
+          </h2>
+          <h2 className="font-normal italic text-[25.77px] leading-[100%] tracking-[0%] mt-3">
             {section2.row1.lightText}
           </h2>
         </div>
@@ -65,21 +67,21 @@ export default function CultureTextSection2() {
           <div className="font-normal text-[18px] leading-[100%] tracking-[0%]">
             {section2.row2.line1}
           </div>
-          <div className="font-bold text-[18px] leading-[100%] tracking-[0%]">
+          <div className="font-bold text-[18px] leading-[100%] tracking-[0%] mt-3">
             {section2.row2.line2}
           </div>
         </div>
 
         {/* Row 3 */}
-        <div className="mb-[114px]">
-          <p className="font-normal text-[16px] leading-[100%] tracking-[0%]">
+        <div className="mb-[114px] mx-[63px]">
+          <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
             {section2.row3}
           </p>
         </div>
 
         {/* Row 4 */}
-        <div className="mb-[114px]">
-          <p className="font-normal text-[16px] leading-[100%] tracking-[0%]">
+        <div className="mb-[114px] mx-[63px]">
+          <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
             {section2.row4}
           </p>
         </div>
@@ -89,7 +91,7 @@ export default function CultureTextSection2() {
           <div className="font-normal text-[30px] leading-[100%] tracking-[0%]">
             {section2.row5.line1}
           </div>
-          <div className="font-normal text-[30px] leading-[100%] tracking-[0%]">
+          <div className="font-normal text-[30px] leading-[100%] tracking-[0%] mt-4">
             {section2.row5.line2}
           </div>
         </div>

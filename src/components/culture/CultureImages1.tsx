@@ -28,15 +28,15 @@ export default function CultureImages1() {
 
       {/* Mobile Version */}
       <div className="md:hidden mx-[52px] mb-[113px]">
-        <div className="flex gap-[20px] w-full">
+        <div className="flex gap-[26px] w-full">
           {cultureImages.set1.map((image, index) => (
-            <div key={index} className="relative flex-1">
+            <div key={index} className="relative flex-1 w-[40%] aspect-[135/175]">
               <Image
                 src={image}
                 alt={`Culture image ${index + 4}`}
                 width={300}
                 height={200}
-                className="rounded-[40px] object-cover w-full h-auto"
+                className="rounded-[12px] object-cover "
               />
             </div>
           ))}

@@ -42,34 +42,34 @@ export default function CultureImages2() {
       {/* Mobile Version */}
       <div className="md:hidden mx-[45px]">
         {/* Row 1 - Single image */}
-        <div className="mb-[38px]">
+        <div className="flex justify-start mb-[38px] w-[80%] aspect-[233/175]">
           <Image
             src={cultureImages.set2[0]}
             alt="Culture image 1"
-            width={400}
-            height={250}
-            className="rounded-[40px] object-cover w-full h-auto"
+            width={300}
+            height={200}
+            className="rounded-[14px] object-cover"
           />
         </div>
 
         {/* Row 2 - Two images */}
-        <div className="flex justify-between gap-[10px]">
-          <div className="flex-1">
+        <div className="flex justify-between gap-[41px] mb-[114px]">
+          <div className="flex-1 w-[25%] aspect-[133/175]">
             <Image
               src={cultureImages.set2[1]}
               alt="Culture image 2"
               width={200}
               height={150}
-              className="rounded-[40px] object-cover w-full h-auto"
+              className="rounded-[14px] object-cover"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 w-[25%] aspect-[133/175]">
             <Image
               src={cultureImages.set2[2]}
               alt="Culture image 3"
               width={200}
               height={150}
-              className="rounded-[40px] object-cover w-full h-auto"
+              className="rounded-[14px] object-cover"
             />
           </div>
         </div>

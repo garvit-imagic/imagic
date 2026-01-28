@@ -20,8 +20,7 @@ export default function CulturePointers() {
                 <div className="px-[15px]">
                   {/* First line - Number and Heading */}
                   <div className="font-normal text-[24px] leading-[100%] tracking-[0%]">
-                    <span>{pointer.number}</span>{" "}
-                    {pointer.heading}
+                    <span>{pointer.number}</span> {pointer.heading}
                   </div>
                   {/* Second line - Description */}
                   <div className="font-normal text-[24px] leading-[100%] tracking-[0%] mt-[10px]">
@@ -30,7 +29,6 @@ export default function CulturePointers() {
                 </div>
                 {/* Black line separator */}
                 <div className="my-[40px] border-t border-black" />
-
               </div>
             ))}
           </div>
@@ -41,26 +39,26 @@ export default function CulturePointers() {
       <div className="md:hidden mb-[114px] mx-[45px]">
         {/* Heading */}
         <div className="mb-[114px] text-center">
-          <h2 className="font-light text-[25.77px] leading-[100%] tracking-[0%] whitespace-pre-line">
+          <h2 className="font-light text-[25.77px] leading-[130%] tracking-[0%] whitespace-pre-line">
             {cultureText.pointers.heading}
           </h2>
         </div>
 
         {/* Pointers */}
-        <div className="px-[34px] mb-[114px]">
+        <div className="px-[32px] mb-[100px]">
           {culturePointers.map((pointer, index) => (
-            <div key={pointer.number} className="mb-[100px] last:mb-0">
-              <div className="flex gap-[30px]">
+            <div key={pointer.number} className="mb-[50px] last:mb-0">
+              <div className="flex gap-[15px]">
                 {/* Column 1 - Number */}
                 <div className="self-start">
-                  <span className="font-bold text-[24px] leading-[100%] tracking-[0%]">
+                  <span className="font-normal text-[16px] leading-[100%] tracking-[0%]">
                     {pointer.number}
                   </span>
                 </div>
 
                 {/* Column 2 - Heading and Description */}
                 <div className="flex-1">
-                  <div className="font-normal text-[24px] leading-[100%] tracking-[0%]">
+                  <div className="font-normal text-[16px] leading-[100%] tracking-[0%]">
                     {pointer.heading} {pointer.description}
                   </div>
                 </div>

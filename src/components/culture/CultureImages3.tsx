@@ -35,26 +35,26 @@ export default function CultureImages3() {
       <div className="md:hidden mx-[50px] mb-[113px]">
         {/* Row 1 - Image right aligned */}
         <div className="mb-[43px] flex justify-end">
-          <div className="w-[80%]">
+          <div className="w-[85%] aspect-[239/175]">
             <Image
               src={cultureImages.set3[0]}
               alt="Culture image 6"
               width={400}
               height={250}
-              className="rounded-[40px] object-cover w-full h-auto"
+              className="rounded-[14px] object-cover "
             />
           </div>
         </div>
 
         {/* Row 2 - Image left aligned */}
         <div className="flex justify-start">
-          <div className="w-[80%]">
+          <div className="w-[60%] aspect-[146/182]">
             <Image
               src={cultureImages.set3[1]}
               alt="Culture image 7"
               width={400}
               height={250}
-              className="rounded-[40px] object-cover w-full h-auto"
+              className="rounded-[14px] object-cover "
             />
           </div>
         </div>

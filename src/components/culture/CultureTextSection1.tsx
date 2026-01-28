@@ -63,20 +63,20 @@ export default function CultureTextSection1() {
               about
             </span>
           </div>
-          <div className="leading-[100%]">
-            <span className="font-bold text-[25.77px] tracking-[0%]">
+          <div className="leading-[100%] mt-[15px]">
+            <span className="font-bold text-[25.77px] tracking-[0%] ">
               design
             </span>
           </div>
         </div>
 
         {/* Row 2 - Paragraphs */}
-        <div className="mb-[144px]">
-          <p className="font-normal text-[16px] leading-[100%] tracking-[0%]">
+        <div className="mb-[144px] mx-[52px]">
+          <p className="font-normal text-[16px] leading-[130%] tracking-[0%]">
             {section1.row2.paragraph1}
             <span className="italic">{section1.row2.italicText}</span>
           </p>
-          <p className="font-normal text-[16px] leading-[100%] tracking-[0%] mt-2">
+          <p className="font-normal text-[16px] leading-[130%] tracking-[0%] mt-5">
             {section1.row2.paragraph2}
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function CultureTextSection1() {
               about
             </span>
           </div>
-          <div className="leading-[100%]">
+          <div className="leading-[100%]  mt-4">
             <span className="font-bold text-[25.77px] tracking-[0%]">
               ourselves !
             </span>
