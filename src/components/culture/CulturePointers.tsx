@@ -36,7 +36,7 @@ export default function CulturePointers() {
                 </div>
               ))}
             </div>
-        </div>
+          </div>
         </ScrollAnimation>
       </div>
 
@@ -71,7 +71,7 @@ export default function CulturePointers() {
                 </div>
               </div>
             ))}
-        </div>
+          </div>
         </ScrollAnimation>
       </div>
     </section>

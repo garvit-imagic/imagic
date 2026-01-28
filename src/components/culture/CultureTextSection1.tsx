@@ -51,8 +51,8 @@ export default function CultureTextSection1() {
               <span className="font-bold text-[80px] tracking-[0%]">
                 {section1.row3.boldText}
               </span>
+            </div>
           </div>
-        </div>
         </ScrollAnimation>
       </div>
 
@@ -101,8 +101,8 @@ export default function CultureTextSection1() {
               <span className="font-bold text-[25.77px] tracking-[0%]">
                 ourselves !
               </span>
+            </div>
           </div>
-        </div>
         </ScrollAnimation>
       </div>
     </section>

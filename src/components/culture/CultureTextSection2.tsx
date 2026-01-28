@@ -51,7 +51,7 @@ export default function CultureTextSection2() {
             <div className="font-normal text-[64px] leading-[100%] tracking-[0%]">
               {section2.row5.line2}
             </div>
-        </div>
+          </div>
         </ScrollAnimation>
       </div>
 
@@ -100,7 +100,7 @@ export default function CultureTextSection2() {
             <div className="font-normal text-[30px] leading-[100%] tracking-[0%] mt-4">
               {section2.row5.line2}
             </div>
-        </div>
+          </div>
         </ScrollAnimation>
       </div>
     </section>
