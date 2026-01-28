@@ -3,7 +3,7 @@ import { cultureImages } from "@/data/cultureData";
 
 export default function CultureHero() {
   return (
-    <section className="w-full">
+    <section className="w-full pt-[75px] md:pt-0">
       {/* Desktop Hero */}
       <div className="hidden md:block w-full">
         <div className="relative w-full h-[calc(100vh-80px)]">
@@ -18,8 +18,8 @@ export default function CultureHero() {
       </div>
 
       {/* Mobile Hero */}
-      <div className="md:hidden w-full">
-        <div className="relative w-full aspect-[375/515]">
+      <div className="md:hidden w-full mb-[114px]">
+        <div className="relative w-full aspect-[400/257]">
           <Image
             src={cultureImages.hero.mobile}
             alt="Culture Hero"
