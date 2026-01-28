@@ -13,7 +13,7 @@ export default function CultureImages1() {
                 src={image}
                 alt={`Culture image ${index + 4}`}
                 width={600}
-                height={400}
+                height={501}
                 className="rounded-[40px] object-cover"
               />
             </div>

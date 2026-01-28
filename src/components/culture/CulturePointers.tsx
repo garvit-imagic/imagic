@@ -8,30 +8,29 @@ export default function CulturePointers() {
         <div className="flex gap-[310px]">
           {/* Column 1 - Heading */}
           <div className="self-start">
-            <h2 className="font-light text-[24px] leading-[100%] tracking-[0%] whitespace-pre-line">
+            <h2 className="font-light text-[48px] leading-[100%] tracking-[0%] whitespace-pre-line">
               {cultureText.pointers.heading}
             </h2>
           </div>
 
           {/* Column 2 - Pointers */}
-          <div className="flex-1">
+          <div className="flex-1 ">
             {culturePointers.map((pointer, index) => (
               <div key={pointer.number}>
-                <div className="px-[10px]">
+                <div className="px-[15px]">
                   {/* First line - Number and Heading */}
                   <div className="font-normal text-[24px] leading-[100%] tracking-[0%]">
                     <span className="font-bold">{pointer.number}</span>{" "}
                     {pointer.heading}
                   </div>
                   {/* Second line - Description */}
-                  <div className="font-normal text-[24px] leading-[100%] tracking-[0%]">
+                  <div className="font-normal text-[24px] leading-[100%] tracking-[0%] mt-[10px]">
                     {pointer.description}
                   </div>
                 </div>
                 {/* Black line separator */}
-                {index < culturePointers.length - 1 && (
-                  <div className="my-[20px] border-t border-black" />
-                )}
+                <div className="my-[40px] border-t border-black" />
+
               </div>
             ))}
           </div>
