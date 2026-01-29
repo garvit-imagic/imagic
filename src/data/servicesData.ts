@@ -14,13 +14,13 @@ export const servicesIntroTexts = [
     mobileMarginBottom: "mb-[80px]",
   },
   {
-    text: "That \"turning 1991\" is the year still cool or meaningful enough, thoughtfully designed books, spatial installations, exhibition environments, and brand expressions that surprise and inspire.",
+    text: 'That "turning 1991" is the year still cool or meaningful enough, thoughtfully designed books, spatial installations, exhibition environments, and brand expressions that surprise and inspire.',
     alignment: "right" as const,
     width: "40%",
     className: "font-normal text-[32px] leading-[100%] tracking-[0%]",
     marginBottom: "mb-[200px]",
     textAlign: "text-right",
-        delay: 0.7,
+    delay: 0.7,
     // Mobile overrides
     mobileWidth: "90%",
     mobileClassName: "font-normal text-[18px] leading-[100%] tracking-[0%]",
@@ -83,8 +83,7 @@ export const serviceDetailCards = [
         "Brand positioning that guides us how your brand speaks across channels",
         "Strategic narrative framing to influence action where needed",
       ],
-      pointerClassName:
-        "font-normal text-[24px] leading-[100%] tracking-[0%]",
+      pointerClassName: "font-normal text-[24px] leading-[100%] tracking-[0%]",
       numberTextGap: "gap-[8px]",
       // Mobile
       mobileHeadingClassName:
@@ -117,8 +116,7 @@ export const serviceDetailCards = [
         "Editorial design — books, magazines, annual reports/layouts, and brand guides.",
         "Graphic templates for social media, presentations and marketing materials across channels.",
       ],
-      pointerClassName:
-        "font-normal text-[24px] leading-[100%] tracking-[0%]",
+      pointerClassName: "font-normal text-[24px] leading-[100%] tracking-[0%]",
       numberTextGap: "gap-[8px]",
       // Mobile
       mobileHeadingClassName:
@@ -151,8 +149,7 @@ export const serviceDetailCards = [
         "Online campaigns, and digital advertisements.",
         "Design graphics and other interactives.",
       ],
-      pointerClassName:
-        "font-normal text-[24px] leading-[100%] tracking-[0%]",
+      pointerClassName: "font-normal text-[24px] leading-[100%] tracking-[0%]",
       numberTextGap: "gap-[8px]",
       // Mobile
       mobileHeadingClassName:
@@ -185,8 +182,7 @@ export const serviceDetailCards = [
         "Retail creative; exhibitions, and stalls",
         "Event creative; and furnish, illustrations, collateral signage, way-finder",
       ],
-      pointerClassName:
-        "font-normal text-[24px] leading-[100%] tracking-[0%]",
+      pointerClassName: "font-normal text-[24px] leading-[100%] tracking-[0%]",
       numberTextGap: "gap-[8px]",
       // Mobile
       mobileHeadingClassName:
@@ -199,8 +195,7 @@ export const serviceDetailCards = [
 
 export const servicesClosingText = {
   text: "Your brand lives and breathes in many places — we make sure it looks and feels consistent everywhere.",
-  className:
-    "font-bold text-[40px] leading-[100%] tracking-[0%] text-center",
+  className: "font-bold text-[40px] leading-[100%] tracking-[0%] text-center",
   containerClassName: "w-[90%] mx-auto",
   // Mobile
   mobileClassName:

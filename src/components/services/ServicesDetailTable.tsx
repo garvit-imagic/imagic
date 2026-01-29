@@ -37,7 +37,10 @@ export default function ServicesDetailTable() {
 
             {/* Table Rows - Stacked Layout */}
             {servicesDetailTable.rows.map((row, index) => (
-              <div key={index} className={servicesDetailTable.mobileRowClassName}>
+              <div
+                key={index}
+                className={servicesDetailTable.mobileRowClassName}
+              >
                 <div className="font-semibold mb-[10px]">{row.label}</div>
                 <div>{row.values}</div>
               </div>

@@ -8,10 +8,7 @@ import ServiceDetailCard from "@/components/services/ServiceDetailCard";
 import ServicesClosingText from "@/components/services/ServicesClosingText";
 import ServicesDetailTable from "@/components/services/ServicesDetailTable";
 import ContactSection from "@/components/ContactSection";
-import {
-  servicesIntroTexts,
-  serviceDetailCards,
-} from "@/data/servicesData";
+import { servicesIntroTexts, serviceDetailCards } from "@/data/servicesData";
 
 export default function ServicesPage() {
   return (

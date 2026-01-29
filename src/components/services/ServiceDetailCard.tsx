@@ -70,7 +70,9 @@ export default function ServiceDetailCard({
                       <span className={column2.pointerClassName}>
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className={column2.pointerClassName}>{pointer}</span>
+                      <span className={column2.pointerClassName}>
+                        {pointer}
+                      </span>
                     </div>
                   ))}
                 </div>

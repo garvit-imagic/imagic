@@ -39,35 +39,42 @@ export default function ServicesIntroText({
   return (
     <>
       {/* Desktop Version */}
-      <section 
+      <section
         className="hidden md:block w-full"
-        style={{ marginBottom: marginBottom.replace('mb-', '').replace('[', '').replace(']', '').replace('px', '') + 'px' }}
+        style={{
+          marginBottom:
+            marginBottom
+              .replace("mb-", "")
+              .replace("[", "")
+              .replace("]", "")
+              .replace("px", "") + "px",
+        }}
       >
         <ScrollAnimation direction="up" distance={24} delay={delay}>
           <div
             className={`mx-[116px] ${getAlignmentClass()}`}
             style={{ width }}
           >
-            <p className={`${className} ${textAlign}`}>
-              {text}
-            </p>
+            <p className={`${className} ${textAlign}`}>{text}</p>
           </div>
         </ScrollAnimation>
       </section>
 
       {/* Mobile Version */}
-      <section 
+      <section
         className="md:hidden w-full"
-        style={{ marginBottom: mobileMarginBottom.replace('mb-', '').replace('[', '').replace(']', '').replace('px', '') + 'px' }}
+        style={{
+          marginBottom:
+            mobileMarginBottom
+              .replace("mb-", "")
+              .replace("[", "")
+              .replace("]", "")
+              .replace("px", "") + "px",
+        }}
       >
         <ScrollAnimation direction="up" distance={18} delay={delay}>
-          <div
-            className="mx-auto"
-            style={{ width: mobileWidth }}
-          >
-            <p className={`${mobileClassName} ${mobileTextAlign}`}>
-              {text}
-            </p>
+          <div className="mx-auto" style={{ width: mobileWidth }}>
+            <p className={`${mobileClassName} ${mobileTextAlign}`}>{text}</p>
           </div>
         </ScrollAnimation>
       </section>

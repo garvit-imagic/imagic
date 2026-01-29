@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       spacing: {
-        '464': '464px',
+        "464": "464px",
       },
       colors: {
         primary: {
