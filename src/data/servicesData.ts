@@ -205,28 +205,28 @@ export const servicesClosingText = {
 
 export const servicesDetailTable = {
   containerClassName: "mt-[592px] mb-[176px] w-[90%] mx-auto",
-  topBorderClassName: "border-t-2 border-black mb-[51px]",
+  topBorderClassName: "border-t-2 border-black ",
   rowClassName:
     "font-normal text-[24px] leading-[100%] tracking-[0%] pb-[22px]",
   bottomBorderClassName: "h-[9px] bg-black w-full mt-[17px]",
   rows: [
     {
-      label: "Environmental",
+      label: "Environmental :",
       values: "events / exhibitions / stalls / interiors",
       expandable: true,
     },
     {
-      label: "Print",
+      label: "Print :",
       values: "stationery / packaging / brochures / publications",
       expandable: true,
     },
     {
-      label: "Digital",
+      label: "Digital :",
       values: "websites / apps / social media / online ads / prototypes",
       expandable: true,
     },
     {
-      label: "Communication",
+      label: "Communication :",
       values: "voice / messaging / campaigns",
       expandable: true,
     },

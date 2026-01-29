@@ -11,21 +11,33 @@ export default function ServicesDetailTable() {
         <ScrollAnimation direction="up" distance={24} delay={0.32}>
           <div className={servicesDetailTable.containerClassName}>
             {/* Top Border */}
-            <div className={servicesDetailTable.topBorderClassName} />
+            <div className={`mb-[51px]  ${servicesDetailTable.topBorderClassName}`} />
 
             {/* Table Rows */}
             {servicesDetailTable.rows.map((row, index) => (
-              <div key={index} className={`font-normal text-[24px] leading-[100%] tracking-[0%] pb-[22px] ${servicesDetailTable.rowClassName}`}>
-                <span className="font-semibold">{row.label}</span>
-                <span className="mx-[20px]">:</span>
+              <div key={index} className="pb-[22px] ml-[369px] flex" style={{ fontSize: '24px', lineHeight: '100%', letterSpacing: '0%', fontWeight: 400 }}>
+                <span style={{ minWidth: '250px' }}>{row.label}</span>
                 <span>{row.values}</span>
               </div>
             ))}
 
             {/* Bottom Border (Marquee style) */}
-            <div className={servicesDetailTable.bottomBorderClassName} />
+            <div className="h-[1px] bg-black w-full mt-[17px]" />
+            <div className="h-[15px] w-[98%] mx-auto" style={{ backgroundColor: '#0000004D' }} />
+
           </div>
         </ScrollAnimation>
+        <div className="text-center" style={{ marginTop: '148px', marginBottom: '200px' }}>
+          <h2 style={{ 
+            fontFamily: 'Open Sans Hebrew, Open Sans, sans-serif',
+            fontWeight: 700,
+            fontSize: '100px',
+            lineHeight: '100%',
+            letterSpacing: '0%'
+          }}>
+            Let&apos;s Collaborate !
+          </h2>
+        </div>
       </div>
 
       {/* Mobile Version */}
@@ -47,7 +59,8 @@ export default function ServicesDetailTable() {
             ))}
 
             {/* Bottom Border (Marquee style) */}
-            <div className="h-[9px] bg-black w-full mt-[20px]" />
+            <div className="h-[1px] bg-black w-full mt-[20px]" />
+            <div className="h-[9px] bg-black w-[95%]" />
           </div>
         </ScrollAnimation>
       </div>

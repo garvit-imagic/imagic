@@ -37,11 +37,11 @@ export default function HeroDesktop() {
             <ScrollAnimation direction="left" distance={32} delay={0.28}>
               <div className="max-w-[700px] min-w-[600px] h-[431px] bg-transparent flex items-center justify-center">
                 <Image
-                  src="/assets/Images/hero-desktop1.gif"
+                  src="/assets/Images/hero-gif.gif"
                   alt="Hero visual"
                   width={700}
                   height={431}
-                  className="w-full h-full object-contain"
+                  className="w-full h-[63%] object-contain"
                   priority
                 />
               </div>
@@ -51,7 +51,7 @@ export default function HeroDesktop() {
 
         <div className="pr-[177px] pl-[144px] pt-[150px] pb-[165px]">
           <div className="flex items-center justify-between">
-            <ScrollAnimation direction="up" distance={20} delay={0.24}>
+            {/* <ScrollAnimation direction="up" distance={20} delay={0.24}>
               <div className="w-[508px] h-[220px]">
                 <Image
                   src="/assets/Images/hero-desktop2.svg"
@@ -61,12 +61,12 @@ export default function HeroDesktop() {
                   className="w-full h-full object-contain"
                 />
               </div>
-            </ScrollAnimation>
+            </ScrollAnimation> */}
 
             <ScrollAnimation direction="up" distance={20} delay={0.32}>
-              <div className="flex-1 pl-[127px]">
+              <div className="flex-1 w-[70%] mx-auto flex justify-center">
                 <span
-                  className="font-normal leading-[100%] text-black"
+                  className="font-normal text-black text-center"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     fontSize: "20px",
