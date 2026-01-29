@@ -37,7 +37,7 @@ export default function ServiceDetailCard({
   return (
     <>
       {/* Desktop Version */}
-      <section className="hidden md:block w-full mb-[200px]">
+      <section className="hidden md:block w-full mb-[200px] h-[1200px]">
         <ScrollAnimation direction="up" distance={22} delay={delay}>
           <div className="mx-[98px] relative">
             {/* Vertical Strip - 60px × 1200px */}
