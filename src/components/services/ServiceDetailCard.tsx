@@ -37,40 +37,91 @@ export default function ServiceDetailCard({
   return (
     <>
       {/* Desktop Version */}
-      <section className="hidden md:block w-full mb-[200px] h-[1200px]">
-        <ScrollAnimation direction="up" distance={22} delay={delay}>
-          <div className="mx-[98px] relative">
+      <section className="hidden md:block w-full mb-[200px]">
+        <div
+          className="mx-[98px] relative"
+          style={{ height: "1200px", display: "flex", alignItems: "center" }}
+        >
+          <ScrollAnimation direction="up" distance={22} delay={delay}>
             {/* Vertical Strip - 60px × 1200px */}
             <div
               className={`absolute ${
                 stripPosition === "left" ? "left-0" : "right-0"
-              } w-[60px] h-[1200px] top-0`}
-              style={{ backgroundColor: stripColor }}
+              } w-[60px] top-0`}
+              style={{ backgroundColor: stripColor, height: "1200px" }}
             />
 
             {/* Two Column Layout */}
-            <div className="flex" style={{ gap: "139px" }}>
+            <div 
+              className="flex w-full relative" 
+              style={{ 
+                gap: "139px",
+                paddingLeft: stripPosition === "left" ? "130px" : "0",
+                paddingRight: stripPosition === "right" ? "130px" : "0"
+              }}
+            >
               {/* Column 1 - Heading & Description - 40% width with pt-[20px] offset */}
               <div className="relative z-10 pt-[20px]" style={{ width: "40%" }}>
-                <h3 className={column1.headingClassName}>{column1.heading}</h3>
-                <p className={`${column1.descriptionClassName} mt-[20px]`}>
+                <p
+                  style={{
+                    fontSize: "36px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    fontWeight: 400,
+                  }}
+                >
+                  {column1.heading}
+                </p>
+                <p
+                  className="pl-[62px] mt-[55px]"
+                  style={{
+                    fontSize: "24px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    fontWeight: 400,
+                  }}
+                >
                   {column1.description}
                 </p>
               </div>
 
               {/* Column 2 - What this includes - 50% width */}
               <div className="relative z-10" style={{ width: "50%" }}>
-                <h3 className={column2.headingClassName}>{column2.heading}</h3>
-                <div className="mt-[30px]">
+                <h3
+                  style={{
+                    fontSize: "36px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    fontWeight: 400,
+                  }}
+                >
+                  {column2.heading}
+                </h3>
+                <div className="mt-[49px]">
                   {column2.pointers.map((pointer, index) => (
                     <div
                       key={index}
-                      className={`flex ${column2.numberTextGap} mb-[20px]`}
+                      className="flex mb-[90px]"
+                      style={{ gap: "8px" }}
                     >
-                      <span className={column2.pointerClassName}>
+                      <span
+                        style={{
+                          fontSize: "24px",
+                          lineHeight: "100%",
+                          letterSpacing: "0%",
+                          fontWeight: 400,
+                        }}
+                      >
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className={column2.pointerClassName}>
+                      <span
+                        style={{
+                          fontSize: "24px",
+                          lineHeight: "100%",
+                          letterSpacing: "0%",
+                          fontWeight: 400,
+                        }}
+                      >
                         {pointer}
                       </span>
                     </div>
@@ -78,8 +129,8 @@ export default function ServiceDetailCard({
                 </div>
               </div>
             </div>
-          </div>
-        </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
       </section>
 
       {/* Mobile Version - No strips, stacked layout */}

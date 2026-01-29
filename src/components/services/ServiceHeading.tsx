@@ -9,7 +9,13 @@ export default function ServiceHeading() {
       {/* Desktop Version */}
       <div className="hidden md:block">
         <ScrollAnimation direction="up" distance={24} delay={0.24}>
-          <div style={{ marginLeft: '97px', marginRight: '97px', marginBottom: '86px' }}>
+          <div
+            style={{
+              marginLeft: "97px",
+              marginRight: "97px",
+              marginBottom: "86px",
+            }}
+          >
             <h3 className={serviceHeading.mainHeadingClassName}>
               {serviceHeading.mainHeading}
             </h3>
@@ -23,7 +29,13 @@ export default function ServiceHeading() {
       {/* Mobile Version */}
       <div className="md:hidden">
         <ScrollAnimation direction="up" distance={18} delay={0.24}>
-          <div style={{ marginLeft: '20px', marginRight: '20px', marginBottom: '50px' }}>
+          <div
+            style={{
+              marginLeft: "20px",
+              marginRight: "20px",
+              marginBottom: "50px",
+            }}
+          >
             <h3 className={serviceHeading.mobileMainClassName}>
               {serviceHeading.mainHeading}
             </h3>
