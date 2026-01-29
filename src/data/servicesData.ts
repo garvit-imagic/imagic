@@ -59,7 +59,7 @@ export const serviceHeading = {
 
 export const serviceDetailCards = [
   {
-    stripColor: "#8CC63F", // Green
+    stripColor: "#8DD461", // Green
     stripPosition: "right" as const,
     column1: {
       heading: "Brand Strategy & Communication",
@@ -126,7 +126,7 @@ export const serviceDetailCards = [
     },
   },
   {
-    stripColor: "#8CC63F", // Green
+    stripColor: "#E9EFE4", // Green
     stripPosition: "right" as const,
     column1: {
       heading: "Digital Experience",
@@ -159,7 +159,7 @@ export const serviceDetailCards = [
     },
   },
   {
-    stripColor: "#8CC63F", // Green
+    stripColor: "#B8E515", // Green
     stripPosition: "left" as const,
     column1: {
       heading: "Brand Experience & Transformation",

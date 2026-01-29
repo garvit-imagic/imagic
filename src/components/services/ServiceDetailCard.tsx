@@ -99,32 +99,41 @@ export default function ServiceDetailCard({
                 </h3>
                 <div className="mt-[49px]">
                   {column2.pointers.map((pointer, index) => (
-                    <div
+                    <ScrollAnimation 
                       key={index}
-                      className="flex mb-[90px]"
-                      style={{ gap: "8px" }}
+                      direction="up" 
+                      distance={16} 
+                      delay={delay + 0.1 + (index * 0.08)}
                     >
-                      <span
-                        style={{
-                          fontSize: "24px",
-                          lineHeight: "100%",
-                          letterSpacing: "0%",
-                          fontWeight: 400,
-                        }}
+                      <div
+                        className="flex mb-[90px] transition-all duration-300 hover:translate-x-2"
+                        style={{ gap: "8px" }}
                       >
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "24px",
-                          lineHeight: "100%",
-                          letterSpacing: "0%",
-                          fontWeight: 400,
-                        }}
-                      >
-                        {pointer}
-                      </span>
-                    </div>
+                        <span
+                          className="transition-colors duration-300"
+                          style={{
+                            fontSize: "24px",
+                            lineHeight: "100%",
+                            letterSpacing: "0%",
+                            fontWeight: 400,
+                            color: "#8CC63F",
+                          }}
+                        >
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span
+                          className="transition-opacity duration-300"
+                          style={{
+                            fontSize: "24px",
+                            lineHeight: "100%",
+                            letterSpacing: "0%",
+                            fontWeight: 400,
+                          }}
+                        >
+                          {pointer}
+                        </span>
+                      </div>
+                    </ScrollAnimation>
                   ))}
                 </div>
               </div>
