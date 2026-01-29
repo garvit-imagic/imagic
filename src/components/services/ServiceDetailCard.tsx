@@ -52,12 +52,12 @@ export default function ServiceDetailCard({
             />
 
             {/* Two Column Layout */}
-            <div 
-              className="flex w-full relative" 
-              style={{ 
+            <div
+              className="flex w-full relative"
+              style={{
                 gap: "139px",
                 paddingLeft: stripPosition === "left" ? "130px" : "0",
-                paddingRight: stripPosition === "right" ? "130px" : "0"
+                paddingRight: stripPosition === "right" ? "130px" : "0",
               }}
             >
               {/* Column 1 - Heading & Description - 40% width with pt-[20px] offset */}
