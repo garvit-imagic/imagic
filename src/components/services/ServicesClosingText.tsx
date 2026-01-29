@@ -9,8 +9,16 @@ export default function ServicesClosingText() {
       {/* Desktop Version */}
       <div className="hidden md:block">
         <ScrollAnimation direction="up" distance={24} delay={0.3}>
-          <div style={{ width: '85%', margin: '0 auto' }}>
-            <p style={{ fontSize: '40px', fontWeight: 700, lineHeight: '100%', letterSpacing: '0%', textAlign: 'center' }}>
+          <div style={{ width: "85%", margin: "0 auto" }}>
+            <p
+              style={{
+                fontSize: "40px",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               {servicesClosingText.text}
             </p>
           </div>
