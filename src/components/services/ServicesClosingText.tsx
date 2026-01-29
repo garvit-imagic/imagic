@@ -14,7 +14,7 @@ export default function ServicesClosingText() {
               style={{
                 fontSize: "40px",
                 fontWeight: 700,
-                lineHeight: "100%",
+                lineHeight: "130%",
                 letterSpacing: "0%",
                 textAlign: "center",
               }}

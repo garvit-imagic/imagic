@@ -65,7 +65,7 @@ export default function ServiceDetailCard({
                 <p
                   style={{
                     fontSize: "36px",
-                    lineHeight: "100%",
+                    lineHeight: "130%",
                     letterSpacing: "0%",
                     fontWeight: 400,
                   }}
@@ -76,7 +76,7 @@ export default function ServiceDetailCard({
                   className="pl-[62px] mt-[55px]"
                   style={{
                     fontSize: "24px",
-                    lineHeight: "100%",
+                    lineHeight: "130%",
                     letterSpacing: "0%",
                     fontWeight: 400,
                   }}
@@ -90,7 +90,7 @@ export default function ServiceDetailCard({
                 <h3
                   style={{
                     fontSize: "36px",
-                    lineHeight: "100%",
+                    lineHeight: "130%",
                     letterSpacing: "0%",
                     fontWeight: 400,
                   }}
@@ -113,7 +113,7 @@ export default function ServiceDetailCard({
                           className="transition-colors duration-300"
                           style={{
                             fontSize: "24px",
-                            lineHeight: "100%",
+                            lineHeight: "130%",
                             letterSpacing: "0%",
                             fontWeight: 400,
                             color: "#8CC63F",
@@ -125,7 +125,7 @@ export default function ServiceDetailCard({
                           className="transition-opacity duration-300"
                           style={{
                             fontSize: "24px",
-                            lineHeight: "100%",
+                            lineHeight: "130%",
                             letterSpacing: "0%",
                             fontWeight: 400,
                           }}
