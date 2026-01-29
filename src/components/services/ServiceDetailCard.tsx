@@ -42,15 +42,15 @@ export default function ServiceDetailCard({
           className="mx-[98px] relative"
           style={{ height: "1200px", display: "flex", alignItems: "center" }}
         >
-          <ScrollAnimation direction="up" distance={22} delay={delay}>
-            {/* Vertical Strip - 60px × 1200px */}
-            <div
-              className={`absolute ${
-                stripPosition === "left" ? "left-0" : "right-0"
-              } w-[60px] top-0`}
-              style={{ backgroundColor: stripColor, height: "1200px" }}
-            />
+          {/* Vertical Strip - 60px × 1200px - Outside animation so always visible */}
+          <div
+            className={`absolute ${
+              stripPosition === "left" ? "left-0" : "right-0"
+            } w-[60px] top-0`}
+            style={{ backgroundColor: stripColor, height: "1200px" }}
+          />
 
+          <ScrollAnimation direction="up" distance={22} delay={delay}>
             {/* Two Column Layout */}
             <div
               className="flex w-full relative"
