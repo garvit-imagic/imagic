@@ -99,11 +99,11 @@ export default function ServiceDetailCard({
                 </h3>
                 <div className="mt-[49px]">
                   {column2.pointers.map((pointer, index) => (
-                    <ScrollAnimation 
+                    <ScrollAnimation
                       key={index}
-                      direction="up" 
-                      distance={16} 
-                      delay={delay + 0.1 + (index * 0.08)}
+                      direction="up"
+                      distance={16}
+                      delay={delay + 0.1 + index * 0.08}
                     >
                       <div
                         className="flex mb-[90px] transition-all duration-300 hover:translate-x-2"
