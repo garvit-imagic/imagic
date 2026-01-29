@@ -205,10 +205,10 @@ export const servicesClosingText = {
 
 export const servicesDetailTable = {
   containerClassName: "mt-[592px] mb-[176px] w-[90%] mx-auto",
-  topBorderClassName: "border-t-2 border-black",
+  topBorderClassName: "border-t-2 border-black mb-[51px]",
   rowClassName:
-    "font-normal text-[24px] leading-[100%] tracking-[0%] py-[20px] border-b border-gray-300",
-  bottomBorderClassName: "h-[9px] bg-black w-full mt-[20px]",
+    "font-normal text-[24px] leading-[100%] tracking-[0%] pb-[22px]",
+  bottomBorderClassName: "h-[9px] bg-black w-full mt-[17px]",
   rows: [
     {
       label: "Environmental",

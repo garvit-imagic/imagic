@@ -15,7 +15,7 @@ export default function ServicesDetailTable() {
 
             {/* Table Rows */}
             {servicesDetailTable.rows.map((row, index) => (
-              <div key={index} className={servicesDetailTable.rowClassName}>
+              <div key={index} className={`font-normal text-[24px] leading-[100%] tracking-[0%] pb-[22px] ${servicesDetailTable.rowClassName}`}>
                 <span className="font-semibold">{row.label}</span>
                 <span className="mx-[20px]">:</span>
                 <span>{row.values}</span>

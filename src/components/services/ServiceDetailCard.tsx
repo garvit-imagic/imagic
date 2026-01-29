@@ -37,7 +37,7 @@ export default function ServiceDetailCard({
   return (
     <>
       {/* Desktop Version */}
-      <section className="hidden md:block w-full mb-[200px]">
+      <section className="hidden md:block w-full -mt-[100px]">
         <div
           className="mx-[98px] relative"
           style={{ height: "1200px", display: "flex", alignItems: "center" }}
@@ -61,7 +61,7 @@ export default function ServiceDetailCard({
               }}
             >
               {/* Column 1 - Heading & Description - 40% width with pt-[20px] offset */}
-              <div className="relative z-10 pt-[20px]" style={{ width: "40%" }}>
+              <div className="relative z-10 pt-[60px]" style={{ width: "40%" }}>
                 <p
                   style={{
                     fontSize: "36px",

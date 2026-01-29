@@ -5,9 +5,9 @@ import ScrollAnimation from "../ScrollAnimation";
 
 export default function ServiceHeading() {
   return (
-    <section className="w-full">
+    <section className="w-full mb-[150px]">
       {/* Desktop Version */}
-      <div className="hidden md:block">
+      <div className="hidden md:block ">
         <ScrollAnimation direction="up" distance={24} delay={0.24}>
           <div
             style={{
