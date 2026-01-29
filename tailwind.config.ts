@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '464': '464px',
+      },
       colors: {
         primary: {
           DEFAULT: "#CDFF3C",
