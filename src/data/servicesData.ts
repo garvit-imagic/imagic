@@ -51,9 +51,9 @@ export const serviceHeading = {
     "font-normal text-[48px] leading-[130%] tracking-[0%] mt-[15px]",
   containerClassName: "mx-[97px] mb-[86px]",
   // Mobile
-  mobileMainClassName: "font-bold text-[16px] leading-[130%] tracking-[0%]",
+  mobileMainClassName: "font-normal italic text-[26px] leading-[140%] tracking-[0%] text-center",
   mobileSubClassName:
-    "font-normal text-[28px] leading-[130%] tracking-[0%] mt-[10px] text-center",
+    "font-bold text-[26px] leading-[140%] tracking-[0%] text-center w-[50%] mx-auto",
   mobileContainerClassName: "mx-[20px] mb-[50px]",
 };
 

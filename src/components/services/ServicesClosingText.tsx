@@ -5,9 +5,9 @@ import ScrollAnimation from "../ScrollAnimation";
 
 export default function ServicesClosingText() {
   return (
-    <section className="w-full mt-[518px] mb-[592px]">
+    <section className="w-full ">
       {/* Desktop Version */}
-      <div className="hidden md:block">
+      <div className="hidden md:block mt-[518px] mb-[592px]">
         <ScrollAnimation direction="up" distance={24} delay={0.3}>
           <div style={{ width: "85%", margin: "0 auto" }}>
             <p
@@ -26,7 +26,7 @@ export default function ServicesClosingText() {
       </div>
 
       {/* Mobile Version */}
-      <div className="md:hidden">
+      <div className="md:hidden my-[160px] mx-[26px]">
         <ScrollAnimation direction="up" distance={18} delay={0.3}>
           <div className={servicesClosingText.mobileContainerClassName}>
             <p className={servicesClosingText.mobileClassName}>

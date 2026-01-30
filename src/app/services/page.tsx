@@ -20,13 +20,13 @@ export default function ServicesPage() {
       <ServicesHero />
 
       {/* Intro Text Section 1 */}
-      <ServicesIntroText {...servicesIntroTexts[0]} delay={0.3} />
+      <ServicesIntroText {...servicesIntroTexts[0]} delay={0.4} />
 
       {/* Intro Text Section 2 */}
-      <ServicesIntroText {...servicesIntroTexts[1]} delay={0.4} />
+      <ServicesIntroText {...servicesIntroTexts[1]} delay={0.5} />
 
       {/* Intro Text Section 3 */}
-      <ServicesIntroText {...servicesIntroTexts[2]} delay={0.5} />
+      <ServicesIntroText {...servicesIntroTexts[2]} delay={0.6} />
 
       {/* Service Heading */}
       <ServiceHeading />

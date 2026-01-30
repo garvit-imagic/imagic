@@ -145,30 +145,59 @@ export default function ServiceDetailCard({
       {/* Mobile Version - No strips, stacked layout */}
       <section className="md:hidden w-full mb-[80px]">
         <ScrollAnimation direction="up" distance={18} delay={delay}>
-          <div className="mx-[20px]">
+          <div className="mx-[40px]">
             {/* Column 1 */}
-            <div className="mb-[40px]">
-              <h3 className={column1.mobileHeadingClassName}>
+            <div className="mb-[112px]">
+              <h3 style={{ 
+                fontSize: '25.77px', 
+                lineHeight: '130%', 
+                letterSpacing: '0%', 
+                fontWeight: 400,
+                textAlign: 'center'
+              }}>
                 {column1.heading}
               </h3>
-              <p className={`${column1.mobileDescriptionClassName} mt-[15px]`}>
+              <p className="mt-[15px]" style={{ 
+                fontSize: '16px', 
+                lineHeight: '130%', 
+                letterSpacing: '0%', 
+                fontWeight: 400,
+                textAlign: 'center'
+              }}>
                 {column1.description}
               </p>
             </div>
 
             {/* Column 2 */}
             <div>
-              <h3 className={column2.mobileHeadingClassName}>
+              <h3 className="mb-[20px]" style={{ 
+                fontSize: '25.77px', 
+                lineHeight: '130%', 
+                letterSpacing: '0%', 
+                fontWeight: 300,
+                textAlign: 'center'
+              }}>
                 {column2.heading}
               </h3>
-              <div className="mt-[20px]">
+              <div className="mx-[33px]">
                 {column2.pointers.map((pointer, index) => (
-                  <div key={index} className="mb-[15px]">
-                    <div className="flex items-start justify-center gap-[8px]">
-                      <span className={column2.mobilePointerClassName}>
+                  <div key={index} className="mb-[20px]">
+                    <div className="flex items-start gap-[8px]">
+                      <span style={{ 
+                        fontSize: '16px', 
+                        lineHeight: '130%', 
+                        letterSpacing: '0%', 
+                        fontWeight: 400,
+                        color: '#8CC63F'
+                      }}>
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className={column2.mobilePointerClassName}>
+                      <span style={{ 
+                        fontSize: '16px', 
+                        lineHeight: '130%', 
+                        letterSpacing: '0%', 
+                        fontWeight: 400
+                      }}>
                         {pointer}
                       </span>
                     </div>

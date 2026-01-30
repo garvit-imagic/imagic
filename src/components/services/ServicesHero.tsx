@@ -23,9 +23,9 @@ export default function ServicesHero() {
       </section>
 
       {/* Mobile Hero */}
-      <section className="md:hidden w-full pt-[75px]">
+      <section className="md:hidden w-full pt-[75px] mb-[60px]">
         <ScrollAnimation direction="up" distance={16} delay={0.1}>
-          <div className="relative w-full aspect-[8/3]">
+          <div className="relative w-full" style={{ aspectRatio: '400/257' }}>
             <Image
               src={servicesImages.hero.mobile}
               alt="Services Hero"

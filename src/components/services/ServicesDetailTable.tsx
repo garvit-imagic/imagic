@@ -61,26 +61,55 @@ export default function ServicesDetailTable() {
       {/* Mobile Version */}
       <div className="md:hidden">
         <ScrollAnimation direction="up" distance={18} delay={0.32}>
-          <div className={servicesDetailTable.mobileContainerClassName}>
+          <div>
             {/* Top Border */}
-            <div className="border-t-2 border-black" />
+            <div className="h-[1px] bg-black w-full mb-[72px]" />
 
             {/* Table Rows - Stacked Layout */}
-            {servicesDetailTable.rows.map((row, index) => (
-              <div
-                key={index}
-                className={servicesDetailTable.mobileRowClassName}
-              >
-                <div className="font-semibold mb-[10px]">{row.label}</div>
-                <div>{row.values}</div>
-              </div>
-            ))}
+            <div className="px-[42px]">
+              {servicesDetailTable.rows.map((row, index) => (
+                <div
+                  key={index}
+                  className="mb-[44px]"
+                  style={{
+                    fontFamily: 'Open Sans Hebrew, Open Sans, sans-serif',
+                    fontSize: '16px',
+                    lineHeight: '130%',
+                    letterSpacing: '0%',
+                    fontWeight: 400
+                  }}
+                >
+                  <div className="mb-[5px]" >{row.label}</div>
+                  <div>{row.values}</div>
+                </div>
+              ))}
+            </div>
 
             {/* Bottom Border (Marquee style) */}
-            <div className="h-[1px] bg-black w-full mt-[20px]" />
-            <div className="h-[9px] bg-black w-[95%]" />
+            <div className="h-[1px] bg-black w-full mt-[52px]" />
+            <div
+              className="h-[15px] w-[90%] mx-auto"
+              style={{ backgroundColor: "#0000004D" }}
+            />
           </div>
         </ScrollAnimation>
+        
+        <div
+          className="text-center px-[42px]"
+          style={{ marginTop: "100px", marginBottom: "100px" }}
+        >
+          <h2
+            style={{
+              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+              fontWeight: 700,
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+            }}
+          >
+            Let&apos;s Collaborate !
+          </h2>
+        </div>
       </div>
     </section>
   );
