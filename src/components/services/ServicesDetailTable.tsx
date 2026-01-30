@@ -72,14 +72,14 @@ export default function ServicesDetailTable() {
                   key={index}
                   className="mb-[44px]"
                   style={{
-                    fontFamily: 'Open Sans Hebrew, Open Sans, sans-serif',
-                    fontSize: '16px',
-                    lineHeight: '130%',
-                    letterSpacing: '0%',
-                    fontWeight: 400
+                    fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                    fontSize: "16px",
+                    lineHeight: "130%",
+                    letterSpacing: "0%",
+                    fontWeight: 400,
                   }}
                 >
-                  <div className="mb-[5px]" >{row.label}</div>
+                  <div className="mb-[5px]">{row.label}</div>
                   <div>{row.values}</div>
                 </div>
               ))}
@@ -93,7 +93,7 @@ export default function ServicesDetailTable() {
             />
           </div>
         </ScrollAnimation>
-        
+
         <div
           className="text-center px-[42px]"
           style={{ marginTop: "100px", marginBottom: "100px" }}

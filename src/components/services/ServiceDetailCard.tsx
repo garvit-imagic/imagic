@@ -148,56 +148,68 @@ export default function ServiceDetailCard({
           <div className="mx-[40px]">
             {/* Column 1 */}
             <div className="mb-[112px]">
-              <h3 style={{ 
-                fontSize: '25.77px', 
-                lineHeight: '130%', 
-                letterSpacing: '0%', 
-                fontWeight: 400,
-                textAlign: 'center'
-              }}>
+              <h3
+                style={{
+                  fontSize: "25.77px",
+                  lineHeight: "130%",
+                  letterSpacing: "0%",
+                  fontWeight: 400,
+                  textAlign: "center",
+                }}
+              >
                 {column1.heading}
               </h3>
-              <p className="mt-[15px]" style={{ 
-                fontSize: '16px', 
-                lineHeight: '130%', 
-                letterSpacing: '0%', 
-                fontWeight: 400,
-                textAlign: 'center'
-              }}>
+              <p
+                className="mt-[15px]"
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "130%",
+                  letterSpacing: "0%",
+                  fontWeight: 400,
+                  textAlign: "center",
+                }}
+              >
                 {column1.description}
               </p>
             </div>
 
             {/* Column 2 */}
             <div>
-              <h3 className="mb-[20px]" style={{ 
-                fontSize: '25.77px', 
-                lineHeight: '130%', 
-                letterSpacing: '0%', 
-                fontWeight: 300,
-                textAlign: 'center'
-              }}>
+              <h3
+                className="mb-[20px]"
+                style={{
+                  fontSize: "25.77px",
+                  lineHeight: "130%",
+                  letterSpacing: "0%",
+                  fontWeight: 300,
+                  textAlign: "center",
+                }}
+              >
                 {column2.heading}
               </h3>
               <div className="mx-[33px]">
                 {column2.pointers.map((pointer, index) => (
                   <div key={index} className="mb-[20px]">
                     <div className="flex items-start gap-[8px]">
-                      <span style={{ 
-                        fontSize: '16px', 
-                        lineHeight: '130%', 
-                        letterSpacing: '0%', 
-                        fontWeight: 400,
-                        color: '#8CC63F'
-                      }}>
+                      <span
+                        style={{
+                          fontSize: "16px",
+                          lineHeight: "130%",
+                          letterSpacing: "0%",
+                          fontWeight: 400,
+                          color: "#8CC63F",
+                        }}
+                      >
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span style={{ 
-                        fontSize: '16px', 
-                        lineHeight: '130%', 
-                        letterSpacing: '0%', 
-                        fontWeight: 400
-                      }}>
+                      <span
+                        style={{
+                          fontSize: "16px",
+                          lineHeight: "130%",
+                          letterSpacing: "0%",
+                          fontWeight: 400,
+                        }}
+                      >
                         {pointer}
                       </span>
                     </div>

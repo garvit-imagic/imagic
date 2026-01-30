@@ -73,8 +73,20 @@ export default function ServicesIntroText({
         }}
       >
         <ScrollAnimation direction="up" distance={18} delay={delay}>
-          <div className="mx-auto text-center px-[10px]" style={{ width: mobileWidth }}>
-            <p style={{ fontSize: '16px', lineHeight: '130%', letterSpacing: '0%', fontWeight: 400 }}>{text}</p>
+          <div
+            className="mx-auto text-center px-[10px]"
+            style={{ width: mobileWidth }}
+          >
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "130%",
+                letterSpacing: "0%",
+                fontWeight: 400,
+              }}
+            >
+              {text}
+            </p>
           </div>
         </ScrollAnimation>
       </section>
