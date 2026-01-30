@@ -195,9 +195,7 @@ export default function ServiceDetailCard({
                     distance={12}
                     delay={delay + 0.1 + index * 0.08}
                   >
-                    <div
-                      className="mb-[20px] transition-all duration-300 hover:translate-x-1"
-                    >
+                    <div className="mb-[20px] transition-all duration-300 hover:translate-x-1">
                       <div className="flex items-start gap-[8px]">
                         <span
                           className="transition-colors duration-300"

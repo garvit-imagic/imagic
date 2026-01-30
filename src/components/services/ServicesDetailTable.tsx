@@ -83,9 +83,7 @@ export default function ServicesDetailTable() {
                     fontWeight: 400,
                   }}
                 >
-                  <div className="mb-[5px]">
-                    {row.label}
-                  </div>
+                  <div className="mb-[5px]">{row.label}</div>
                   <div>{row.values}</div>
                 </div>
               </ScrollAnimation>
