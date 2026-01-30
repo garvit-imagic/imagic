@@ -12,7 +12,7 @@ export default function ServicesDetailTable() {
           <div className={servicesDetailTable.containerClassName}>
             {/* Top Border */}
             <div
-              className={`mb-[51px]  ${servicesDetailTable.topBorderClassName}`}
+              className={`mb-[51px]  border-t-2 border-black `}
             />
 
             {/* Table Rows */}
@@ -93,7 +93,7 @@ export default function ServicesDetailTable() {
           {/* Bottom Border (Marquee style) */}
           <div className="h-[1px] bg-black w-full mt-[52px]" />
           <div
-            className="h-[15px] w-[98%] mx-auto"
+            className="h-[15px] w-[90%] mx-auto"
             style={{ backgroundColor: "#0000004D" }}
           />
         </div>
