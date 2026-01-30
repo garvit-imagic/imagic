@@ -36,10 +36,29 @@ export default function ServiceHeading() {
               marginBottom: "50px",
             }}
           >
-            <h3 className={serviceHeading.mobileMainClassName}>
+            <h3
+              className="text-center"
+              style={{
+                fontSize: "26px",
+                fontWeight: 400,
+                fontStyle: "italic",
+                lineHeight: "130%",
+                letterSpacing: "0%",
+              }}
+            >
               {serviceHeading.mainHeading}
             </h3>
-            <h2 className={serviceHeading.mobileSubClassName}>
+            <h2
+              className="text-center mx-auto"
+              style={{
+                fontSize: "26px",
+                fontWeight: 700,
+                lineHeight: "140%",
+                letterSpacing: "0%",
+                width: "50%",
+                marginTop: "10px",
+              }}
+            >
               {serviceHeading.subHeading}
             </h2>
           </div>

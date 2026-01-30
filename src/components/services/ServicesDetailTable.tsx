@@ -60,17 +60,21 @@ export default function ServicesDetailTable() {
 
       {/* Mobile Version */}
       <div className="md:hidden">
-        <ScrollAnimation direction="up" distance={18} delay={0.32}>
-          <div>
-            {/* Top Border */}
-            <div className="h-[1px] bg-black w-full mb-[72px]" />
+        <div>
+          {/* Top Border */}
+          <div className="h-[1px] bg-black w-full mb-[72px]" />
 
-            {/* Table Rows - Stacked Layout */}
-            <div className="px-[42px]">
-              {servicesDetailTable.rows.map((row, index) => (
+          {/* Table Rows - Stacked Layout with staggered animations */}
+          <div className="px-[42px]">
+            {servicesDetailTable.rows.map((row, index) => (
+              <ScrollAnimation
+                key={index}
+                direction="up"
+                distance={12}
+                delay={0.32 + index * 0.08}
+              >
                 <div
-                  key={index}
-                  className="mb-[44px]"
+                  className="mb-[44px] transition-all duration-300"
                   style={{
                     fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
                     fontSize: "16px",
@@ -79,37 +83,41 @@ export default function ServicesDetailTable() {
                     fontWeight: 400,
                   }}
                 >
-                  <div className="mb-[5px]">{row.label}</div>
+                  <div className="mb-[5px]">
+                    {row.label}
+                  </div>
                   <div>{row.values}</div>
                 </div>
-              ))}
-            </div>
+              </ScrollAnimation>
+            ))}
+          </div>
 
-            {/* Bottom Border (Marquee style) */}
-            <div className="h-[1px] bg-black w-full mt-[52px]" />
-            <div
-              className="h-[15px] w-[90%] mx-auto"
-              style={{ backgroundColor: "#0000004D" }}
-            />
+          {/* Bottom Border (Marquee style) */}
+          <div className="h-[1px] bg-black w-full mt-[52px]" />
+          <div
+            className="h-[15px] w-[98%] mx-auto"
+            style={{ backgroundColor: "#0000004D" }}
+          />
+        </div>
+
+        <ScrollAnimation direction="up" distance={18} delay={0.6}>
+          <div
+            className="text-center px-[42px]"
+            style={{ marginTop: "100px", marginBottom: "100px" }}
+          >
+            <h2
+              style={{
+                fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
+                fontWeight: 700,
+                fontSize: "32px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              Let&apos;s Collaborate !
+            </h2>
           </div>
         </ScrollAnimation>
-
-        <div
-          className="text-center px-[42px]"
-          style={{ marginTop: "100px", marginBottom: "100px" }}
-        >
-          <h2
-            style={{
-              fontFamily: "Open Sans Hebrew, Open Sans, sans-serif",
-              fontWeight: 700,
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Let&apos;s Collaborate !
-          </h2>
-        </div>
       </div>
     </section>
   );

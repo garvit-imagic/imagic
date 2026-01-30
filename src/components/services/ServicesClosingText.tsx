@@ -28,8 +28,16 @@ export default function ServicesClosingText() {
       {/* Mobile Version */}
       <div className="md:hidden my-[160px] mx-[26px]">
         <ScrollAnimation direction="up" distance={18} delay={0.3}>
-          <div className={servicesClosingText.mobileContainerClassName}>
-            <p className={servicesClosingText.mobileClassName}>
+          <div>
+            <p
+              style={{
+                fontSize: "20px",
+                fontWeight: 700,
+                lineHeight: "130%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
               {servicesClosingText.text}
             </p>
           </div>
